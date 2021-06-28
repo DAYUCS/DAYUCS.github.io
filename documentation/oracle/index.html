@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.68.3" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Get Data from Oracle Log | My New Hugo Site</title>
+<meta name="description" content=""><meta property="og:title" content="Get Data from Oracle Log" />
+<meta property="og:description" content="A example to show how to get historical data from Oracle Log.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/documentation/oracle/" />
+
+<meta itemprop="name" content="Get Data from Oracle Log">
+<meta itemprop="description" content="A example to show how to get historical data from Oracle Log.
+">
+
+<meta itemprop="wordCount" content="505">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Get Data from Oracle Log"/>
+<meta name="twitter:description" content="A example to show how to get historical data from Oracle Log.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.scss" as="style">
+<link href="/scss/main.scss" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+
+
+
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">My New Hugo Site</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/documentation/" ><i class='fa fa-heart'></i><span>Documentation</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+  
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    
+    
+    
+    
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-documentation-li">
+    
+      <a href="/documentation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-documentation"><span class="">RDB Log</span></a>
+    
+    
+      
+      <ul class="ul-1">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationdb2-li">
+    
+      <a href="/documentation/db2/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationdb2"><span class="">Get Data from DB2 Log</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationmssql-li">
+    
+      <a href="/documentation/mssql/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationmssql"><span class="">Get Data from MS SQL Server Log</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationoracle-li">
+    
+      <a href="/documentation/oracle/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-documentationoracle"><span class="td-sidebar-nav-active-item">Get Data from Oracle Log</span></a>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+    </ul>
+  </nav>
+</div>
+
+
+
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+  
+  
+  
+  
+  
+  
+  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  
+  
+  </div>
+
+
+            
+
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#历史资料的用途"><strong>历史资料的用途</strong></a></li>
+    <li><a href="#历史资料的保管与获取"><strong>历史资料的保管与获取</strong></a></li>
+    <li><a href="#获取数据库transaction-log内容的方法"><strong>获取数据库Transaction Log内容的方法</strong></a></li>
+    <li><a href="#数据库审计的专用工具"><strong>数据库审计的专用工具</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#系统设置"><strong>系统设置</strong></a>
+      <ul>
+        <li><a href="#undo参数设置">UNDO参数设置</a></li>
+        <li><a href="#flashback-data-archive设置">Flashback Data archive设置</a></li>
+        <li><a href="#flashback-transaction-query设置">Flashback Transaction Query设置</a></li>
+        <li><a href="#flashback-transaction设置">Flashback Transaction设置</a></li>
+      </ul>
+    </li>
+    <li><a href="#功能运用"><strong>功能运用</strong></a></li>
+    <li><a href="#在eximbills中使用oracle-flashback-technology">在Eximbills中使用Oracle Flashback Technology</a></li>
+  </ul>
+</nav></div>
+
+
+
+            
+
+	
+		
+
+
+
+  
+  
+
+	
+		
+
+
+
+  
+  
+
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="http://example.org/documentation/">RDB Log</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="http://example.org/documentation/oracle/">Get Data from Oracle Log</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Get Data from Oracle Log</h1>
+	<div class="lead">A example to show how to get historical data from Oracle Log.</div>
+	<header class="article-meta">
+		
+		
+			
+				
+
+
+			
+				
+
+
+			
+		
+		
+	</header>    
+	<p><img src="./media/image1.png" alt="">{width=&quot;2.89375in&rdquo; height=&quot;1.0604166666666666in&rdquo;}</p>
+<p>Get Historical Data from Database Log</p>
+<p><strong>介绍各种从Oracle数据库Log中读取交易历史数据的方法，重点展示Oracle
+Flashback技术的各种功能及用法，探讨在Eximbills产品中使用Oracle
+Flashback技术的可能性。</strong></p>
+<p>Copyright  2017</p>
+<p>All rights reserved. This product and related documentation are
+protected by copyright and distributed under licenses restricting its
+use, copying, distribution and decompilation. No part of this product or
+related documentation may be reproduced in any form by any means without
+the prior written authorization of and its licensors, if any.</p>
+<hr>
+<p>Authors:   Dayu Bian
+Version:   2.0.0
+Date:      April 7, 2017
+Project:   Audit Log Report</p>
+<hr>
+<p>:</p>
+<hr>
+<p>File name:         <br>
+Path name:         <br>
+Internal reference:   Audit Log Report</p>
+<hr>
+<p>DOCUMENT HISTORY</p>
+<hr>
+<p><strong>[Version]{.underline}</strong>   <strong>[Date]{.underline}</strong>   <strong>[Narrative]{.underline}</strong>
+1.0.0                       September 15, 2011       First Draft
+2.0.0                       April 7, 2017            Update for Oracle 12c Release 2 and new scenario</p>
+<hr>
+<h1 id="目录" class="TOC">目录</h1>
+<p><a href="#%E8%83%8C%E6%99%AF%E6%8F%8F%E8%BF%B0">[1]{.underline} [背景描述]{.underline} 4</a></p>
+<p><a href="#%E5%8E%86%E5%8F%B2%E8%B5%84%E6%96%99%E7%9A%84%E7%94%A8%E9%80%94">[1.1]{.underline} [历史资料的用途]{.underline} 4</a></p>
+<p><a href="#%E5%8E%86%E5%8F%B2%E8%B5%84%E6%96%99%E7%9A%84%E4%BF%9D%E7%AE%A1%E4%B8%8E%E8%8E%B7%E5%8F%96">[1.2]{.underline} [历史资料的保管与获取]{.underline}
+4</a></p>
+<p><a href="#%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E5%BA%93transaction-log%E5%86%85%E5%AE%B9%E7%9A%84%E6%96%B9%E6%B3%95">[1.3]{.underline} [获取数据库Transaction Log内容的方法]{.underline}
+5</a></p>
+<p><a href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%A1%E8%AE%A1%E7%9A%84%E4%B8%93%E7%94%A8%E5%B7%A5%E5%85%B7">[1.4]{.underline} [数据库审计的专用工具]{.underline}
+5</a></p>
+<p><a href="#oracle-flashback-technology">[2]{.underline} [Oracle Flashback Technology]{.underline}
+7</a></p>
+<p><a href="#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">[2.1]{.underline} [系统设置]{.underline} 7</a></p>
+<p><a href="#undo%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE">[2.1.1]{.underline} [UNDO参数设置]{.underline} 7</a></p>
+<p><a href="#flashback-data-archive%E8%AE%BE%E7%BD%AE">[2.1.2]{.underline} [Flashback Data archive设置]{.underline}
+9</a></p>
+<p><a href="#flashback-transaction-query%E8%AE%BE%E7%BD%AE">[2.1.3]{.underline} [Flashback Transaction Query设置]{.underline}
+11</a></p>
+<p><a href="#flashback-transaction%E8%AE%BE%E7%BD%AE">[2.1.4]{.underline} [Flashback Transaction设置]{.underline}
+11</a></p>
+<p><a href="#%E5%8A%9F%E8%83%BD%E8%BF%90%E7%94%A8">[2.2]{.underline} [功能运用]{.underline} 11</a></p>
+<p><a href="#%E5%9C%A8eximbills%E4%B8%AD%E4%BD%BF%E7%94%A8oracle-flashback-technology">[2.3]{.underline} [在Eximbills中使用Oracle Flashback
+Technology]{.underline}
+12</a></p>
+<p><a href="#%E5%B0%8F%E7%BB%93">[3]{.underline} [小结]{.underline} 14</a></p>
+<p><a href="#sign-off-sheet">[Sign-off Sheet]{.underline} 15</a></p>
+<h1 id="背景描述">背景描述</h1>
+<h2 id="历史资料的用途"><strong>历史资料的用途</strong></h2>
+<p>交易及非交易数据的历史资料，对Eximbills这样的银行应用系统来说，在很多地方都会被用到。例如&mdash;&mdash;</p>
+<ul>
+<li>
+<p>交易资料的核对、查询与报表;</p>
+</li>
+<li>
+<p>审计功能(Audit);</p>
+</li>
+<li>
+<p>对错误交易的更正(Cancellation)。</p>
+</li>
+</ul>
+<h2 id="历史资料的保管与获取"><strong>历史资料的保管与获取</strong></h2>
+<p>一个系统，如何保管历史资料，有两类方法&mdash;&mdash;</p>
+<ul>
+<li>
+<p>应用系统自已保管历史资料，在设计时就充分考虑到历史资料的各种可能用途，规划好历史资料的归档、清理等功能。</p>
+</li>
+<li>
+<p>利用数据库Log机制，从Log中获取应用所需的历史资料。</p>
+</li>
+</ul>
+<p>前一种方法，其优点在于既不依赖于数据库的Log实现机制，也不依赖于第三方数据库工具，做到了实现一次、各个数据库都通用。但其缺点在于交易处理时需要额外处理&quot;历史&quot;资料的读写，相对增加了数据库操作，从而会对交易处理的性能产生一定的负面影响。</p>
+<p>后一种方法，其优缺点恰好与前者相反。由于主流的关系型数据库，在SQL语句被真正落实到磁盘系统之前，都是要先记数据库交易Log，因此Log中实际已记录了数据的历史记录，利用数据库Log机制保管与获取历史资料，不仅可以通过节省交易处理时对数据库的存取来提高性能，而且可利用数据库Log管理机制实现历史资料的归档、清理。但缺点也很明显，这类方法严重依赖于数据库自身所提供的、非标准化的Log存取接口，或第三方软件工具，实现不了各数据库兼容。</p>
+<p>因此，当我们强调应用要兼容各种数据库系统时，多半会采取前一种方法。比如在Eximbills中就有Event表，我们猜测其设计的本意应该是存放Master的历史资料，只不过隨着产品的演进，后来出现了改变Master却不增加Event记录的交易路径，从而给审计功能的实现提了个难题。</p>
+<p>相反，当我们强调客户满意度、面对特定用户、遭遇系统性能瓶颈时，则倾向于使用后一种方法。</p>
+<h2 id="获取数据库transaction-log内容的方法"><strong>获取数据库Transaction Log内容的方法</strong></h2>
+<p>众所周知，数据库Log并非是以明码、文本方式存放的，所以想获取其内容需费一些周折。</p>
+<p>已知的获取Log内容的方式有如下这些&mdash;&mdash;</p>
+<ul>
+<li>
+<p>IBM InfoSphere Change Data Capture 一种实时的数据复制/转换工具，直接
+从各种数据库Log中捕获数据变化，并可对数据进行一定的转换处理，最后写入到目标数据库中。
+使用该工具，应用可从目标数据库中以SQL语句获取所需的Log内容。</p>
+</li>
+<li>
+<p>Oracle Golden Gate 与IBM InfoSphere Change Data
+Capture类似的实时数据复制工具，可直接
+从各种数据库Log中捕获数据变化，并可对数据进行一定的转换处理，最后写入到目标数据库中。
+使用该工具，应用可从目标数据库中以SQL语句获取所需的Log内容。</p>
+</li>
+<li>
+<p>Oracle LogMiner Oracle数据库自带的Redo
+Log分析工具，可分析Oracle在线与离线Redo Log，从中得到所有DML(Data
+Manipulation Language)语句，应用可根据这些SQL语句跟踪数据变化。</p>
+</li>
+<li>
+<p>IBM DB2 Recovery Expert DB2数据恢复工具，其Log分析功能可以从DB2
+transaction log中读取并输出数据变化内容。</p>
+</li>
+<li>
+<p>IBM db2ReadLog API DB2自带的C/C++
+API，通过调用这些API，C/C++程序可以读取DB2 log内容。</p>
+</li>
+<li>
+<p>Oracle Flashback Technology
+Oracle闪回技术是Oracle数据库特有的一系列功能项。利用这些功能项，应用可以用SQL语句查询数据历史记录、事务的回滚SQL语句等有用信息。</p>
+</li>
+</ul>
+<h2 id="数据库审计的专用工具"><strong>数据库审计的专用工具</strong></h2>
+<p>如果我们获取数据库Log内容的目的仅仅是为了数据库审计，其实还有两个专门用于数据库安全审计的软件值得考虑：</p>
+<ul>
+<li>
+<p>Oracle Audit Vault</p>
+</li>
+<li>
+<p>IBM Security Guardium （以前叫做InfoSphere Guardium)</p>
+</li>
+</ul>
+<p>这两个软件可以从多种数据库中抓取Log，提供全方位的数据安全保护与审计。一些非常通用的企业应用，也会结合这些安全审计工具，定制相应的审计功能。</p>
+<p>无庸置疑，这类专用工具当然会提供诸如Before/After之类的报表功能：</p>
+<p><img src="./media/image2.png" alt="">{width=&quot;6.0in&rdquo; height=&quot;3.25in&rdquo;}</p>
+<h1 id="oracle-flashback-technology">Oracle Flashback Technology</h1>
+<p>就Oracle数据库而言，Flashback
+Technology是系统自带的功能项，无需借助任何其他第三方工具，且使用也非常简便,只要经过一些必要的设置，应用就可以通过SQL语句得到数据库对象过去某个时点的快照。具体的功能描述，请参考Oracle手册：</p>
+<p><a href="http://docs.oracle.com/database/122/ADFNS/flashback.htm#ADFNS1008">[http://docs.oracle.com/database/122/ADFNS/flashback.htm#ADFNS1008]{.underline}</a></p>
+<h2 id="系统设置"><strong>系统设置</strong></h2>
+<h3 id="undo参数设置">UNDO参数设置</h3>
+<p>可用show parameters undo语句显示Oracle数据库中UNDO参数的设置。</p>
+<p><img src="./media/image3.png" alt="">{width=&quot;6.0in&rdquo; height=&quot;5.93125in&rdquo;}</p>
+<p>其中undo_management及undo_tablespace是安装缺省值，且UNDOTBS1是一个自动扩展的tablespace。而undo_retention的值是28800秒，也就是8小时，表明UNDO信息保留的时长为8小时。必须注意，undo_retention所指定的时长是否有效，实际会受UNDOTBS1的大小限制，由于我们这儿的UNDOTBS1是自动扩展的，所以能保证UNDO信息保留8小时。下图为UNDOTBS1的相关设置：</p>
+<p><img src="./media/image4.png" alt="">{width=&quot;6.0in&rdquo; height=&quot;7.845833333333333in&rdquo;}</p>
+<h3 id="flashback-data-archive设置">Flashback Data archive设置</h3>
+<p>对于超出undo_retention时长的交易历史记录，Undo Management将会自动从UNDO
+tablespace中移除。为将交易历史记录保留更长时间，Oracle提供了Flashback
+Data Archive功能。</p>
+<p>为使用些功能
+，我们首先建立了一个NOLOGGING的tablespace&mdash;&mdash;FBATBS，如下图所示：</p>
+<blockquote>
+<p><img src="./media/image4.png" alt="">{width=&quot;6.0in&rdquo; height=&quot;7.845833333333333in&rdquo;}</p>
+</blockquote>
+<p>然后，使用下面SQL语句建立一个缺省的Flashback Archive:</p>
+<p>create flashback archive default <em>fla</em> tablespace <em>fbatbs</em> retention <em>30
+day</em>;</p>
+<p>这里的retention指定了交易历史记录在flashback
+archive中保留的时长，单位可以是天、月、年。</p>
+<p>最后，使用alter table语句一一指定各个需要保留历史记录的表：</p>
+<p>ALTER TABLE eximbills.imlc flashback archive;</p>
+<h3 id="flashback-transaction-query设置">Flashback Transaction Query设置</h3>
+<p>如果我们需要查询在一个数据库事务中做了哪些数据更新，则需要做如下设置：</p>
+<blockquote>
+<p>ALTER DATABASE ADD SUPPLEMENTAL LOG DATA;</p>
+</blockquote>
+<h3 id="flashback-transaction设置">Flashback Transaction设置</h3>
+<p>如果我们希望通过调用过程DBMS_FLASHBACK.TRANSACTION_BACKOUT回滚已提交的数据库事务，则需要做如下设置(第一条命令需要数据库以startup
+mount方式启动，此时数据库在非Open状态下，才能被正确执行)：</p>
+<blockquote>
+<p>ALTER DATABASE ARCHIVELOG;</p>
+<p>ALTER SYSTEM ARCHIVE LOG CURRENT;</p>
+<p>ALTER DATABASE ADD SUPPLEMENTAL LOG DATA;</p>
+<p>ALTER DATABASE ADD SUPPLEMENTAL LOG DATA (PRIMARY KEY) COLUMNS;</p>
+<p>ALTER DATABASE ADD SUPPLEMENTAL LOG DATA (FOREIGN KEY) COLUMNS;</p>
+</blockquote>
+<p><em><strong>需要注意的是，在真正的银行生产环境中，Eximbills所使用的数据库用户不会是DBA，所以除上述设置项目外，还会涉及到一些数据库权限设置，具体方法请参阅相关文档。</strong></em></p>
+<h2 id="功能运用"><strong>功能运用</strong></h2>
+<p>接下去的两幅图，分别显示了Flashback Version Query与Flashback Transaction
+Query的具体效果：</p>
+<p><img src="./media/image5.png" alt="">{width=&quot;6.0in&rdquo; height=&quot;3.1347222222222224in&rdquo;}</p>
+<p><img src="./media/image6.png" alt="">{width=&quot;6.0in&rdquo; height=&quot;2.651388888888889in&rdquo;}</p>
+<p><em><strong>需要注意的是，我们在实际测试中发现，Flashback Version
+Query有一个短暂的延时，即交易提交后，我们虽可通过Flashback Version
+Query立即查询到之前的最新版本的栏位versions_endscn与versions_endtime从null变为相应的时间戳，但当前最新版本却不会立刻显现于Flashback
+Version Query。总之，会有一个短暂的延时。</strong></em></p>
+<h2 id="在eximbills中使用oracle-flashback-technology">在Eximbills中使用Oracle Flashback Technology</h2>
+<p>从前面的演示效果，我们不难发现，利用Oracle Flashback Version
+Query，Eximbills可以回溯数据库记录的演进历史，从而可据此实现对历史数据的查询、生成
+Audit Log Report、得到Cancellation所需的历史记录。利用Oracle Flashback
+Transaction Query，我们甚至可以得到Cancellation所需的Undo SQL语句。</p>
+<p>为更为详细地演示Oracle Flashback
+Technology，我们建立了eximbills.imlc表，具体表结构如下图所示：</p>
+<p><img src="./media/image7.png" alt="">{width=&quot;6.0in&rdquo; height=&quot;1.7097222222222221in&rdquo;}</p>
+<p>为了得到Before/After Value Report的效果，我们使用如下SQL建立了一个View:</p>
+<p>create view eximbills.imlc_fb_view as</p>
+<p>SELECT versions_startscn, versions_endscn, versions_starttime,
+versions_endtime, versions_xid, 'B' as versions_operation, lc_no,
+lc_ccy, lc_amt, lc_event, exim_user, exim_trx_id</p>
+<p>FROM eximbills.imlc versions BETWEEN SCN MINVALUE AND MAXVALUE</p>
+<p>where versions_endscn is not null and versions_endscn in (select
+versions_startscn from eximbills.imlc versions BETWEEN SCN MINVALUE AND
+MAXVALUE where versions_startscn is not null)</p>
+<p>union</p>
+<p>SELECT versions_startscn, versions_endscn, versions_starttime,
+versions_endtime, versions_xid, versions_operation, lc_no, lc_ccy,
+lc_amt, lc_event, exim_user, exim_trx_id</p>
+<p>FROM eximbills.imlc versions BETWEEN SCN MINVALUE AND MAXVALUE;</p>
+<p>针对上述view，使用如下SQL：</p>
+<p>select * from eximbills.imlc_fb_view where versions_operation is not
+null order by lc_no, versions_endtime asc, versions_operation desc;</p>
+<p>则得到下面图中的结果：</p>
+<p><img src="./media/image8.png" alt="">{width=&quot;6.0in&rdquo; height=&quot;2.6083333333333334in&rdquo;}</p>
+<p>当然，我们也可以不用如此复杂的SQL语句、转而在程序中直接操纵数据集得到完全相似的结果。</p>
+<p>这里强调一下，在使用Oracle Flashback
+Technology时，我们需要注意以下几点：</p>
+<ul>
+<li>
+<p>Flashback Version Query的响应有一定延时;</p>
+</li>
+<li>
+<p>Flashback Version
+Query所返回的结果中没有数据库用户信息，因此需要应用在相应表中增加用户信息字段，并在更新数据库资料时同时更新这些字段;</p>
+</li>
+<li>
+<p>Flashback Version Query所返回的结果中不包括直接的SQL
+Delete信息，但Delete的效果体现在versions_endscn及versions_endtime栏位的值上。</p>
+</li>
+</ul>
+<h1 id="小结">小结</h1>
+<p>有若干种方法从数据库Log中读取交易的历史记录，就Oracle数据库而言，Flashback
+Technology是数据库自带的功能，只需在数据库上进行一些设置就可打开这些功能，而且其接口形式为SQL语句，故兼容于基于JDBC的各种报表工具，应用方面需要进行的改动也较小，可作为设计Audit
+Log Report功能的备选方案。</p>
+<h1 id="sign-off-sheet" class="ListParagraph">Sign-off Sheet</h1>
+<hr>
+<p>Internal Reference:  <br>
+Version:             <br>
+Authors:             <br>
+Sign off Required by:</p>
+<hr>
+<hr>
+<p>[Reviewed by]{.underline}   [Position / Comment]{.underline}   [Signature]{.underline}   [Date]{.underline}</p>
+<hr>
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">
+
+</div>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        
+        
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.77dd55aebbd081b349dcd2d53f48602ec4de4bfefdb6dccfb814ef61fd25648b.js" integrity="sha256-d91VrrvQgbNJ3NLVP0hgLsTeS/79ttzPuBTvYf0lZIs=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

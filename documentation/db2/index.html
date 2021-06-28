@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.68.3" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Get Data from DB2 Log | My New Hugo Site</title>
+<meta name="description" content=""><meta property="og:title" content="Get Data from DB2 Log" />
+<meta property="og:description" content="A example to show how to get historical data from DB2 Log.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/documentation/db2/" />
+
+<meta itemprop="name" content="Get Data from DB2 Log">
+<meta itemprop="description" content="A example to show how to get historical data from DB2 Log.
+">
+
+<meta itemprop="wordCount" content="420">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Get Data from DB2 Log"/>
+<meta name="twitter:description" content="A example to show how to get historical data from DB2 Log.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.scss" as="style">
+<link href="/scss/main.scss" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+
+
+
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">My New Hugo Site</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/documentation/" ><i class='fa fa-heart'></i><span>Documentation</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+  
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    
+    
+    
+    
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-documentation-li">
+    
+      <a href="/documentation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-documentation"><span class="">RDB Log</span></a>
+    
+    
+      
+      <ul class="ul-1">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationdb2-li">
+    
+      <a href="/documentation/db2/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-documentationdb2"><span class="td-sidebar-nav-active-item">Get Data from DB2 Log</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationmssql-li">
+    
+      <a href="/documentation/mssql/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationmssql"><span class="">Get Data from MS SQL Server Log</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationoracle-li">
+    
+      <a href="/documentation/oracle/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationoracle"><span class="">Get Data from Oracle Log</span></a>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+    </ul>
+  </nav>
+</div>
+
+
+
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+  
+  
+  
+  
+  
+  
+  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  
+  
+  </div>
+
+
+            
+
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#增加并指定系统时间字段"><strong>增加并指定系统时间字段</strong></a></li>
+    <li><a href="#创建历史记录表">创建历史记录表</a></li>
+    <li><a href="#关联历史记录表">关联历史记录表</a></li>
+  </ul>
+</nav></div>
+
+
+
+            
+
+	
+		
+
+
+
+  
+  
+
+	
+		
+
+
+
+  
+  
+
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="http://example.org/documentation/">RDB Log</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="http://example.org/documentation/db2/">Get Data from DB2 Log</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Get Data from DB2 Log</h1>
+	<div class="lead">A example to show how to get historical data from DB2 Log.</div>
+	<header class="article-meta">
+		
+		
+			
+				
+
+
+			
+				
+
+
+			
+		
+		
+	</header>    
+	<p><img src="./media/image1.png" alt="">{width=&quot;2.89375in&rdquo; height=&quot;1.0604166666666666in&rdquo;}</p>
+<p>简要介绍DB2 V10.1上新出的Time Travel
+Query技术，探讨在Eximbills产品中使用该技术实现Audit
+Log相关功能的可能途径。</p>
+<p>Copyright  2012</p>
+<p>All rights reserved. This product and related documentation are
+protected by copyright and distributed under licenses restricting its
+use, copying, distribution and decompilation. No part of this product or
+related documentation may be reproduced in any form by any means without
+the prior written authorization of and its licensors, if any.</p>
+<p>Authors:   Dayu Bian</p>
+<hr>
+<p>Version:   1.0.0
+Date:      September 27, 2012
+Project:   Audit Log Report</p>
+<p>:</p>
+<p>File name:</p>
+<hr>
+<p>Path name:         <br>
+Internal reference:   Audit Log Report</p>
+<p>DOCUMENT HISTORY</p>
+<p><strong>[Version]{.underline}</strong>   <strong>[Date]{.underline}</strong>   <strong>[Narrative]{.underline}</strong></p>
+<hr>
+<p>1.0.0                       September 26, 2012       First Draft</p>
+<p>Contents</p>
+<p>1 背景描述 4</p>
+<p>2 设置步骤 5</p>
+<p>2.1 增加并指定系统时间字段 5</p>
+<p>2.2 创建历史记录表 5</p>
+<p>2.3 关联历史记录表 6</p>
+<p>3 验证Time Travel Query效果 7</p>
+<p>4 小结 8</p>
+<p>Sign-off Sheet 9</p>
+<h1 id="背景描述">背景描述</h1>
+<p>在上一篇报告<a href="Get%20Data%20from%20DB%20Log%20-%20Oracle.docx">[《Get Data from DB Log -
+Oracle.docx》]{.underline}</a>中，介绍了Oracle数据库的Flashback技术。利用该技术，应用程序与报表工具可以直接使用SQL语句读取到数据库中记录的变化历史资料，从而给Audit
+Log功能的实现提供了便利。</p>
+<p>IBM的DB2也不甘落后，在今年推出的V10.1上，提供了一个与Oracle
+Flashback功能相似的技术&mdash;&mdash;Time Travel
+Query，<a href="http://www-01.ibm.com/software/data/db2/linux-unix-windows/time-travel-query.html">[这里]{.underline}</a>有相关介绍。</p>
+<p>在具体的设置方法上，DB2与Oracle并不一样。在DB2上，对于需跟踪历史记录的table，采用的是定义相应的时序表（temporal
+table）的方法。</p>
+<p>在所提供的具体功能上，DB2与Oracle也不尽相同。在DB2上，一共提供了三种类型的时序表&mdash;&mdash;</p>
+<ul>
+<li>
+<p>以数据库系统时间为基准的System-period temporal tables(STT);</p>
+</li>
+<li>
+<p>以应用中的业务时间为基准的Application-period temporal tables(ATT);</p>
+</li>
+<li>
+<p>结合STT与ATT为一体的Bitemporal tables。</p>
+</li>
+</ul>
+<p>对于应用设计而言，DB2的Time Travel
+Query在功能上似乎更胜一筹。因为目前我们只对如何实现Audit
+Log感兴趣，所以本报告将只涉及到STT的使用方法。</p>
+<h1 id="设置步骤">设置步骤</h1>
+<p>假设有一个名为IMLC的表，现有如下几个简单字段&mdash;&mdash;</p>
+<p><img src="./media/image2.png" alt="orginal\_base\_tabel.PNG">{width=&quot;6.0in&rdquo;
+height=&quot;1.6229166666666666in&rdquo;}</p>
+<p>下面，我们将以此表为基础、分三个步骤设置对STT&mdash;&mdash;</p>
+<h2 id="增加并指定系统时间字段"><strong>增加并指定系统时间字段</strong></h2>
+<p>使用下面的SQL为IMLC增加用于存放系统时间的字段：</p>
+<p><strong>ALTER</strong> <strong>TABLE</strong> ADMINISTRATOR.IMLC</p>
+<p><strong>ADD</strong> <strong>COLUMN</strong> SYSTEM_START_TIME <strong>TIMESTAMP</strong>(12) <strong>NOT</strong>
+<strong>NULL</strong> GENERATED ALWAYS <strong>AS</strong> <strong>ROW</strong> <strong>BEGIN</strong></p>
+<p><strong>ADD</strong> <strong>COLUMN</strong> SYSTEM_END_TIME <strong>TIMESTAMP</strong>(12) <strong>NOT</strong> <strong>NULL</strong>
+GENERATED ALWAYS <strong>AS</strong> <strong>ROW</strong> <strong>END</strong></p>
+<p><strong>ADD</strong> <strong>COLUMN</strong> TRANS_ID <strong>TIMESTAMP</strong>(12) GENERATED ALWAYS <strong>AS</strong>
+<strong>TRANSACTION</strong> START ID;</p>
+<p>其中</p>
+<ul>
+<li>
+<p>SYSTEM_START_TIME为System-period start time，具体含义为：This
+column is the system time when this row came into existence (the
+time of the original insert or update operation that created this
+version of the row)</p>
+</li>
+<li>
+<p>SYSTEM_END_TIME为System-period end time, 具体含义为：This column
+is the system time when this row was modified with either a　newer
+version of the row or deleted from the table. The setting of
+this　timestamp to the following value indicates it is the current
+version of the row:　9999-12-30-00:00.00</p>
+</li>
+<li>
+<p>TRANS_ID为Transaction start ID，具体含义为：This column is the
+unique identifier for the transaction that modified or inserted the
+row; it can be used to find all records affected by the same
+transaction across multiple tables using Time Travel Query. A
+database can have many transactions occurring in a relatively short
+time span (milliseconds). To uniquely identify different
+transactions, a timestamp value provides subsecond granularity.</p>
+</li>
+</ul>
+<p>使用下面的SQL为IMLC指定系统时间字段：</p>
+<p><strong>ALTER</strong> <strong>TABLE</strong> ADMINISTRATOR.IMLC</p>
+<p><strong>ADD</strong> PERIOD SYSTEM_TIME ( SYSTEM_START_TIME, SYSTEM_END_TIME );</p>
+<h2 id="创建历史记录表">创建历史记录表</h2>
+<p>使用下面的SQL语句为IMLC创建历史记录表:</p>
+<p>CREATE TABLE IMLC_STT LIKE IMLC;</p>
+<p>ALTER TABLE IMLC_STT APPEND ON;</p>
+<p>后一条语句为可选项，但可提高IMLC_STT表的insert性能。</p>
+<h2 id="关联历史记录表">关联历史记录表</h2>
+<p>使用下面的SQL将两张表关联起来：</p>
+<blockquote>
+<p>ALTER TABLE IMLC ADD VERSIONING USE HISTORY TABLE IMLC_STT;</p>
+</blockquote>
+<p>至此，有关IMLC的STT设置就全部完成了。</p>
+<h1 id="验证time-travel-query效果">验证Time Travel Query效果</h1>
+<p>现在（2012年9月27日），我们对IMLC依次进行如下数据操作：</p>
+<ul>
+<li>
+<p>Insert一笔记录，LCNO为LC-0001;</p>
+</li>
+<li>
+<p>Update上笔记录；</p>
+</li>
+<li>
+<p>Delete上笔记录；</p>
+</li>
+<li>
+<p>Insert另一笔记录，LCNO为LC-0002.</p>
+</li>
+</ul>
+<p>然后，我们运行如下Time Travel Query语句：</p>
+<p>select * from IMLC</p>
+<p>for system_time between timestamp('2012-09-27') and
+timestamp('9999-12-31');</p>
+<p>下图为运行结果：</p>
+<p><img src="./media/image3.png" alt="imlc\_stt\_query.PNG">{width=&quot;6.0in&rdquo;
+height=&quot;0.6722222222222223in&rdquo;}</p>
+<p>显然，上述结果与Oracle Flashback Version
+Query基本上是类似的,DELETE的结果也反映在SYSTEM_END_TIME字段上（Oracle上相应字段为versions_endtime）；但在版本记录被删除或修改之前，DB2上的值为9999-12-30，而Oracle上则是null。</p>
+<h1 id="小结">小结</h1>
+<p>DB2 V10.1上的Time Travel Query功能，与Oracle上的Flashback
+Technology极其相似，都是只需在数据库上进行一些设置就可打开这些功能；而且，其接口形式都为SQL，故兼容于基于JDBC的各种报表工具，应用方面需要进行的改动也较小，可做为设计Audit
+Log Report功能的备选方案。</p>
+<h1 id="sign-off-sheet" class="ListParagraph">Sign-off Sheet</h1>
+<p>Internal Reference:</p>
+<hr>
+<p>Version:             <br>
+Authors:             <br>
+Sign off Required by:</p>
+<p>[Reviewed by]{.underline}   [Position / Comment]{.underline}   [Signature]{.underline}   [Date]{.underline}</p>
+<hr>
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">
+
+</div>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        
+        
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.77dd55aebbd081b349dcd2d53f48602ec4de4bfefdb6dccfb814ef61fd25648b.js" integrity="sha256-d91VrrvQgbNJ3NLVP0hgLsTeS/79ttzPuBTvYf0lZIs=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>
