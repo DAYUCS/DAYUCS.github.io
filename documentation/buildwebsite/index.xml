@@ -98,6 +98,59 @@ package information.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;hugo version
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;./media/image.png&#34; alt=&#34;The Hugo Version&#34;&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Run hugo command to create a new site.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo new site word2md
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The above will create a new Hugo site in a folder named &lt;em&gt;word2md&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Documentation: 3. Install Docsy</title>
+      <link>http://github.io/documentation/buildwebsite/docsy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://github.io/documentation/buildwebsite/docsy/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Docsy is a Hugo theme for creating great technical documentaion sites (&lt;a href=&#34;https://www.docsy.dev/&#34;&gt;https://www.docsy.dev/&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll install it on Ubuntu.&lt;/p&gt;
+&lt;h1 id=&#34;detailed-instructions&#34;&gt;Detailed Instructions:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To build or update our site&amp;rsquo;s CSS resources, we need PostCSS to create the final assets. Web must have
+a recent version of NodeJS installed on our machine so we can use npm.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo npm install -D autoprefixer
+sudo npm install -D postcss-cli
+sudo npm install -D postcss
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We&amp;rsquo;ve generate a hugo site named &lt;em&gt;word2md&lt;/em&gt;. Now we&amp;rsquo;ll add the Docs theme as a submodule.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd word2md
+git init
+git submodule add https://github.com/google/docsy.git themes/docsy
+echo &#39;theme = &amp;quot;docsy&amp;quot;&#39; &amp;gt;&amp;gt; config.toml
+git submodule update --init --recursive
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To build and preview your site locally:.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;By default, your site will be available at http://localhost:1313/&lt;/p&gt;
+&lt;/blockquote&gt;
 
       </description>
     </item>
