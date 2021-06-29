@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.68.3" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>3. Get Data from MS SQL Server Log | My New Hugo Site</title>
+<meta name="description" content=""><meta property="og:title" content="3. Get Data from MS SQL Server Log" />
+<meta property="og:description" content="A example to show how to get historical data from MS SQL Server Log.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://github.io/documentation/rdb/mssql/" />
+
+<meta itemprop="name" content="3. Get Data from MS SQL Server Log">
+<meta itemprop="description" content="A example to show how to get historical data from MS SQL Server Log.
+">
+
+<meta itemprop="wordCount" content="351">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="3. Get Data from MS SQL Server Log"/>
+<meta name="twitter:description" content="A example to show how to get historical data from MS SQL Server Log.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.28fb3aa092e3d1d97bfeaad13e27f40856b29252350248c2f434b3469e200b33.css" as="style">
+<link href="/scss/main.min.28fb3aa092e3d1d97bfeaad13e27f40856b29252350248c2f434b3469e200b33.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+
+
+
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">My New Hugo Site</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/documentation/" ><i class='fa fa-heart'></i><span>Documentation</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+  
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    
+    
+    
+    
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-documentation-li">
+    
+      <a href="/documentation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-documentation"><span class="">Documentation</span></a>
+    
+    
+      
+      <ul class="ul-1">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-documentationbuildwebsite-li">
+    
+      <a href="/documentation/buildwebsite/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-documentationbuildwebsite"><span class="">Build Web Site</span></a>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitepandoc-li">
+    
+      <a href="/documentation/buildwebsite/pandoc/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitepandoc"><span class="">1. Install Pandoc and Convert Docx</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitehugo-li">
+    
+      <a href="/documentation/buildwebsite/hugo/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitehugo"><span class="">2. Install Hugo</span></a>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-documentationrdb-li">
+    
+      <a href="/documentation/rdb/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-documentationrdb"><span class="">Example - RDB Log</span></a>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationrdboracle-li">
+    
+      <a href="/documentation/rdb/oracle/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationrdboracle"><span class="">1. Get Data from Oracle Log</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationrdbdb2-li">
+    
+      <a href="/documentation/rdb/db2/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationrdbdb2"><span class="">2. Get Data from DB2 Log</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationrdbmssql-li">
+    
+      <a href="/documentation/rdb/mssql/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-documentationrdbmssql"><span class="td-sidebar-nav-active-item">3. Get Data from MS SQL Server Log</span></a>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+    </ul>
+  </nav>
+</div>
+
+
+
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+  
+  
+  
+  
+  
+  
+  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  
+  
+  </div>
+
+
+            
+
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#enable-change-data-capture-for-the-database-exim">Enable Change Data Capture for the Database exim</a></li>
+    <li><a href="#enable-change-data-capture-for-the-table-imlc">Enable Change Data Capture for the Table IMLC</a></li>
+  </ul>
+</nav></div>
+
+
+
+            
+
+	
+		
+
+
+
+  
+  
+
+	
+		
+
+
+
+  
+  
+
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="http://github.io/documentation/">Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="http://github.io/documentation/rdb/">Example - RDB Log</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="http://github.io/documentation/rdb/mssql/">3. Get Data from MS SQL Server Log</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>3. Get Data from MS SQL Server Log</h1>
+	<div class="lead">A example to show how to get historical data from MS SQL Server Log.</div>
+	<header class="article-meta">
+		
+		
+			
+				
+
+
+			
+				
+
+
+			
+		
+		
+	</header>    
+	<p><img src="./media/image1.png" alt="">{width=&quot;2.89375in&rdquo; height=&quot;1.0604166666666666in&rdquo;}</p>
+<p>简要介绍MS SQL Server 2008上出现的Change Data
+Capture功能，探讨在Eximbills产品中使用该技术实现Audit
+Log相关功能的可能途径。</p>
+<p>Copyright  2012</p>
+<p>All rights reserved. This product and related documentation are
+protected by copyright and distributed under licenses restricting its
+use, copying, distribution and decompilation. No part of this product or
+related documentation may be reproduced in any form by any means without
+the prior written authorization of and its licensors, if any.</p>
+<p>Authors:   Dayu Bian</p>
+<hr>
+<p>Version:   1.0.0
+Date:      September 29, 2012
+Project:   Audit Log Report</p>
+<p>:</p>
+<p>File name:</p>
+<hr>
+<p>Path name:         <br>
+Internal reference:   Audit Log Report</p>
+<p>DOCUMENT HISTORY</p>
+<p><strong>[Version]{.underline}</strong>   <strong>[Date]{.underline}</strong>   <strong>[Narrative]{.underline}</strong></p>
+<hr>
+<p>1.0.0                       September 28, 2012       First Draft</p>
+<p>Contents</p>
+<p>1 背景描述 4</p>
+<p>2 设置步骤 5</p>
+<p>2.1 Enable Change Data Capture for the Database exim 5</p>
+<p>2.2 Enable Change Data Capture for the Table IMLC 5</p>
+<p>3 验证效果 8</p>
+<p>4 小结 10</p>
+<p>Sign-off Sheet 11</p>
+<h1 id="背景描述">背景描述</h1>
+<p>在上两篇报告<a href="">[《Get Data from DB Log -
+Oracle.docx》]{.underline}</a>、《<a href="Get%20Data%20from%20DB%20Log%20-%20DB2.docx">[Get
+Data From DB Log &ndash;
+DB2]{.underline}</a>》中，介绍了Oracle数据库的Flashback技术及DB2
+V10的Time Travel
+Query功能。利用这些技术，应用程序与报表工具可以直接使用SQL语句读取到数据库中记录的变化历史资料，从而给Audit
+Log功能的实现提供了便利。</p>
+<p>至于MS SQL Server，自2008版本起，推出了一个名为Change Data
+Capture的功能，同样也是在后台通过读取数据库日志的方法、自动生成数据库中记录的变化历史资料。<a href="http://msdn.microsoft.com/en-us/library/cc645937.aspx">[这儿]{.underline}</a>有相关介绍，当中有一幅图（如下）描述了其基本实现原理。</p>
+<p><img src="./media/image2.gif" alt="Change data capture dataflow">{width=&quot;2.4784722222222224in&rdquo;
+height=&quot;4.157638888888889in&rdquo;}</p>
+<h1 id="设置步骤">设置步骤</h1>
+<p>假设在数据库exim下有一个名为dbo.IMLC的表，现有如下几个简单字段&mdash;&mdash;</p>
+<p><img src="./media/image3.png" alt="imlc\_table.PNG">{width=&quot;4.042230971128609in&rdquo;
+height=&quot;1.458536745406824in&rdquo;}</p>
+<p>下面，我们将以此表为基础、分两个步骤设置Change Data Capture&mdash;&mdash;</p>
+<h2 id="enable-change-data-capture-for-the-database-exim">Enable Change Data Capture for the Database exim</h2>
+<p>执行以下Transact-SQL：</p>
+<blockquote>
+<p>USE exim</p>
+<p>GO</p>
+<p>EXEC sys.sp_cdc_enable_db</p>
+<p>GO</p>
+</blockquote>
+<h2 id="enable-change-data-capture-for-the-table-imlc">Enable Change Data Capture for the Table IMLC</h2>
+<p>执行以下Transact-SQL:</p>
+<blockquote>
+<p>USE exim</p>
+<p>GO</p>
+<p>EXEC sys.sp_cdc_enable_table</p>
+<p>@source_schema = N'dbo',</p>
+<p>@source_name = N'IMLC',</p>
+<p>@role_name = NULL,</p>
+<p>@supports_net_changes = 1</p>
+<p>GO</p>
+</blockquote>
+<p>至此，有关IMLC的Data Change
+Capture设置就全部完成了，系统还为此自动生成了两个Table-valued函数及一个Change
+table:</p>
+<p><img src="./media/image4.png" alt="imlc\_cdc\_functions.PNG">{width=&quot;5.386169072615923in&rdquo;
+height=&quot;5.980002187226597in&rdquo;}</p>
+<p><img src="./media/image5.png" alt="imlc\_cdc\_table.PNG">{width=&quot;6.0in&rdquo;
+height=&quot;3.2625in&rdquo;}</p>
+<h1 id="验证效果">验证效果</h1>
+<p>现在（2012年9月29日），我们对IMLC依次进行如下数据操作：</p>
+<ul>
+<li>
+<p>Insert一笔记录，LCNO为LC-0001;</p>
+</li>
+<li>
+<p>Update上笔记录；</p>
+</li>
+<li>
+<p>Delete上笔记录；</p>
+</li>
+<li>
+<p>Insert另一笔记录，LCNO为LC-0002.</p>
+</li>
+</ul>
+<p>然后，我们运行如下Transact-SQL：</p>
+<p>USE exim;</p>
+<p>GO</p>
+<p>DECLARE @begin_time datetime, @end_time datetime, @from_lsn
+binary(10), @to_lsn binary(10);</p>
+<p>-- Obtain the beginning of the time interval.</p>
+<p>SET @begin_time = GETDATE() -1;</p>
+<p>-- Obtain the end of the time interval.</p>
+<p>SET @end_time = GETDATE();</p>
+<p>-- Map the time interval to a change data capture query range.</p>
+<p>SET @from_lsn = sys.fn_cdc_map_time_to_lsn('smallest greater
+than or equal', @begin_time);</p>
+<p>SET @to_lsn = sys.fn_cdc_map_time_to_lsn('largest less than or
+equal', @end_time);</p>
+<p>-- Return the net changes occurring within the query window.</p>
+<p>SELECT * FROM cdc.fn_cdc_get_all_changes_dbo_IMLC(@from_lsn,
+@to_lsn, 'all');</p>
+<p>得到的结果如下图：</p>
+<p><img src="./media/image6.png" alt="imlc\_cdc\_query.PNG">{width=&quot;6.0in&rdquo;
+height=&quot;0.9104166666666667in&rdquo;}</p>
+<p>其中，__$operation的值的含义为：</p>
+<blockquote>
+<p>2 &ndash; Insert</p>
+<p>4 &ndash; Update
+(一次Update产生before/after两笔记录，由__$update_mask区分)</p>
+<p>1 &ndash; Delete</p>
+</blockquote>
+<p>此外，通过JDBC/SQL直接访问Change Table也可得到与上面类似的结果：</p>
+<p><img src="./media/image7.png" alt="imlc\_cdc\_jdbc\_sql.PNG">{width=&quot;6.0in&rdquo;
+height=&quot;2.088888888888889in&rdquo;}</p>
+<h1 id="小结">小结</h1>
+<p>MS SQL Server上的Change Data Capture功能，与Oracle上的Flashback
+Technology、DB2上的Time Travel
+Query极其相似，都是只需在数据库上进行一些设置就可打开这些功能；而且，其接口形式都为SQL，故兼容于基于JDBC的各种报表工具，应用方面需要进行的改动也较小，可做为设计Audit
+Log Report功能的备选方案。</p>
+<h1 id="sign-off-sheet" class="ListParagraph">Sign-off Sheet</h1>
+<p>Internal Reference:</p>
+<hr>
+<p>Version:             <br>
+Authors:             <br>
+Sign off Required by:</p>
+<p>[Reviewed by]{.underline}   [Position / Comment]{.underline}   [Signature]{.underline}   [Date]{.underline}</p>
+<hr>
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">
+
+</div>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        
+        
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.2e92bf2ffa204a26e25e14871581973de73fb4d1b14da10d9e838d9996783ad2.js" integrity="sha256-LpK/L/ogSibiXhSHFYGXPec/tNGxTaENnoONmZZ4OtI=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

@@ -3,31 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/documentation/db2/</loc>
+    <loc>http://github.io/documentation/rdb/oracle/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/documentation/mssql/</loc>
+    <loc>http://github.io/documentation/buildwebsite/pandoc/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/documentation/oracle/</loc>
+    <loc>http://github.io/documentation/rdb/db2/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/documentation/</loc>
+    <loc>http://github.io/documentation/buildwebsite/hugo/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>http://github.io/documentation/rdb/mssql/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://github.io/documentation/buildwebsite/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://github.io/documentation/</loc>
+  </url>
+  
+  <url>
+    <loc>http://github.io/documentation/rdb/</loc>
+  </url>
+  
+  <url>
+    <loc>http://github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>http://github.io/tags/</loc>
   </url>
   
 </urlset>

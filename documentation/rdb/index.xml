@@ -1,0 +1,575 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site – Example - RDB Log</title>
+    <link>http://github.io/documentation/rdb/</link>
+    <description>Recent content in Example - RDB Log on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://github.io/documentation/rdb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Documentation: 1. Get Data from Oracle Log</title>
+      <link>http://github.io/documentation/rdb/oracle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://github.io/documentation/rdb/oracle/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;img src=&#34;./media/image1.png&#34; alt=&#34;&#34;&gt;{width=&amp;quot;2.89375in&amp;rdquo; height=&amp;quot;1.0604166666666666in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;Get Historical Data from Database Log&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;介绍各种从Oracle数据库Log中读取交易历史数据的方法，重点展示Oracle
+Flashback技术的各种功能及用法，探讨在Eximbills产品中使用Oracle
+Flashback技术的可能性。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Copyright  2017&lt;/p&gt;
+&lt;p&gt;All rights reserved. This product and related documentation are
+protected by copyright and distributed under licenses restricting its
+use, copying, distribution and decompilation. No part of this product or
+related documentation may be reproduced in any form by any means without
+the prior written authorization of and its licensors, if any.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Authors:   Dayu Bian
+Version:   2.0.0
+Date:      April 7, 2017
+Project:   Audit Log Report&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;File name:         &lt;br&gt;
+Path name:         &lt;br&gt;
+Internal reference:   Audit Log Report&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;DOCUMENT HISTORY&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;[Version]{.underline}&lt;/strong&gt;   &lt;strong&gt;[Date]{.underline}&lt;/strong&gt;   &lt;strong&gt;[Narrative]{.underline}&lt;/strong&gt;
+1.0.0                       September 15, 2011       First Draft
+2.0.0                       April 7, 2017            Update for Oracle 12c Release 2 and new scenario&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;目录&#34; class=&#34;TOC&#34;&gt;目录&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;#%E8%83%8C%E6%99%AF%E6%8F%8F%E8%BF%B0&#34;&gt;[1]{.underline} [背景描述]{.underline} 4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#%E5%8E%86%E5%8F%B2%E8%B5%84%E6%96%99%E7%9A%84%E7%94%A8%E9%80%94&#34;&gt;[1.1]{.underline} [历史资料的用途]{.underline} 4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#%E5%8E%86%E5%8F%B2%E8%B5%84%E6%96%99%E7%9A%84%E4%BF%9D%E7%AE%A1%E4%B8%8E%E8%8E%B7%E5%8F%96&#34;&gt;[1.2]{.underline} [历史资料的保管与获取]{.underline}
+4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E5%BA%93transaction-log%E5%86%85%E5%AE%B9%E7%9A%84%E6%96%B9%E6%B3%95&#34;&gt;[1.3]{.underline} [获取数据库Transaction Log内容的方法]{.underline}
+5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%A1%E8%AE%A1%E7%9A%84%E4%B8%93%E7%94%A8%E5%B7%A5%E5%85%B7&#34;&gt;[1.4]{.underline} [数据库审计的专用工具]{.underline}
+5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#oracle-flashback-technology&#34;&gt;[2]{.underline} [Oracle Flashback Technology]{.underline}
+7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE&#34;&gt;[2.1]{.underline} [系统设置]{.underline} 7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#undo%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE&#34;&gt;[2.1.1]{.underline} [UNDO参数设置]{.underline} 7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#flashback-data-archive%E8%AE%BE%E7%BD%AE&#34;&gt;[2.1.2]{.underline} [Flashback Data archive设置]{.underline}
+9&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#flashback-transaction-query%E8%AE%BE%E7%BD%AE&#34;&gt;[2.1.3]{.underline} [Flashback Transaction Query设置]{.underline}
+11&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#flashback-transaction%E8%AE%BE%E7%BD%AE&#34;&gt;[2.1.4]{.underline} [Flashback Transaction设置]{.underline}
+11&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#%E5%8A%9F%E8%83%BD%E8%BF%90%E7%94%A8&#34;&gt;[2.2]{.underline} [功能运用]{.underline} 11&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#%E5%9C%A8eximbills%E4%B8%AD%E4%BD%BF%E7%94%A8oracle-flashback-technology&#34;&gt;[2.3]{.underline} [在Eximbills中使用Oracle Flashback
+Technology]{.underline}
+12&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#%E5%B0%8F%E7%BB%93&#34;&gt;[3]{.underline} [小结]{.underline} 14&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#sign-off-sheet&#34;&gt;[Sign-off Sheet]{.underline} 15&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;背景描述&#34;&gt;背景描述&lt;/h1&gt;
+&lt;h2 id=&#34;历史资料的用途&#34;&gt;&lt;strong&gt;历史资料的用途&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;交易及非交易数据的历史资料，对Eximbills这样的银行应用系统来说，在很多地方都会被用到。例如&amp;mdash;&amp;mdash;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;交易资料的核对、查询与报表;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;审计功能(Audit);&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对错误交易的更正(Cancellation)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;历史资料的保管与获取&#34;&gt;&lt;strong&gt;历史资料的保管与获取&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;一个系统，如何保管历史资料，有两类方法&amp;mdash;&amp;mdash;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;应用系统自已保管历史资料，在设计时就充分考虑到历史资料的各种可能用途，规划好历史资料的归档、清理等功能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;利用数据库Log机制，从Log中获取应用所需的历史资料。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;前一种方法，其优点在于既不依赖于数据库的Log实现机制，也不依赖于第三方数据库工具，做到了实现一次、各个数据库都通用。但其缺点在于交易处理时需要额外处理&amp;quot;历史&amp;quot;资料的读写，相对增加了数据库操作，从而会对交易处理的性能产生一定的负面影响。&lt;/p&gt;
+&lt;p&gt;后一种方法，其优缺点恰好与前者相反。由于主流的关系型数据库，在SQL语句被真正落实到磁盘系统之前，都是要先记数据库交易Log，因此Log中实际已记录了数据的历史记录，利用数据库Log机制保管与获取历史资料，不仅可以通过节省交易处理时对数据库的存取来提高性能，而且可利用数据库Log管理机制实现历史资料的归档、清理。但缺点也很明显，这类方法严重依赖于数据库自身所提供的、非标准化的Log存取接口，或第三方软件工具，实现不了各数据库兼容。&lt;/p&gt;
+&lt;p&gt;因此，当我们强调应用要兼容各种数据库系统时，多半会采取前一种方法。比如在Eximbills中就有Event表，我们猜测其设计的本意应该是存放Master的历史资料，只不过隨着产品的演进，后来出现了改变Master却不增加Event记录的交易路径，从而给审计功能的实现提了个难题。&lt;/p&gt;
+&lt;p&gt;相反，当我们强调客户满意度、面对特定用户、遭遇系统性能瓶颈时，则倾向于使用后一种方法。&lt;/p&gt;
+&lt;h2 id=&#34;获取数据库transaction-log内容的方法&#34;&gt;&lt;strong&gt;获取数据库Transaction Log内容的方法&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;众所周知，数据库Log并非是以明码、文本方式存放的，所以想获取其内容需费一些周折。&lt;/p&gt;
+&lt;p&gt;已知的获取Log内容的方式有如下这些&amp;mdash;&amp;mdash;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;IBM InfoSphere Change Data Capture 一种实时的数据复制/转换工具，直接
+从各种数据库Log中捕获数据变化，并可对数据进行一定的转换处理，最后写入到目标数据库中。
+使用该工具，应用可从目标数据库中以SQL语句获取所需的Log内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Oracle Golden Gate 与IBM InfoSphere Change Data
+Capture类似的实时数据复制工具，可直接
+从各种数据库Log中捕获数据变化，并可对数据进行一定的转换处理，最后写入到目标数据库中。
+使用该工具，应用可从目标数据库中以SQL语句获取所需的Log内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Oracle LogMiner Oracle数据库自带的Redo
+Log分析工具，可分析Oracle在线与离线Redo Log，从中得到所有DML(Data
+Manipulation Language)语句，应用可根据这些SQL语句跟踪数据变化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IBM DB2 Recovery Expert DB2数据恢复工具，其Log分析功能可以从DB2
+transaction log中读取并输出数据变化内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IBM db2ReadLog API DB2自带的C/C++
+API，通过调用这些API，C/C++程序可以读取DB2 log内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Oracle Flashback Technology
+Oracle闪回技术是Oracle数据库特有的一系列功能项。利用这些功能项，应用可以用SQL语句查询数据历史记录、事务的回滚SQL语句等有用信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;数据库审计的专用工具&#34;&gt;&lt;strong&gt;数据库审计的专用工具&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;如果我们获取数据库Log内容的目的仅仅是为了数据库审计，其实还有两个专门用于数据库安全审计的软件值得考虑：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Oracle Audit Vault&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IBM Security Guardium （以前叫做InfoSphere Guardium)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这两个软件可以从多种数据库中抓取Log，提供全方位的数据安全保护与审计。一些非常通用的企业应用，也会结合这些安全审计工具，定制相应的审计功能。&lt;/p&gt;
+&lt;p&gt;无庸置疑，这类专用工具当然会提供诸如Before/After之类的报表功能：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image2.png&#34; alt=&#34;&#34;&gt;{width=&amp;quot;6.0in&amp;rdquo; height=&amp;quot;3.25in&amp;rdquo;}&lt;/p&gt;
+&lt;h1 id=&#34;oracle-flashback-technology&#34;&gt;Oracle Flashback Technology&lt;/h1&gt;
+&lt;p&gt;就Oracle数据库而言，Flashback
+Technology是系统自带的功能项，无需借助任何其他第三方工具，且使用也非常简便,只要经过一些必要的设置，应用就可以通过SQL语句得到数据库对象过去某个时点的快照。具体的功能描述，请参考Oracle手册：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://docs.oracle.com/database/122/ADFNS/flashback.htm#ADFNS1008&#34;&gt;[http://docs.oracle.com/database/122/ADFNS/flashback.htm#ADFNS1008]{.underline}&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;系统设置&#34;&gt;&lt;strong&gt;系统设置&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;undo参数设置&#34;&gt;UNDO参数设置&lt;/h3&gt;
+&lt;p&gt;可用show parameters undo语句显示Oracle数据库中UNDO参数的设置。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image3.png&#34; alt=&#34;&#34;&gt;{width=&amp;quot;6.0in&amp;rdquo; height=&amp;quot;5.93125in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;其中undo_management及undo_tablespace是安装缺省值，且UNDOTBS1是一个自动扩展的tablespace。而undo_retention的值是28800秒，也就是8小时，表明UNDO信息保留的时长为8小时。必须注意，undo_retention所指定的时长是否有效，实际会受UNDOTBS1的大小限制，由于我们这儿的UNDOTBS1是自动扩展的，所以能保证UNDO信息保留8小时。下图为UNDOTBS1的相关设置：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image4.png&#34; alt=&#34;&#34;&gt;{width=&amp;quot;6.0in&amp;rdquo; height=&amp;quot;7.845833333333333in&amp;rdquo;}&lt;/p&gt;
+&lt;h3 id=&#34;flashback-data-archive设置&#34;&gt;Flashback Data archive设置&lt;/h3&gt;
+&lt;p&gt;对于超出undo_retention时长的交易历史记录，Undo Management将会自动从UNDO
+tablespace中移除。为将交易历史记录保留更长时间，Oracle提供了Flashback
+Data Archive功能。&lt;/p&gt;
+&lt;p&gt;为使用些功能
+，我们首先建立了一个NOLOGGING的tablespace&amp;mdash;&amp;mdash;FBATBS，如下图所示：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image4.png&#34; alt=&#34;&#34;&gt;{width=&amp;quot;6.0in&amp;rdquo; height=&amp;quot;7.845833333333333in&amp;rdquo;}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后，使用下面SQL语句建立一个缺省的Flashback Archive:&lt;/p&gt;
+&lt;p&gt;create flashback archive default &lt;em&gt;fla&lt;/em&gt; tablespace &lt;em&gt;fbatbs&lt;/em&gt; retention &lt;em&gt;30
+day&lt;/em&gt;;&lt;/p&gt;
+&lt;p&gt;这里的retention指定了交易历史记录在flashback
+archive中保留的时长，单位可以是天、月、年。&lt;/p&gt;
+&lt;p&gt;最后，使用alter table语句一一指定各个需要保留历史记录的表：&lt;/p&gt;
+&lt;p&gt;ALTER TABLE eximbills.imlc flashback archive;&lt;/p&gt;
+&lt;h3 id=&#34;flashback-transaction-query设置&#34;&gt;Flashback Transaction Query设置&lt;/h3&gt;
+&lt;p&gt;如果我们需要查询在一个数据库事务中做了哪些数据更新，则需要做如下设置：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ALTER DATABASE ADD SUPPLEMENTAL LOG DATA;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;flashback-transaction设置&#34;&gt;Flashback Transaction设置&lt;/h3&gt;
+&lt;p&gt;如果我们希望通过调用过程DBMS_FLASHBACK.TRANSACTION_BACKOUT回滚已提交的数据库事务，则需要做如下设置(第一条命令需要数据库以startup
+mount方式启动，此时数据库在非Open状态下，才能被正确执行)：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ALTER DATABASE ARCHIVELOG;&lt;/p&gt;
+&lt;p&gt;ALTER SYSTEM ARCHIVE LOG CURRENT;&lt;/p&gt;
+&lt;p&gt;ALTER DATABASE ADD SUPPLEMENTAL LOG DATA;&lt;/p&gt;
+&lt;p&gt;ALTER DATABASE ADD SUPPLEMENTAL LOG DATA (PRIMARY KEY) COLUMNS;&lt;/p&gt;
+&lt;p&gt;ALTER DATABASE ADD SUPPLEMENTAL LOG DATA (FOREIGN KEY) COLUMNS;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;需要注意的是，在真正的银行生产环境中，Eximbills所使用的数据库用户不会是DBA，所以除上述设置项目外，还会涉及到一些数据库权限设置，具体方法请参阅相关文档。&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;功能运用&#34;&gt;&lt;strong&gt;功能运用&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;接下去的两幅图，分别显示了Flashback Version Query与Flashback Transaction
+Query的具体效果：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image5.png&#34; alt=&#34;&#34;&gt;{width=&amp;quot;6.0in&amp;rdquo; height=&amp;quot;3.1347222222222224in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image6.png&#34; alt=&#34;&#34;&gt;{width=&amp;quot;6.0in&amp;rdquo; height=&amp;quot;2.651388888888889in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;需要注意的是，我们在实际测试中发现，Flashback Version
+Query有一个短暂的延时，即交易提交后，我们虽可通过Flashback Version
+Query立即查询到之前的最新版本的栏位versions_endscn与versions_endtime从null变为相应的时间戳，但当前最新版本却不会立刻显现于Flashback
+Version Query。总之，会有一个短暂的延时。&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;在eximbills中使用oracle-flashback-technology&#34;&gt;在Eximbills中使用Oracle Flashback Technology&lt;/h2&gt;
+&lt;p&gt;从前面的演示效果，我们不难发现，利用Oracle Flashback Version
+Query，Eximbills可以回溯数据库记录的演进历史，从而可据此实现对历史数据的查询、生成
+Audit Log Report、得到Cancellation所需的历史记录。利用Oracle Flashback
+Transaction Query，我们甚至可以得到Cancellation所需的Undo SQL语句。&lt;/p&gt;
+&lt;p&gt;为更为详细地演示Oracle Flashback
+Technology，我们建立了eximbills.imlc表，具体表结构如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image7.png&#34; alt=&#34;&#34;&gt;{width=&amp;quot;6.0in&amp;rdquo; height=&amp;quot;1.7097222222222221in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;为了得到Before/After Value Report的效果，我们使用如下SQL建立了一个View:&lt;/p&gt;
+&lt;p&gt;create view eximbills.imlc_fb_view as&lt;/p&gt;
+&lt;p&gt;SELECT versions_startscn, versions_endscn, versions_starttime,
+versions_endtime, versions_xid, &#39;B&#39; as versions_operation, lc_no,
+lc_ccy, lc_amt, lc_event, exim_user, exim_trx_id&lt;/p&gt;
+&lt;p&gt;FROM eximbills.imlc versions BETWEEN SCN MINVALUE AND MAXVALUE&lt;/p&gt;
+&lt;p&gt;where versions_endscn is not null and versions_endscn in (select
+versions_startscn from eximbills.imlc versions BETWEEN SCN MINVALUE AND
+MAXVALUE where versions_startscn is not null)&lt;/p&gt;
+&lt;p&gt;union&lt;/p&gt;
+&lt;p&gt;SELECT versions_startscn, versions_endscn, versions_starttime,
+versions_endtime, versions_xid, versions_operation, lc_no, lc_ccy,
+lc_amt, lc_event, exim_user, exim_trx_id&lt;/p&gt;
+&lt;p&gt;FROM eximbills.imlc versions BETWEEN SCN MINVALUE AND MAXVALUE;&lt;/p&gt;
+&lt;p&gt;针对上述view，使用如下SQL：&lt;/p&gt;
+&lt;p&gt;select * from eximbills.imlc_fb_view where versions_operation is not
+null order by lc_no, versions_endtime asc, versions_operation desc;&lt;/p&gt;
+&lt;p&gt;则得到下面图中的结果：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image8.png&#34; alt=&#34;&#34;&gt;{width=&amp;quot;6.0in&amp;rdquo; height=&amp;quot;2.6083333333333334in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;当然，我们也可以不用如此复杂的SQL语句、转而在程序中直接操纵数据集得到完全相似的结果。&lt;/p&gt;
+&lt;p&gt;这里强调一下，在使用Oracle Flashback
+Technology时，我们需要注意以下几点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Flashback Version Query的响应有一定延时;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Flashback Version
+Query所返回的结果中没有数据库用户信息，因此需要应用在相应表中增加用户信息字段，并在更新数据库资料时同时更新这些字段;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Flashback Version Query所返回的结果中不包括直接的SQL
+Delete信息，但Delete的效果体现在versions_endscn及versions_endtime栏位的值上。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;小结&#34;&gt;小结&lt;/h1&gt;
+&lt;p&gt;有若干种方法从数据库Log中读取交易的历史记录，就Oracle数据库而言，Flashback
+Technology是数据库自带的功能，只需在数据库上进行一些设置就可打开这些功能，而且其接口形式为SQL语句，故兼容于基于JDBC的各种报表工具，应用方面需要进行的改动也较小，可作为设计Audit
+Log Report功能的备选方案。&lt;/p&gt;
+&lt;h1 id=&#34;sign-off-sheet&#34; class=&#34;ListParagraph&#34;&gt;Sign-off Sheet&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Internal Reference:  &lt;br&gt;
+Version:             &lt;br&gt;
+Authors:             &lt;br&gt;
+Sign off Required by:&lt;/p&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;[Reviewed by]{.underline}   [Position / Comment]{.underline}   [Signature]{.underline}   [Date]{.underline}&lt;/p&gt;
+&lt;hr&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Documentation: 2. Get Data from DB2 Log</title>
+      <link>http://github.io/documentation/rdb/db2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://github.io/documentation/rdb/db2/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;img src=&#34;./media/image1.png&#34; alt=&#34;&#34;&gt;{width=&amp;quot;2.89375in&amp;rdquo; height=&amp;quot;1.0604166666666666in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;简要介绍DB2 V10.1上新出的Time Travel
+Query技术，探讨在Eximbills产品中使用该技术实现Audit
+Log相关功能的可能途径。&lt;/p&gt;
+&lt;p&gt;Copyright  2012&lt;/p&gt;
+&lt;p&gt;All rights reserved. This product and related documentation are
+protected by copyright and distributed under licenses restricting its
+use, copying, distribution and decompilation. No part of this product or
+related documentation may be reproduced in any form by any means without
+the prior written authorization of and its licensors, if any.&lt;/p&gt;
+&lt;p&gt;Authors:   Dayu Bian&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Version:   1.0.0
+Date:      September 27, 2012
+Project:   Audit Log Report&lt;/p&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;p&gt;File name:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Path name:         &lt;br&gt;
+Internal reference:   Audit Log Report&lt;/p&gt;
+&lt;p&gt;DOCUMENT HISTORY&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;[Version]{.underline}&lt;/strong&gt;   &lt;strong&gt;[Date]{.underline}&lt;/strong&gt;   &lt;strong&gt;[Narrative]{.underline}&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;1.0.0                       September 26, 2012       First Draft&lt;/p&gt;
+&lt;p&gt;Contents&lt;/p&gt;
+&lt;p&gt;1 背景描述 4&lt;/p&gt;
+&lt;p&gt;2 设置步骤 5&lt;/p&gt;
+&lt;p&gt;2.1 增加并指定系统时间字段 5&lt;/p&gt;
+&lt;p&gt;2.2 创建历史记录表 5&lt;/p&gt;
+&lt;p&gt;2.3 关联历史记录表 6&lt;/p&gt;
+&lt;p&gt;3 验证Time Travel Query效果 7&lt;/p&gt;
+&lt;p&gt;4 小结 8&lt;/p&gt;
+&lt;p&gt;Sign-off Sheet 9&lt;/p&gt;
+&lt;h1 id=&#34;背景描述&#34;&gt;背景描述&lt;/h1&gt;
+&lt;p&gt;在上一篇报告&lt;a href=&#34;Get%20Data%20from%20DB%20Log%20-%20Oracle.docx&#34;&gt;[《Get Data from DB Log -
+Oracle.docx》]{.underline}&lt;/a&gt;中，介绍了Oracle数据库的Flashback技术。利用该技术，应用程序与报表工具可以直接使用SQL语句读取到数据库中记录的变化历史资料，从而给Audit
+Log功能的实现提供了便利。&lt;/p&gt;
+&lt;p&gt;IBM的DB2也不甘落后，在今年推出的V10.1上，提供了一个与Oracle
+Flashback功能相似的技术&amp;mdash;&amp;mdash;Time Travel
+Query，&lt;a href=&#34;http://www-01.ibm.com/software/data/db2/linux-unix-windows/time-travel-query.html&#34;&gt;[这里]{.underline}&lt;/a&gt;有相关介绍。&lt;/p&gt;
+&lt;p&gt;在具体的设置方法上，DB2与Oracle并不一样。在DB2上，对于需跟踪历史记录的table，采用的是定义相应的时序表（temporal
+table）的方法。&lt;/p&gt;
+&lt;p&gt;在所提供的具体功能上，DB2与Oracle也不尽相同。在DB2上，一共提供了三种类型的时序表&amp;mdash;&amp;mdash;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;以数据库系统时间为基准的System-period temporal tables(STT);&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以应用中的业务时间为基准的Application-period temporal tables(ATT);&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;结合STT与ATT为一体的Bitemporal tables。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于应用设计而言，DB2的Time Travel
+Query在功能上似乎更胜一筹。因为目前我们只对如何实现Audit
+Log感兴趣，所以本报告将只涉及到STT的使用方法。&lt;/p&gt;
+&lt;h1 id=&#34;设置步骤&#34;&gt;设置步骤&lt;/h1&gt;
+&lt;p&gt;假设有一个名为IMLC的表，现有如下几个简单字段&amp;mdash;&amp;mdash;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image2.png&#34; alt=&#34;orginal\_base\_tabel.PNG&#34;&gt;{width=&amp;quot;6.0in&amp;rdquo;
+height=&amp;quot;1.6229166666666666in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;下面，我们将以此表为基础、分三个步骤设置对STT&amp;mdash;&amp;mdash;&lt;/p&gt;
+&lt;h2 id=&#34;增加并指定系统时间字段&#34;&gt;&lt;strong&gt;增加并指定系统时间字段&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;使用下面的SQL为IMLC增加用于存放系统时间的字段：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ALTER&lt;/strong&gt; &lt;strong&gt;TABLE&lt;/strong&gt; ADMINISTRATOR.IMLC&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ADD&lt;/strong&gt; &lt;strong&gt;COLUMN&lt;/strong&gt; SYSTEM_START_TIME &lt;strong&gt;TIMESTAMP&lt;/strong&gt;(12) &lt;strong&gt;NOT&lt;/strong&gt;
+&lt;strong&gt;NULL&lt;/strong&gt; GENERATED ALWAYS &lt;strong&gt;AS&lt;/strong&gt; &lt;strong&gt;ROW&lt;/strong&gt; &lt;strong&gt;BEGIN&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ADD&lt;/strong&gt; &lt;strong&gt;COLUMN&lt;/strong&gt; SYSTEM_END_TIME &lt;strong&gt;TIMESTAMP&lt;/strong&gt;(12) &lt;strong&gt;NOT&lt;/strong&gt; &lt;strong&gt;NULL&lt;/strong&gt;
+GENERATED ALWAYS &lt;strong&gt;AS&lt;/strong&gt; &lt;strong&gt;ROW&lt;/strong&gt; &lt;strong&gt;END&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ADD&lt;/strong&gt; &lt;strong&gt;COLUMN&lt;/strong&gt; TRANS_ID &lt;strong&gt;TIMESTAMP&lt;/strong&gt;(12) GENERATED ALWAYS &lt;strong&gt;AS&lt;/strong&gt;
+&lt;strong&gt;TRANSACTION&lt;/strong&gt; START ID;&lt;/p&gt;
+&lt;p&gt;其中&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;SYSTEM_START_TIME为System-period start time，具体含义为：This
+column is the system time when this row came into existence (the
+time of the original insert or update operation that created this
+version of the row)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SYSTEM_END_TIME为System-period end time, 具体含义为：This column
+is the system time when this row was modified with either a　newer
+version of the row or deleted from the table. The setting of
+this　timestamp to the following value indicates it is the current
+version of the row:　9999-12-30-00:00.00&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TRANS_ID为Transaction start ID，具体含义为：This column is the
+unique identifier for the transaction that modified or inserted the
+row; it can be used to find all records affected by the same
+transaction across multiple tables using Time Travel Query. A
+database can have many transactions occurring in a relatively short
+time span (milliseconds). To uniquely identify different
+transactions, a timestamp value provides subsecond granularity.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用下面的SQL为IMLC指定系统时间字段：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ALTER&lt;/strong&gt; &lt;strong&gt;TABLE&lt;/strong&gt; ADMINISTRATOR.IMLC&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ADD&lt;/strong&gt; PERIOD SYSTEM_TIME ( SYSTEM_START_TIME, SYSTEM_END_TIME );&lt;/p&gt;
+&lt;h2 id=&#34;创建历史记录表&#34;&gt;创建历史记录表&lt;/h2&gt;
+&lt;p&gt;使用下面的SQL语句为IMLC创建历史记录表:&lt;/p&gt;
+&lt;p&gt;CREATE TABLE IMLC_STT LIKE IMLC;&lt;/p&gt;
+&lt;p&gt;ALTER TABLE IMLC_STT APPEND ON;&lt;/p&gt;
+&lt;p&gt;后一条语句为可选项，但可提高IMLC_STT表的insert性能。&lt;/p&gt;
+&lt;h2 id=&#34;关联历史记录表&#34;&gt;关联历史记录表&lt;/h2&gt;
+&lt;p&gt;使用下面的SQL将两张表关联起来：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ALTER TABLE IMLC ADD VERSIONING USE HISTORY TABLE IMLC_STT;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;至此，有关IMLC的STT设置就全部完成了。&lt;/p&gt;
+&lt;h1 id=&#34;验证time-travel-query效果&#34;&gt;验证Time Travel Query效果&lt;/h1&gt;
+&lt;p&gt;现在（2012年9月27日），我们对IMLC依次进行如下数据操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Insert一笔记录，LCNO为LC-0001;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update上笔记录；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delete上笔记录；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Insert另一笔记录，LCNO为LC-0002.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后，我们运行如下Time Travel Query语句：&lt;/p&gt;
+&lt;p&gt;select * from IMLC&lt;/p&gt;
+&lt;p&gt;for system_time between timestamp(&#39;2012-09-27&#39;) and
+timestamp(&#39;9999-12-31&#39;);&lt;/p&gt;
+&lt;p&gt;下图为运行结果：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image3.png&#34; alt=&#34;imlc\_stt\_query.PNG&#34;&gt;{width=&amp;quot;6.0in&amp;rdquo;
+height=&amp;quot;0.6722222222222223in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;显然，上述结果与Oracle Flashback Version
+Query基本上是类似的,DELETE的结果也反映在SYSTEM_END_TIME字段上（Oracle上相应字段为versions_endtime）；但在版本记录被删除或修改之前，DB2上的值为9999-12-30，而Oracle上则是null。&lt;/p&gt;
+&lt;h1 id=&#34;小结&#34;&gt;小结&lt;/h1&gt;
+&lt;p&gt;DB2 V10.1上的Time Travel Query功能，与Oracle上的Flashback
+Technology极其相似，都是只需在数据库上进行一些设置就可打开这些功能；而且，其接口形式都为SQL，故兼容于基于JDBC的各种报表工具，应用方面需要进行的改动也较小，可做为设计Audit
+Log Report功能的备选方案。&lt;/p&gt;
+&lt;h1 id=&#34;sign-off-sheet&#34; class=&#34;ListParagraph&#34;&gt;Sign-off Sheet&lt;/h1&gt;
+&lt;p&gt;Internal Reference:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Version:             &lt;br&gt;
+Authors:             &lt;br&gt;
+Sign off Required by:&lt;/p&gt;
+&lt;p&gt;[Reviewed by]{.underline}   [Position / Comment]{.underline}   [Signature]{.underline}   [Date]{.underline}&lt;/p&gt;
+&lt;hr&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Documentation: 3. Get Data from MS SQL Server Log</title>
+      <link>http://github.io/documentation/rdb/mssql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://github.io/documentation/rdb/mssql/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;img src=&#34;./media/image1.png&#34; alt=&#34;&#34;&gt;{width=&amp;quot;2.89375in&amp;rdquo; height=&amp;quot;1.0604166666666666in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;简要介绍MS SQL Server 2008上出现的Change Data
+Capture功能，探讨在Eximbills产品中使用该技术实现Audit
+Log相关功能的可能途径。&lt;/p&gt;
+&lt;p&gt;Copyright  2012&lt;/p&gt;
+&lt;p&gt;All rights reserved. This product and related documentation are
+protected by copyright and distributed under licenses restricting its
+use, copying, distribution and decompilation. No part of this product or
+related documentation may be reproduced in any form by any means without
+the prior written authorization of and its licensors, if any.&lt;/p&gt;
+&lt;p&gt;Authors:   Dayu Bian&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Version:   1.0.0
+Date:      September 29, 2012
+Project:   Audit Log Report&lt;/p&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;p&gt;File name:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Path name:         &lt;br&gt;
+Internal reference:   Audit Log Report&lt;/p&gt;
+&lt;p&gt;DOCUMENT HISTORY&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;[Version]{.underline}&lt;/strong&gt;   &lt;strong&gt;[Date]{.underline}&lt;/strong&gt;   &lt;strong&gt;[Narrative]{.underline}&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;1.0.0                       September 28, 2012       First Draft&lt;/p&gt;
+&lt;p&gt;Contents&lt;/p&gt;
+&lt;p&gt;1 背景描述 4&lt;/p&gt;
+&lt;p&gt;2 设置步骤 5&lt;/p&gt;
+&lt;p&gt;2.1 Enable Change Data Capture for the Database exim 5&lt;/p&gt;
+&lt;p&gt;2.2 Enable Change Data Capture for the Table IMLC 5&lt;/p&gt;
+&lt;p&gt;3 验证效果 8&lt;/p&gt;
+&lt;p&gt;4 小结 10&lt;/p&gt;
+&lt;p&gt;Sign-off Sheet 11&lt;/p&gt;
+&lt;h1 id=&#34;背景描述&#34;&gt;背景描述&lt;/h1&gt;
+&lt;p&gt;在上两篇报告&lt;a href=&#34;&#34;&gt;[《Get Data from DB Log -
+Oracle.docx》]{.underline}&lt;/a&gt;、《&lt;a href=&#34;Get%20Data%20from%20DB%20Log%20-%20DB2.docx&#34;&gt;[Get
+Data From DB Log &amp;ndash;
+DB2]{.underline}&lt;/a&gt;》中，介绍了Oracle数据库的Flashback技术及DB2
+V10的Time Travel
+Query功能。利用这些技术，应用程序与报表工具可以直接使用SQL语句读取到数据库中记录的变化历史资料，从而给Audit
+Log功能的实现提供了便利。&lt;/p&gt;
+&lt;p&gt;至于MS SQL Server，自2008版本起，推出了一个名为Change Data
+Capture的功能，同样也是在后台通过读取数据库日志的方法、自动生成数据库中记录的变化历史资料。&lt;a href=&#34;http://msdn.microsoft.com/en-us/library/cc645937.aspx&#34;&gt;[这儿]{.underline}&lt;/a&gt;有相关介绍，当中有一幅图（如下）描述了其基本实现原理。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image2.gif&#34; alt=&#34;Change data capture dataflow&#34;&gt;{width=&amp;quot;2.4784722222222224in&amp;rdquo;
+height=&amp;quot;4.157638888888889in&amp;rdquo;}&lt;/p&gt;
+&lt;h1 id=&#34;设置步骤&#34;&gt;设置步骤&lt;/h1&gt;
+&lt;p&gt;假设在数据库exim下有一个名为dbo.IMLC的表，现有如下几个简单字段&amp;mdash;&amp;mdash;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image3.png&#34; alt=&#34;imlc\_table.PNG&#34;&gt;{width=&amp;quot;4.042230971128609in&amp;rdquo;
+height=&amp;quot;1.458536745406824in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;下面，我们将以此表为基础、分两个步骤设置Change Data Capture&amp;mdash;&amp;mdash;&lt;/p&gt;
+&lt;h2 id=&#34;enable-change-data-capture-for-the-database-exim&#34;&gt;Enable Change Data Capture for the Database exim&lt;/h2&gt;
+&lt;p&gt;执行以下Transact-SQL：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;USE exim&lt;/p&gt;
+&lt;p&gt;GO&lt;/p&gt;
+&lt;p&gt;EXEC sys.sp_cdc_enable_db&lt;/p&gt;
+&lt;p&gt;GO&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;enable-change-data-capture-for-the-table-imlc&#34;&gt;Enable Change Data Capture for the Table IMLC&lt;/h2&gt;
+&lt;p&gt;执行以下Transact-SQL:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;USE exim&lt;/p&gt;
+&lt;p&gt;GO&lt;/p&gt;
+&lt;p&gt;EXEC sys.sp_cdc_enable_table&lt;/p&gt;
+&lt;p&gt;@source_schema = N&#39;dbo&#39;,&lt;/p&gt;
+&lt;p&gt;@source_name = N&#39;IMLC&#39;,&lt;/p&gt;
+&lt;p&gt;@role_name = NULL,&lt;/p&gt;
+&lt;p&gt;@supports_net_changes = 1&lt;/p&gt;
+&lt;p&gt;GO&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;至此，有关IMLC的Data Change
+Capture设置就全部完成了，系统还为此自动生成了两个Table-valued函数及一个Change
+table:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image4.png&#34; alt=&#34;imlc\_cdc\_functions.PNG&#34;&gt;{width=&amp;quot;5.386169072615923in&amp;rdquo;
+height=&amp;quot;5.980002187226597in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image5.png&#34; alt=&#34;imlc\_cdc\_table.PNG&#34;&gt;{width=&amp;quot;6.0in&amp;rdquo;
+height=&amp;quot;3.2625in&amp;rdquo;}&lt;/p&gt;
+&lt;h1 id=&#34;验证效果&#34;&gt;验证效果&lt;/h1&gt;
+&lt;p&gt;现在（2012年9月29日），我们对IMLC依次进行如下数据操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Insert一笔记录，LCNO为LC-0001;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update上笔记录；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delete上笔记录；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Insert另一笔记录，LCNO为LC-0002.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后，我们运行如下Transact-SQL：&lt;/p&gt;
+&lt;p&gt;USE exim;&lt;/p&gt;
+&lt;p&gt;GO&lt;/p&gt;
+&lt;p&gt;DECLARE @begin_time datetime, @end_time datetime, @from_lsn
+binary(10), @to_lsn binary(10);&lt;/p&gt;
+&lt;p&gt;-- Obtain the beginning of the time interval.&lt;/p&gt;
+&lt;p&gt;SET @begin_time = GETDATE() -1;&lt;/p&gt;
+&lt;p&gt;-- Obtain the end of the time interval.&lt;/p&gt;
+&lt;p&gt;SET @end_time = GETDATE();&lt;/p&gt;
+&lt;p&gt;-- Map the time interval to a change data capture query range.&lt;/p&gt;
+&lt;p&gt;SET @from_lsn = sys.fn_cdc_map_time_to_lsn(&#39;smallest greater
+than or equal&#39;, @begin_time);&lt;/p&gt;
+&lt;p&gt;SET @to_lsn = sys.fn_cdc_map_time_to_lsn(&#39;largest less than or
+equal&#39;, @end_time);&lt;/p&gt;
+&lt;p&gt;-- Return the net changes occurring within the query window.&lt;/p&gt;
+&lt;p&gt;SELECT * FROM cdc.fn_cdc_get_all_changes_dbo_IMLC(@from_lsn,
+@to_lsn, &#39;all&#39;);&lt;/p&gt;
+&lt;p&gt;得到的结果如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image6.png&#34; alt=&#34;imlc\_cdc\_query.PNG&#34;&gt;{width=&amp;quot;6.0in&amp;rdquo;
+height=&amp;quot;0.9104166666666667in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;其中，__$operation的值的含义为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2 &amp;ndash; Insert&lt;/p&gt;
+&lt;p&gt;4 &amp;ndash; Update
+(一次Update产生before/after两笔记录，由__$update_mask区分)&lt;/p&gt;
+&lt;p&gt;1 &amp;ndash; Delete&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;此外，通过JDBC/SQL直接访问Change Table也可得到与上面类似的结果：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./media/image7.png&#34; alt=&#34;imlc\_cdc\_jdbc\_sql.PNG&#34;&gt;{width=&amp;quot;6.0in&amp;rdquo;
+height=&amp;quot;2.088888888888889in&amp;rdquo;}&lt;/p&gt;
+&lt;h1 id=&#34;小结&#34;&gt;小结&lt;/h1&gt;
+&lt;p&gt;MS SQL Server上的Change Data Capture功能，与Oracle上的Flashback
+Technology、DB2上的Time Travel
+Query极其相似，都是只需在数据库上进行一些设置就可打开这些功能；而且，其接口形式都为SQL，故兼容于基于JDBC的各种报表工具，应用方面需要进行的改动也较小，可做为设计Audit
+Log Report功能的备选方案。&lt;/p&gt;
+&lt;h1 id=&#34;sign-off-sheet&#34; class=&#34;ListParagraph&#34;&gt;Sign-off Sheet&lt;/h1&gt;
+&lt;p&gt;Internal Reference:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Version:             &lt;br&gt;
+Authors:             &lt;br&gt;
+Sign off Required by:&lt;/p&gt;
+&lt;p&gt;[Reviewed by]{.underline}   [Position / Comment]{.underline}   [Signature]{.underline}   [Date]{.underline}&lt;/p&gt;
+&lt;hr&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
