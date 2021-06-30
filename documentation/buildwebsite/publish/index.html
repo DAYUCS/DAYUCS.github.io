@@ -17,24 +17,24 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>6. Setup Search | My New Hugo Site</title>
-<meta name="description" content=""><meta property="og:title" content="6. Setup Search" />
-<meta property="og:description" content="How to set up site search.
+<title>7. Publish on Github (Option) | My New Hugo Site</title>
+<meta name="description" content=""><meta property="og:title" content="7. Publish on Github (Option)" />
+<meta property="og:description" content="How to publish our site on Github.
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://DAYUCS.github.io/documentation/buildwebsite/search/" />
+<meta property="og:url" content="http://DAYUCS.github.io/documentation/buildwebsite/publish/" />
 
-<meta itemprop="name" content="6. Setup Search">
-<meta itemprop="description" content="How to set up site search.
+<meta itemprop="name" content="7. Publish on Github (Option)">
+<meta itemprop="description" content="How to publish our site on Github.
 ">
 
-<meta itemprop="wordCount" content="126">
+<meta itemprop="wordCount" content="150">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="6. Setup Search"/>
-<meta name="twitter:description" content="How to set up site search.
+<meta name="twitter:title" content="7. Publish on Github (Option)"/>
+<meta name="twitter:description" content="How to publish our site on Github.
 "/>
 
 
@@ -356,7 +356,7 @@
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitesearch-li">
     
-      <a href="/documentation/buildwebsite/search/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitesearch"><span class="td-sidebar-nav-active-item">6. Setup Search</span></a>
+      <a href="/documentation/buildwebsite/search/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitesearch"><span class="">6. Setup Search</span></a>
     
     
   </li>
@@ -383,7 +383,7 @@
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitepublish-li">
     
-      <a href="/documentation/buildwebsite/publish/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitepublish"><span class="">7. Publish on Github (Option)</span></a>
+      <a href="/documentation/buildwebsite/publish/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitepublish"><span class="td-sidebar-nav-active-item">7. Publish on Github (Option)</span></a>
     
     
   </li>
@@ -622,7 +622,7 @@
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="http://DAYUCS.github.io/documentation/buildwebsite/search/">6. Setup Search</a>
+	<a href="http://DAYUCS.github.io/documentation/buildwebsite/publish/">7. Publish on Github (Option)</a>
 </li>
 
 	</ol>
@@ -630,8 +630,8 @@
 
             
 <div class="td-content">
-	<h1>6. Setup Search</h1>
-	<div class="lead">How to set up site search.</div>
+	<h1>7. Publish on Github (Option)</h1>
+	<div class="lead">How to publish our site on Github.</div>
 	<header class="article-meta">
 		
 		
@@ -647,39 +647,38 @@
 		
 		
 	</header>    
-	<p>Docsy offers multiple options that let our readers search our site content. In this case, we&rsquo;ll use <em>Local search with Lunr</em>.
-This is a Javascript-based search option that lets us index our site and make it searchable without the need for external,
-server-side search services. This is a good option particularly for smaller or non-public sites.</p>
+	<p>Because Hugo renders static websites, we can host our new Hugo website virtually anywhere. Github provides free and fast static
+hosting over SSL for personal, organization, or project pages directly from a GitHub repository via its GitHub Pages service and
+automating development workflows and build with GitHub Actions. In this case, we&rsquo;ll deploy our site on GitHub manually.</p>
 <h1 id="detailed-instructions">Detailed Instructions:</h1>
 <ul>
 <li>Step 1</li>
 </ul>
 <blockquote>
-<p>Create a Markdown file as content/documentation/search.md. It only needs a <em>title</em> and <em>layout: search</em>, as in the following
-example:</p>
-<pre><code>---
-title: Search Results
-layout: search
----
-</code></pre></blockquote>
+<p>Head over to GitHub and create a new public repository named <em>username</em>.github.io, where <em>username</em> is our username (or
+organization name) on Github. In this case, <em>username</em> is DAYUCS.</p>
+</blockquote>
 <ul>
 <li>Step 2</li>
 </ul>
 <blockquote>
-<p>Enable local search in <em>config.toml</em>:</p>
-<pre><code>[params]
-#Enable offline search with Lunr.js
-algolia_docsearch = false
-offlineSearch = true
-offlineSearchSummaryLength = 200
-offlineSearchMaxResults = 25
-</code></pre><p>You may find the completed files at <a href="https://github.com/DAYUCS/word2md">https://github.com/DAYUCS/word2md</a>.</p>
-</blockquote>
+<p>Clone the new repository:</p>
+<pre><code>cd ~
+git clone https://github.com/DAYUCS/DAYUCS.github.io
+</code></pre></blockquote>
 <ul>
 <li>Step 3</li>
 </ul>
 <blockquote>
-<p>Restart our Hugo local server.</p>
+<p>Stop Hugo local server, and build the site (<em>word2md</em> is our Hugo project directory):</p>
+<pre><code>cd ~
+cd word2md
+hugo -d ../DAYUCS.github.io
+cd ../DAYUCS.github.io
+git add .
+git commit -m &quot;first commit&quot;
+git push -u origin master
+</code></pre><p>Go to <a href="https://DAYUCS.github.io">https://DAYUCS.github.io</a> to see our website out in the wild.</p>
 </blockquote>
 
 	

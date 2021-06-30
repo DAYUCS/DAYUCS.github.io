@@ -90,7 +90,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.5a45a7f61de0c210e49f4548b03b21cc.json"
+  data-offline-search-index-json-src="/offline-search-index.6148fdbd24f6ae9d67819427790e61fc.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -197,6 +197,14 @@ This the multi-page printable view of this section.
     
 	
 <li>1.6: <a href="#pg-44d9553cab3b6896f36717a3cf48b8b5">6. Setup Search</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.7: <a href="#pg-d06abd0c509ee74139ddf2a99a3ad1fc">7. Publish on Github (Option)</a></li>
 
 
     
@@ -627,6 +635,56 @@ offlineSearchMaxResults = 25
 </ul>
 <blockquote>
 <p>Restart our Hugo local server.</p>
+</blockquote>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d06abd0c509ee74139ddf2a99a3ad1fc">1.7 - 7. Publish on Github (Option)</h1>
+    <div class="lead">How to publish our site on Github.</div>
+	<p>Because Hugo renders static websites, we can host our new Hugo website virtually anywhere. Github provides free and fast static
+hosting over SSL for personal, organization, or project pages directly from a GitHub repository via its GitHub Pages service and
+automating development workflows and build with GitHub Actions. In this case, we&rsquo;ll deploy our site on GitHub manually.</p>
+<h1 id="detailed-instructions">Detailed Instructions:</h1>
+<ul>
+<li>Step 1</li>
+</ul>
+<blockquote>
+<p>Head over to GitHub and create a new public repository named <em>username</em>.github.io, where <em>username</em> is our username (or
+organization name) on Github. In this case, <em>username</em> is DAYUCS.</p>
+</blockquote>
+<ul>
+<li>Step 2</li>
+</ul>
+<blockquote>
+<p>Clone the new repository:</p>
+<pre><code>cd ~
+git clone https://github.com/DAYUCS/DAYUCS.github.io
+</code></pre></blockquote>
+<ul>
+<li>Step 3</li>
+</ul>
+<blockquote>
+<p>Stop Hugo local server, and build the site (<em>word2md</em> is our Hugo project directory):</p>
+<pre><code>cd ~
+cd word2md
+hugo -d ../DAYUCS.github.io
+cd ../DAYUCS.github.io
+git add .
+git commit -m &quot;first commit&quot;
+git push -u origin master
+</code></pre><p>Go to <a href="https://DAYUCS.github.io">https://DAYUCS.github.io</a> to see our website out in the wild.</p>
 </blockquote>
 
 </div>
