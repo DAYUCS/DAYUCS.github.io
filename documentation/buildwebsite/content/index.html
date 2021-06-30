@@ -17,24 +17,24 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>1. Install Pandoc and Convert Docx | My New Hugo Site</title>
-<meta name="description" content=""><meta property="og:title" content="1. Install Pandoc and Convert Docx" />
-<meta property="og:description" content="How to install Pandoc on Ubuntu and convert docx to md.
+<title>5. Add Content | My New Hugo Site</title>
+<meta name="description" content=""><meta property="og:title" content="5. Add Content" />
+<meta property="og:description" content="How to add content.
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://DAYUCS.github.io/documentation/buildwebsite/pandoc/" />
+<meta property="og:url" content="http://DAYUCS.github.io/documentation/buildwebsite/content/" />
 
-<meta itemprop="name" content="1. Install Pandoc and Convert Docx">
-<meta itemprop="description" content="How to install Pandoc on Ubuntu and convert docx to md.
+<meta itemprop="name" content="5. Add Content">
+<meta itemprop="description" content="How to add content.
 ">
 
-<meta itemprop="wordCount" content="108">
+<meta itemprop="wordCount" content="223">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="1. Install Pandoc and Convert Docx"/>
-<meta name="twitter:description" content="How to install Pandoc on Ubuntu and convert docx to md.
+<meta name="twitter:title" content="5. Add Content"/>
+<meta name="twitter:description" content="How to add content.
 "/>
 
 
@@ -183,7 +183,7 @@
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitepandoc-li">
     
-      <a href="/documentation/buildwebsite/pandoc/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitepandoc"><span class="td-sidebar-nav-active-item">1. Install Pandoc and Convert Docx</span></a>
+      <a href="/documentation/buildwebsite/pandoc/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitepandoc"><span class="">1. Install Pandoc and Convert Docx</span></a>
     
     
   </li>
@@ -291,7 +291,7 @@
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitecontent-li">
     
-      <a href="/documentation/buildwebsite/content/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitecontent"><span class="">5. Add Content</span></a>
+      <a href="/documentation/buildwebsite/content/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitecontent"><span class="td-sidebar-nav-active-item">5. Add Content</span></a>
     
     
   </li>
@@ -501,7 +501,7 @@
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="http://DAYUCS.github.io/documentation/buildwebsite/pandoc/">1. Install Pandoc and Convert Docx</a>
+	<a href="http://DAYUCS.github.io/documentation/buildwebsite/content/">5. Add Content</a>
 </li>
 
 	</ol>
@@ -509,8 +509,8 @@
 
             
 <div class="td-content">
-	<h1>1. Install Pandoc and Convert Docx</h1>
-	<div class="lead">How to install Pandoc on Ubuntu and convert docx to md.</div>
+	<h1>5. Add Content</h1>
+	<div class="lead">How to add content.</div>
 	<header class="article-meta">
 		
 		
@@ -526,41 +526,60 @@
 		
 		
 	</header>    
-	<p>Pandoc is a Haskell library for converting from one markup format to
-another (<a href="https://pandoc.org/">https://pandoc.org/</a>).</p>
-<p>We&rsquo;ll install it on Ubuntu and convert files from Microsoft Word docx to
-Markdown.</p>
+	<p>We add content for our site under the <strong>content root directory</strong> of our Hugo site project, either content/ or a
+language-specific root like conten/en/. Because most technical documentation sites have different sections for
+different types of content, the Docsy theme comes with the following templates for top-level site sections:</p>
+<ol>
+<li><em>docs</em> is for pages in our site’s Documentation section.</li>
+<li><em>blog</em> is for pages in our site’s Blog.</li>
+<li><em>community</em> is for our site’s Community page.</li>
+</ol>
+<p>We&rsquo;ll create a new section under the <em>docs</em> for those documents converted from MS DOCX.</p>
 <h1 id="detailed-instructions">Detailed Instructions:</h1>
 <ul>
 <li>Step 1</li>
 </ul>
 <blockquote>
-<p>Run update command to update package repositories and get latest
-package information.</p>
-<pre><code>sudo apt update
-</code></pre></blockquote>
+<p>Create a new directory under content/documentation/ of our Hugo site project. In this case, The new dirctory is
+<em>RDB</em>.
+<img src="./media/image1.png" alt="The RDB Directory"></p>
+</blockquote>
 <ul>
 <li>Step 2</li>
 </ul>
 <blockquote>
-<p>Run the install command to install the packages and dependencies.</p>
-<pre><code>sudo apt install pandoc
+<p>Put a file named _index.md into the directory. The content of this file looks like this:</p>
+<pre><code>---
+title: &quot;Example - RDB Log&quot;
+weight: 20
+type: docs
+summary: How to get data from RDB Log.
+---
+
+# Get Data from RDB Log
+
+How to get data from RDB Log?
 </code></pre></blockquote>
 <ul>
 <li>Step 3</li>
 </ul>
 <blockquote>
-<p>Run Pandoc command to check the installation.</p>
-<pre><code>pandoc --version
-</code></pre></blockquote>
+<p>Create sub-directories for each docx file, and put converted files into these directories.
+<img src="./media/image2.png" alt="Sub-directories of RDB"></p>
+</blockquote>
 <ul>
 <li>Step 4</li>
 </ul>
 <blockquote>
-<p>Run Pandoc command to convert docx to Markdown file and extract images
-that the docx contains.</p>
-<pre><code>pandoc -f docx -t markdown 'Get Data from DB Log - Oracle V2.docx' -o index.md --extract-media=.
-</code></pre><p><img src="./media/image1.png" alt="The files generated by Pandoc"></p>
+<p>For each index.md converted from docx, add Docsy header like this:</p>
+<pre><code>---
+title: &quot;Get Data from Oracle Log&quot;
+weight: 10
+type: docs
+description: &gt;
+   A example to show how to get historical data from Oracle Log.
+---
+</code></pre><p>You may find the completed files at <a href="https://github.com/DAYUCS/word2md">https://github.com/DAYUCS/word2md</a>.</p>
 </blockquote>
 
 	

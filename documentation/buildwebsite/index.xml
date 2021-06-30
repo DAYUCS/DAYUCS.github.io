@@ -207,5 +207,73 @@ Here are the contents:
       </description>
     </item>
     
+    <item>
+      <title>Documentation: 5. Add Content</title>
+      <link>http://DAYUCS.github.io/documentation/buildwebsite/content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://DAYUCS.github.io/documentation/buildwebsite/content/</guid>
+      <description>
+        
+        
+        &lt;p&gt;We add content for our site under the &lt;strong&gt;content root directory&lt;/strong&gt; of our Hugo site project, either content/ or a
+language-specific root like conten/en/. Because most technical documentation sites have different sections for
+different types of content, the Docsy theme comes with the following templates for top-level site sections:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;docs&lt;/em&gt; is for pages in our site’s Documentation section.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;blog&lt;/em&gt; is for pages in our site’s Blog.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;community&lt;/em&gt; is for our site’s Community page.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We&amp;rsquo;ll create a new section under the &lt;em&gt;docs&lt;/em&gt; for those documents converted from MS DOCX.&lt;/p&gt;
+&lt;h1 id=&#34;detailed-instructions&#34;&gt;Detailed Instructions:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Create a new directory under content/documentation/ of our Hugo site project. In this case, The new dirctory is
+&lt;em&gt;RDB&lt;/em&gt;.
+&lt;img src=&#34;./media/image1.png&#34; alt=&#34;The RDB Directory&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Put a file named _index.md into the directory. The content of this file looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;quot;Example - RDB Log&amp;quot;
+weight: 20
+type: docs
+summary: How to get data from RDB Log.
+---
+
+# Get Data from RDB Log
+
+How to get data from RDB Log?
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Create sub-directories for each docx file, and put converted files into these directories.
+&lt;img src=&#34;./media/image2.png&#34; alt=&#34;Sub-directories of RDB&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For each index.md converted from docx, add Docsy header like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;quot;Get Data from Oracle Log&amp;quot;
+weight: 10
+type: docs
+description: &amp;gt;
+   A example to show how to get historical data from Oracle Log.
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You may find the completed files at &lt;a href=&#34;https://github.com/DAYUCS/word2md&#34;&gt;https://github.com/DAYUCS/word2md&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>
