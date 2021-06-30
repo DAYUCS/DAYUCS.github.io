@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.68.3" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.68.3" /><link rel="canonical" type="text/html" href="http://DAYUCS.github.io/documentation/rdb/">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -17,25 +18,16 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Get Data from Oracle Log | My New Hugo Site</title>
-<meta name="description" content=""><meta property="og:title" content="Get Data from Oracle Log" />
-<meta property="og:description" content="A example to show how to get historical data from Oracle Log.
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://DAYUCS.github.io/documentation/rdb/oracle/" />
+<title>Example - RDB Log | My New Hugo Site</title>
+<meta name="description" content=""><meta property="og:title" content="Example - RDB Log" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://DAYUCS.github.io/documentation/rdb/" />
 
-<meta itemprop="name" content="Get Data from Oracle Log">
-<meta itemprop="description" content="A example to show how to get historical data from Oracle Log.
-">
-
-<meta itemprop="wordCount" content="505">
-
-
-
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Get Data from Oracle Log"/>
-<meta name="twitter:description" content="A example to show how to get historical data from Oracle Log.
-"/>
+<meta itemprop="name" content="Example - RDB Log">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Example - RDB Log"/>
+<meta name="twitter:description" content=""/>
 
 
 
@@ -62,7 +54,7 @@
 
 
   </head>
-  <body class="td-page">
+  <body class="td-section">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -110,538 +102,96 @@
     <div class="container-fluid td-outer">
       <div class="td-main">
         <div class="row flex-xl-nowrap">
-          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
 
 
 
 
-  
-
-
-<div id="td-sidebar-menu" class="td-sidebar__inner">
-  
-  <form class="td-sidebar__search d-flex align-items-center">
-    
-
-
-
-<input
-  type="search"
-  class="form-control td-search-input"
-  placeholder="&#xf002; Search this site…"
-  aria-label="Search this site…"
-  autocomplete="off"
-  
-  data-offline-search-index-json-src="/offline-search-index.5a45a7f61de0c210e49f4548b03b21cc.json"
-  data-offline-search-base-href="/"
-  data-offline-search-max-results="25"
->
-
-
-    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
-    </button>
-  </form>
-  
-  <nav class="collapse td-sidebar-nav" id="td-section-nav">
-    
-    
-    
-    
-    
-    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-documentation-li">
-    
-      <a href="/documentation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-documentation"><span class="">Documentation</span></a>
-    
-    
-      
-      <ul class="ul-1">
-        
-          
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-documentationbuildwebsite-li">
-    
-      <a href="/documentation/buildwebsite/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-documentationbuildwebsite"><span class="">Build Web Site</span></a>
-    
-    
-      
-      <ul class="ul-2 foldable">
-        
-          
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitepandoc-li">
-    
-      <a href="/documentation/buildwebsite/pandoc/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitepandoc"><span class="">1. Install Pandoc and Convert Docx</span></a>
-    
-    
-  </li>
-
-          
-        
-          
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitehugo-li">
-    
-      <a href="/documentation/buildwebsite/hugo/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitehugo"><span class="">2. Install Hugo</span></a>
-    
-    
-  </li>
-
-          
-        
-          
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitedocsy-li">
-    
-      <a href="/documentation/buildwebsite/docsy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitedocsy"><span class="">3. Install Docsy</span></a>
-    
-    
-  </li>
-
-          
-        
-          
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitemenu-li">
-    
-      <a href="/documentation/buildwebsite/menu/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitemenu"><span class="">4. Setup Top-level Menu</span></a>
-    
-    
-  </li>
-
-          
-        
-          
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitecontent-li">
-    
-      <a href="/documentation/buildwebsite/content/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitecontent"><span class="">5. Add Content</span></a>
-    
-    
-  </li>
-
-          
-        
-          
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitesearch-li">
-    
-      <a href="/documentation/buildwebsite/search/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitesearch"><span class="">6. Setup Search</span></a>
-    
-    
-  </li>
-
-          
-        
-      </ul>
-    
-  </li>
-
-          
-        
-          
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-documentationrdb-li">
-    
-      <a href="/documentation/rdb/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-documentationrdb"><span class="">Example - RDB Log</span></a>
-    
-    
-      
-      <ul class="ul-2 foldable">
-        
-          
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationrdboracle-li">
-    
-      <a href="/documentation/rdb/oracle/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-documentationrdboracle"><span class="td-sidebar-nav-active-item">Get Data from Oracle Log</span></a>
-    
-    
-  </li>
-
-          
-        
-          
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationrdbdb2-li">
-    
-      <a href="/documentation/rdb/db2/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationrdbdb2"><span class="">Get Data from DB2 Log</span></a>
-    
-    
-  </li>
-
-          
-        
-          
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationrdbmssql-li">
-    
-      <a href="/documentation/rdb/mssql/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationrdbmssql"><span class="">Get Data from MS SQL Server Log</span></a>
-    
-    
-  </li>
-
-          
-        
-      </ul>
-    
-  </li>
-
-          
-        
-          
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationsearch-li">
-    
-      <a href="/documentation/search/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationsearch"><span class="">Search Results</span></a>
-    
-    
-  </li>
-
-          
-        
-      </ul>
-    
-  </li>
-
-    </ul>
-  </nav>
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/documentation/rdb/">Return to the regular view of this page</a>.
+</p>
 </div>
 
 
 
+<h1 class="title">Example - RDB Log</h1>
 
-          </aside>
-          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
-            
+
+
+
+
+    <ul>
+    
   
   
   
   
+
   
-  
-  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-  
-  
-    <a id="print" href="http://DAYUCS.github.io/documentation/rdb/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
-  
-  </div>
-
-
-            
-
-
-<div class="td-toc"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#历史资料的用途"><strong>历史资料的用途</strong></a></li>
-    <li><a href="#历史资料的保管与获取"><strong>历史资料的保管与获取</strong></a></li>
-    <li><a href="#获取数据库transaction-log内容的方法"><strong>获取数据库Transaction Log内容的方法</strong></a></li>
-    <li><a href="#数据库审计的专用工具"><strong>数据库审计的专用工具</strong></a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#系统设置"><strong>系统设置</strong></a>
-      <ul>
-        <li><a href="#undo参数设置">UNDO参数设置</a></li>
-        <li><a href="#flashback-data-archive设置">Flashback Data archive设置</a></li>
-        <li><a href="#flashback-transaction-query设置">Flashback Transaction Query设置</a></li>
-        <li><a href="#flashback-transaction设置">Flashback Transaction设置</a></li>
-      </ul>
-    </li>
-    <li><a href="#功能运用"><strong>功能运用</strong></a></li>
-    <li><a href="#在eximbills中使用oracle-flashback-technology">在Eximbills中使用Oracle Flashback Technology</a></li>
-  </ul>
-</nav></div>
-
-
-
-            
-
+    
+    
 	
-		
+<li>1: <a href="#pg-177bc8becb828baa1e525871925f385b">Get Data from Oracle Log</a></li>
 
 
-
+    
   
-  
-
+    
+    
 	
-		
+<li>2: <a href="#pg-0d7674015e99daafc58965b6c3b23fb7">Get Data from DB2 Log</a></li>
 
 
-
+    
   
-  
-
+    
+    
 	
+<li>3: <a href="#pg-e49bcd4fac49fb7b5f981eb8497e7584">Get Data from MS SQL Server Log</a></li>
 
-          </aside>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
-            
+
+    
   
 
-            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
-	<ol class="breadcrumb spb-1">
-		
+    </ul>
 
 
+<div class="content">
+      <h1 id="get-data-from-rdb-log">Get Data from RDB Log</h1>
+<p>How to get data from RDB Log?</p>
+
+</div>
+</div>
 
 
+  
+  
+  
+  
 
+  
+  
 
+  
+    
+    
+	
+    
 
-
-
-
-<li class="breadcrumb-item" >
-	<a href="http://DAYUCS.github.io/documentation/">Documentation</a>
-</li>
-
-
-
-
-<li class="breadcrumb-item" >
-	<a href="http://DAYUCS.github.io/documentation/rdb/">Example - RDB Log</a>
-</li>
-
-
-
-
-<li class="breadcrumb-item active" aria-current="page">
-	<a href="http://DAYUCS.github.io/documentation/rdb/oracle/">Get Data from Oracle Log</a>
-</li>
-
-	</ol>
-</nav	>
-
-            
-<div class="td-content">
-	<h1>Get Data from Oracle Log</h1>
-	<div class="lead">A example to show how to get historical data from Oracle Log.</div>
-	<header class="article-meta">
-		
-		
-			
-				
-
-
-			
-				
-
-
-			
-		
-		
-	</header>    
+<div class="td-content" style="">
+    
+	<h1 id="pg-177bc8becb828baa1e525871925f385b">1 - Get Data from Oracle Log</h1>
+    <div class="lead">A example to show how to get historical data from Oracle Log.</div>
 	<p><img src="./media/image1.png" alt="">{width=&quot;2.89375in&rdquo; height=&quot;1.0604166666666666in&rdquo;}</p>
 <p>Get Historical Data from Database Log</p>
 <p><strong>介绍各种从Oracle数据库Log中读取交易历史数据的方法，重点展示Oracle
@@ -879,13 +429,330 @@ Sign off Required by:</p>
 <p>[Reviewed by]{.underline}   [Position / Comment]{.underline}   [Signature]{.underline}   [Date]{.underline}</p>
 <hr>
 
+</div>
+
+
+
+    
 	
+  
+    
+    
 	
-	<div class="text-muted mt-5 pt-3 border-top">
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0d7674015e99daafc58965b6c3b23fb7">2 - Get Data from DB2 Log</h1>
+    <div class="lead">A example to show how to get historical data from DB2 Log.</div>
+	<p><img src="./media/image1.png" alt="">{width=&quot;2.89375in&rdquo; height=&quot;1.0604166666666666in&rdquo;}</p>
+<p>简要介绍DB2 V10.1上新出的Time Travel
+Query技术，探讨在Eximbills产品中使用该技术实现Audit
+Log相关功能的可能途径。</p>
+<p>Copyright  2012</p>
+<p>All rights reserved. This product and related documentation are
+protected by copyright and distributed under licenses restricting its
+use, copying, distribution and decompilation. No part of this product or
+related documentation may be reproduced in any form by any means without
+the prior written authorization of and its licensors, if any.</p>
+<p>Authors:   Dayu Bian</p>
+<hr>
+<p>Version:   1.0.0
+Date:      September 27, 2012
+Project:   Audit Log Report</p>
+<p>:</p>
+<p>File name:</p>
+<hr>
+<p>Path name:         <br>
+Internal reference:   Audit Log Report</p>
+<p>DOCUMENT HISTORY</p>
+<p><strong>[Version]{.underline}</strong>   <strong>[Date]{.underline}</strong>   <strong>[Narrative]{.underline}</strong></p>
+<hr>
+<p>1.0.0                       September 26, 2012       First Draft</p>
+<p>Contents</p>
+<p>1 背景描述 4</p>
+<p>2 设置步骤 5</p>
+<p>2.1 增加并指定系统时间字段 5</p>
+<p>2.2 创建历史记录表 5</p>
+<p>2.3 关联历史记录表 6</p>
+<p>3 验证Time Travel Query效果 7</p>
+<p>4 小结 8</p>
+<p>Sign-off Sheet 9</p>
+<h1 id="背景描述">背景描述</h1>
+<p>在上一篇报告<a href="Get%20Data%20from%20DB%20Log%20-%20Oracle.docx">[《Get Data from DB Log -
+Oracle.docx》]{.underline}</a>中，介绍了Oracle数据库的Flashback技术。利用该技术，应用程序与报表工具可以直接使用SQL语句读取到数据库中记录的变化历史资料，从而给Audit
+Log功能的实现提供了便利。</p>
+<p>IBM的DB2也不甘落后，在今年推出的V10.1上，提供了一个与Oracle
+Flashback功能相似的技术&mdash;&mdash;Time Travel
+Query，<a href="http://www-01.ibm.com/software/data/db2/linux-unix-windows/time-travel-query.html">[这里]{.underline}</a>有相关介绍。</p>
+<p>在具体的设置方法上，DB2与Oracle并不一样。在DB2上，对于需跟踪历史记录的table，采用的是定义相应的时序表（temporal
+table）的方法。</p>
+<p>在所提供的具体功能上，DB2与Oracle也不尽相同。在DB2上，一共提供了三种类型的时序表&mdash;&mdash;</p>
+<ul>
+<li>
+<p>以数据库系统时间为基准的System-period temporal tables(STT);</p>
+</li>
+<li>
+<p>以应用中的业务时间为基准的Application-period temporal tables(ATT);</p>
+</li>
+<li>
+<p>结合STT与ATT为一体的Bitemporal tables。</p>
+</li>
+</ul>
+<p>对于应用设计而言，DB2的Time Travel
+Query在功能上似乎更胜一筹。因为目前我们只对如何实现Audit
+Log感兴趣，所以本报告将只涉及到STT的使用方法。</p>
+<h1 id="设置步骤">设置步骤</h1>
+<p>假设有一个名为IMLC的表，现有如下几个简单字段&mdash;&mdash;</p>
+<p><img src="./media/image2.png" alt="orginal\_base\_tabel.PNG">{width=&quot;6.0in&rdquo;
+height=&quot;1.6229166666666666in&rdquo;}</p>
+<p>下面，我们将以此表为基础、分三个步骤设置对STT&mdash;&mdash;</p>
+<h2 id="增加并指定系统时间字段"><strong>增加并指定系统时间字段</strong></h2>
+<p>使用下面的SQL为IMLC增加用于存放系统时间的字段：</p>
+<p><strong>ALTER</strong> <strong>TABLE</strong> ADMINISTRATOR.IMLC</p>
+<p><strong>ADD</strong> <strong>COLUMN</strong> SYSTEM_START_TIME <strong>TIMESTAMP</strong>(12) <strong>NOT</strong>
+<strong>NULL</strong> GENERATED ALWAYS <strong>AS</strong> <strong>ROW</strong> <strong>BEGIN</strong></p>
+<p><strong>ADD</strong> <strong>COLUMN</strong> SYSTEM_END_TIME <strong>TIMESTAMP</strong>(12) <strong>NOT</strong> <strong>NULL</strong>
+GENERATED ALWAYS <strong>AS</strong> <strong>ROW</strong> <strong>END</strong></p>
+<p><strong>ADD</strong> <strong>COLUMN</strong> TRANS_ID <strong>TIMESTAMP</strong>(12) GENERATED ALWAYS <strong>AS</strong>
+<strong>TRANSACTION</strong> START ID;</p>
+<p>其中</p>
+<ul>
+<li>
+<p>SYSTEM_START_TIME为System-period start time，具体含义为：This
+column is the system time when this row came into existence (the
+time of the original insert or update operation that created this
+version of the row)</p>
+</li>
+<li>
+<p>SYSTEM_END_TIME为System-period end time, 具体含义为：This column
+is the system time when this row was modified with either a　newer
+version of the row or deleted from the table. The setting of
+this　timestamp to the following value indicates it is the current
+version of the row:　9999-12-30-00:00.00</p>
+</li>
+<li>
+<p>TRANS_ID为Transaction start ID，具体含义为：This column is the
+unique identifier for the transaction that modified or inserted the
+row; it can be used to find all records affected by the same
+transaction across multiple tables using Time Travel Query. A
+database can have many transactions occurring in a relatively short
+time span (milliseconds). To uniquely identify different
+transactions, a timestamp value provides subsecond granularity.</p>
+</li>
+</ul>
+<p>使用下面的SQL为IMLC指定系统时间字段：</p>
+<p><strong>ALTER</strong> <strong>TABLE</strong> ADMINISTRATOR.IMLC</p>
+<p><strong>ADD</strong> PERIOD SYSTEM_TIME ( SYSTEM_START_TIME, SYSTEM_END_TIME );</p>
+<h2 id="创建历史记录表">创建历史记录表</h2>
+<p>使用下面的SQL语句为IMLC创建历史记录表:</p>
+<p>CREATE TABLE IMLC_STT LIKE IMLC;</p>
+<p>ALTER TABLE IMLC_STT APPEND ON;</p>
+<p>后一条语句为可选项，但可提高IMLC_STT表的insert性能。</p>
+<h2 id="关联历史记录表">关联历史记录表</h2>
+<p>使用下面的SQL将两张表关联起来：</p>
+<blockquote>
+<p>ALTER TABLE IMLC ADD VERSIONING USE HISTORY TABLE IMLC_STT;</p>
+</blockquote>
+<p>至此，有关IMLC的STT设置就全部完成了。</p>
+<h1 id="验证time-travel-query效果">验证Time Travel Query效果</h1>
+<p>现在（2012年9月27日），我们对IMLC依次进行如下数据操作：</p>
+<ul>
+<li>
+<p>Insert一笔记录，LCNO为LC-0001;</p>
+</li>
+<li>
+<p>Update上笔记录；</p>
+</li>
+<li>
+<p>Delete上笔记录；</p>
+</li>
+<li>
+<p>Insert另一笔记录，LCNO为LC-0002.</p>
+</li>
+</ul>
+<p>然后，我们运行如下Time Travel Query语句：</p>
+<p>select * from IMLC</p>
+<p>for system_time between timestamp('2012-09-27') and
+timestamp('9999-12-31');</p>
+<p>下图为运行结果：</p>
+<p><img src="./media/image3.png" alt="imlc\_stt\_query.PNG">{width=&quot;6.0in&rdquo;
+height=&quot;0.6722222222222223in&rdquo;}</p>
+<p>显然，上述结果与Oracle Flashback Version
+Query基本上是类似的,DELETE的结果也反映在SYSTEM_END_TIME字段上（Oracle上相应字段为versions_endtime）；但在版本记录被删除或修改之前，DB2上的值为9999-12-30，而Oracle上则是null。</p>
+<h1 id="小结">小结</h1>
+<p>DB2 V10.1上的Time Travel Query功能，与Oracle上的Flashback
+Technology极其相似，都是只需在数据库上进行一些设置就可打开这些功能；而且，其接口形式都为SQL，故兼容于基于JDBC的各种报表工具，应用方面需要进行的改动也较小，可做为设计Audit
+Log Report功能的备选方案。</p>
+<h1 id="sign-off-sheet" class="ListParagraph">Sign-off Sheet</h1>
+<p>Internal Reference:</p>
+<hr>
+<p>Version:             <br>
+Authors:             <br>
+Sign off Required by:</p>
+<p>[Reviewed by]{.underline}   [Position / Comment]{.underline}   [Signature]{.underline}   [Date]{.underline}</p>
+<hr>
 
 </div>
 
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e49bcd4fac49fb7b5f981eb8497e7584">3 - Get Data from MS SQL Server Log</h1>
+    <div class="lead">A example to show how to get historical data from MS SQL Server Log.</div>
+	<p><img src="./media/image1.png" alt="">{width=&quot;2.89375in&rdquo; height=&quot;1.0604166666666666in&rdquo;}</p>
+<p>简要介绍MS SQL Server 2008上出现的Change Data
+Capture功能，探讨在Eximbills产品中使用该技术实现Audit
+Log相关功能的可能途径。</p>
+<p>Copyright  2012</p>
+<p>All rights reserved. This product and related documentation are
+protected by copyright and distributed under licenses restricting its
+use, copying, distribution and decompilation. No part of this product or
+related documentation may be reproduced in any form by any means without
+the prior written authorization of and its licensors, if any.</p>
+<p>Authors:   Dayu Bian</p>
+<hr>
+<p>Version:   1.0.0
+Date:      September 29, 2012
+Project:   Audit Log Report</p>
+<p>:</p>
+<p>File name:</p>
+<hr>
+<p>Path name:         <br>
+Internal reference:   Audit Log Report</p>
+<p>DOCUMENT HISTORY</p>
+<p><strong>[Version]{.underline}</strong>   <strong>[Date]{.underline}</strong>   <strong>[Narrative]{.underline}</strong></p>
+<hr>
+<p>1.0.0                       September 28, 2012       First Draft</p>
+<p>Contents</p>
+<p>1 背景描述 4</p>
+<p>2 设置步骤 5</p>
+<p>2.1 Enable Change Data Capture for the Database exim 5</p>
+<p>2.2 Enable Change Data Capture for the Table IMLC 5</p>
+<p>3 验证效果 8</p>
+<p>4 小结 10</p>
+<p>Sign-off Sheet 11</p>
+<h1 id="背景描述">背景描述</h1>
+<p>在上两篇报告<a href="">[《Get Data from DB Log -
+Oracle.docx》]{.underline}</a>、《<a href="Get%20Data%20from%20DB%20Log%20-%20DB2.docx">[Get
+Data From DB Log &ndash;
+DB2]{.underline}</a>》中，介绍了Oracle数据库的Flashback技术及DB2
+V10的Time Travel
+Query功能。利用这些技术，应用程序与报表工具可以直接使用SQL语句读取到数据库中记录的变化历史资料，从而给Audit
+Log功能的实现提供了便利。</p>
+<p>至于MS SQL Server，自2008版本起，推出了一个名为Change Data
+Capture的功能，同样也是在后台通过读取数据库日志的方法、自动生成数据库中记录的变化历史资料。<a href="http://msdn.microsoft.com/en-us/library/cc645937.aspx">[这儿]{.underline}</a>有相关介绍，当中有一幅图（如下）描述了其基本实现原理。</p>
+<p><img src="./media/image2.gif" alt="Change data capture dataflow">{width=&quot;2.4784722222222224in&rdquo;
+height=&quot;4.157638888888889in&rdquo;}</p>
+<h1 id="设置步骤">设置步骤</h1>
+<p>假设在数据库exim下有一个名为dbo.IMLC的表，现有如下几个简单字段&mdash;&mdash;</p>
+<p><img src="./media/image3.png" alt="imlc\_table.PNG">{width=&quot;4.042230971128609in&rdquo;
+height=&quot;1.458536745406824in&rdquo;}</p>
+<p>下面，我们将以此表为基础、分两个步骤设置Change Data Capture&mdash;&mdash;</p>
+<h2 id="enable-change-data-capture-for-the-database-exim">Enable Change Data Capture for the Database exim</h2>
+<p>执行以下Transact-SQL：</p>
+<blockquote>
+<p>USE exim</p>
+<p>GO</p>
+<p>EXEC sys.sp_cdc_enable_db</p>
+<p>GO</p>
+</blockquote>
+<h2 id="enable-change-data-capture-for-the-table-imlc">Enable Change Data Capture for the Table IMLC</h2>
+<p>执行以下Transact-SQL:</p>
+<blockquote>
+<p>USE exim</p>
+<p>GO</p>
+<p>EXEC sys.sp_cdc_enable_table</p>
+<p>@source_schema = N'dbo',</p>
+<p>@source_name = N'IMLC',</p>
+<p>@role_name = NULL,</p>
+<p>@supports_net_changes = 1</p>
+<p>GO</p>
+</blockquote>
+<p>至此，有关IMLC的Data Change
+Capture设置就全部完成了，系统还为此自动生成了两个Table-valued函数及一个Change
+table:</p>
+<p><img src="./media/image4.png" alt="imlc\_cdc\_functions.PNG">{width=&quot;5.386169072615923in&rdquo;
+height=&quot;5.980002187226597in&rdquo;}</p>
+<p><img src="./media/image5.png" alt="imlc\_cdc\_table.PNG">{width=&quot;6.0in&rdquo;
+height=&quot;3.2625in&rdquo;}</p>
+<h1 id="验证效果">验证效果</h1>
+<p>现在（2012年9月29日），我们对IMLC依次进行如下数据操作：</p>
+<ul>
+<li>
+<p>Insert一笔记录，LCNO为LC-0001;</p>
+</li>
+<li>
+<p>Update上笔记录；</p>
+</li>
+<li>
+<p>Delete上笔记录；</p>
+</li>
+<li>
+<p>Insert另一笔记录，LCNO为LC-0002.</p>
+</li>
+</ul>
+<p>然后，我们运行如下Transact-SQL：</p>
+<p>USE exim;</p>
+<p>GO</p>
+<p>DECLARE @begin_time datetime, @end_time datetime, @from_lsn
+binary(10), @to_lsn binary(10);</p>
+<p>-- Obtain the beginning of the time interval.</p>
+<p>SET @begin_time = GETDATE() -1;</p>
+<p>-- Obtain the end of the time interval.</p>
+<p>SET @end_time = GETDATE();</p>
+<p>-- Map the time interval to a change data capture query range.</p>
+<p>SET @from_lsn = sys.fn_cdc_map_time_to_lsn('smallest greater
+than or equal', @begin_time);</p>
+<p>SET @to_lsn = sys.fn_cdc_map_time_to_lsn('largest less than or
+equal', @end_time);</p>
+<p>-- Return the net changes occurring within the query window.</p>
+<p>SELECT * FROM cdc.fn_cdc_get_all_changes_dbo_IMLC(@from_lsn,
+@to_lsn, 'all');</p>
+<p>得到的结果如下图：</p>
+<p><img src="./media/image6.png" alt="imlc\_cdc\_query.PNG">{width=&quot;6.0in&rdquo;
+height=&quot;0.9104166666666667in&rdquo;}</p>
+<p>其中，__$operation的值的含义为：</p>
+<blockquote>
+<p>2 &ndash; Insert</p>
+<p>4 &ndash; Update
+(一次Update产生before/after两笔记录，由__$update_mask区分)</p>
+<p>1 &ndash; Delete</p>
+</blockquote>
+<p>此外，通过JDBC/SQL直接访问Change Table也可得到与上面类似的结果：</p>
+<p><img src="./media/image7.png" alt="imlc\_cdc\_jdbc\_sql.PNG">{width=&quot;6.0in&rdquo;
+height=&quot;2.088888888888889in&rdquo;}</p>
+<h1 id="小结">小结</h1>
+<p>MS SQL Server上的Change Data Capture功能，与Oracle上的Flashback
+Technology、DB2上的Time Travel
+Query极其相似，都是只需在数据库上进行一些设置就可打开这些功能；而且，其接口形式都为SQL，故兼容于基于JDBC的各种报表工具，应用方面需要进行的改动也较小，可做为设计Audit
+Log Report功能的备选方案。</p>
+<h1 id="sign-off-sheet" class="ListParagraph">Sign-off Sheet</h1>
+<p>Internal Reference:</p>
+<hr>
+<p>Version:             <br>
+Authors:             <br>
+Sign off Required by:</p>
+<p>[Reviewed by]{.underline}   [Position / Comment]{.underline}   [Signature]{.underline}   [Date]{.underline}</p>
+<hr>
+
 </div>
+
+
+
+    
+	
+  
+
 
 
           </main>

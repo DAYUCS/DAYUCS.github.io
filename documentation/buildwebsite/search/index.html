@@ -17,24 +17,24 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>1. Install Pandoc and Convert Docx | My New Hugo Site</title>
-<meta name="description" content=""><meta property="og:title" content="1. Install Pandoc and Convert Docx" />
-<meta property="og:description" content="How to install Pandoc on Ubuntu and convert docx to md.
+<title>6. Setup Search | My New Hugo Site</title>
+<meta name="description" content=""><meta property="og:title" content="6. Setup Search" />
+<meta property="og:description" content="How to set up site search.
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://DAYUCS.github.io/documentation/buildwebsite/pandoc/" />
+<meta property="og:url" content="http://DAYUCS.github.io/documentation/buildwebsite/search/" />
 
-<meta itemprop="name" content="1. Install Pandoc and Convert Docx">
-<meta itemprop="description" content="How to install Pandoc on Ubuntu and convert docx to md.
+<meta itemprop="name" content="6. Setup Search">
+<meta itemprop="description" content="How to set up site search.
 ">
 
-<meta itemprop="wordCount" content="108">
+<meta itemprop="wordCount" content="126">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="1. Install Pandoc and Convert Docx"/>
-<meta name="twitter:description" content="How to install Pandoc on Ubuntu and convert docx to md.
+<meta name="twitter:title" content="6. Setup Search"/>
+<meta name="twitter:description" content="How to set up site search.
 "/>
 
 
@@ -221,7 +221,7 @@
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitepandoc-li">
     
-      <a href="/documentation/buildwebsite/pandoc/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitepandoc"><span class="td-sidebar-nav-active-item">1. Install Pandoc and Convert Docx</span></a>
+      <a href="/documentation/buildwebsite/pandoc/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitepandoc"><span class="">1. Install Pandoc and Convert Docx</span></a>
     
     
   </li>
@@ -356,7 +356,7 @@
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitesearch-li">
     
-      <a href="/documentation/buildwebsite/search/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitesearch"><span class="">6. Setup Search</span></a>
+      <a href="/documentation/buildwebsite/search/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitesearch"><span class="td-sidebar-nav-active-item">6. Setup Search</span></a>
     
     
   </li>
@@ -595,7 +595,7 @@
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="http://DAYUCS.github.io/documentation/buildwebsite/pandoc/">1. Install Pandoc and Convert Docx</a>
+	<a href="http://DAYUCS.github.io/documentation/buildwebsite/search/">6. Setup Search</a>
 </li>
 
 	</ol>
@@ -603,8 +603,8 @@
 
             
 <div class="td-content">
-	<h1>1. Install Pandoc and Convert Docx</h1>
-	<div class="lead">How to install Pandoc on Ubuntu and convert docx to md.</div>
+	<h1>6. Setup Search</h1>
+	<div class="lead">How to set up site search.</div>
 	<header class="article-meta">
 		
 		
@@ -620,41 +620,39 @@
 		
 		
 	</header>    
-	<p>Pandoc is a Haskell library for converting from one markup format to
-another (<a href="https://pandoc.org/">https://pandoc.org/</a>).</p>
-<p>We&rsquo;ll install it on Ubuntu and convert files from Microsoft Word docx to
-Markdown.</p>
+	<p>Docsy offers multiple options that let our readers search our site content. In this case, we&rsquo;ll use <em>Local search with Lunr</em>.
+This is a Javascript-based search option that lets us index our site and make it searchable without the need for external,
+server-side search services. This is a good option particularly for smaller or non-public sites.</p>
 <h1 id="detailed-instructions">Detailed Instructions:</h1>
 <ul>
 <li>Step 1</li>
 </ul>
 <blockquote>
-<p>Run update command to update package repositories and get latest
-package information.</p>
-<pre><code>sudo apt update
+<p>Create a Markdown file as content/documentation/search.md. It only needs a <em>title</em> and <em>layout: search</em>, as in the following
+example:</p>
+<pre><code>---
+title: Search Results
+layout: search
+---
 </code></pre></blockquote>
 <ul>
 <li>Step 2</li>
 </ul>
 <blockquote>
-<p>Run the install command to install the packages and dependencies.</p>
-<pre><code>sudo apt install pandoc
-</code></pre></blockquote>
+<p>Enable local search in <em>config.toml</em>:</p>
+<pre><code>[params]
+#Enable offline search with Lunr.js
+algolia_docsearch = false
+offlineSearch = true
+offlineSearchSummaryLength = 200
+offlineSearchMaxResults = 25
+</code></pre><p>You may find the completed files at <a href="https://github.com/DAYUCS/word2md">https://github.com/DAYUCS/word2md</a>.</p>
+</blockquote>
 <ul>
 <li>Step 3</li>
 </ul>
 <blockquote>
-<p>Run Pandoc command to check the installation.</p>
-<pre><code>pandoc --version
-</code></pre></blockquote>
-<ul>
-<li>Step 4</li>
-</ul>
-<blockquote>
-<p>Run Pandoc command to convert docx to Markdown file and extract images
-that the docx contains.</p>
-<pre><code>pandoc -f docx -t markdown 'Get Data from DB Log - Oracle V2.docx' -o index.md --extract-media=.
-</code></pre><p><img src="./media/image1.png" alt="The files generated by Pandoc"></p>
+<p>Restart our Hugo local server.</p>
 </blockquote>
 
 	
