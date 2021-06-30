@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Documentation: 1. Get Data from Oracle Log</title>
+      <title>Documentation: Get Data from Oracle Log</title>
       <link>http://github.io/documentation/rdb/oracle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -264,7 +264,7 @@ Sign off Required by:&lt;/p&gt;
     </item>
     
     <item>
-      <title>Documentation: 2. Get Data from DB2 Log</title>
+      <title>Documentation: Get Data from DB2 Log</title>
       <link>http://github.io/documentation/rdb/db2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -424,7 +424,7 @@ Sign off Required by:&lt;/p&gt;
     </item>
     
     <item>
-      <title>Documentation: 3. Get Data from MS SQL Server Log</title>
+      <title>Documentation: Get Data from MS SQL Server Log</title>
       <link>http://github.io/documentation/rdb/mssql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
