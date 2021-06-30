@@ -3,51 +3,55 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://github.io/documentation/buildwebsite/pandoc/</loc>
+    <loc>http://DAYUCS.github.io/documentation/buildwebsite/pandoc/</loc>
   </url>
   
   <url>
-    <loc>http://github.io/documentation/buildwebsite/hugo/</loc>
+    <loc>http://DAYUCS.github.io/documentation/buildwebsite/hugo/</loc>
   </url>
   
   <url>
-    <loc>http://github.io/documentation/buildwebsite/docsy/</loc>
+    <loc>http://DAYUCS.github.io/documentation/buildwebsite/docsy/</loc>
   </url>
   
   <url>
-    <loc>http://github.io/documentation/</loc>
+    <loc>http://DAYUCS.github.io/documentation/buildwebsite/menu/</loc>
   </url>
   
   <url>
-    <loc>http://github.io/documentation/buildwebsite/</loc>
+    <loc>http://DAYUCS.github.io/documentation/</loc>
   </url>
   
   <url>
-    <loc>http://github.io/documentation/rdb/oracle/</loc>
+    <loc>http://DAYUCS.github.io/documentation/buildwebsite/</loc>
   </url>
   
   <url>
-    <loc>http://github.io/documentation/rdb/</loc>
+    <loc>http://DAYUCS.github.io/documentation/rdb/oracle/</loc>
   </url>
   
   <url>
-    <loc>http://github.io/documentation/rdb/db2/</loc>
+    <loc>http://DAYUCS.github.io/documentation/rdb/</loc>
   </url>
   
   <url>
-    <loc>http://github.io/documentation/rdb/mssql/</loc>
+    <loc>http://DAYUCS.github.io/documentation/rdb/db2/</loc>
   </url>
   
   <url>
-    <loc>http://github.io/categories/</loc>
+    <loc>http://DAYUCS.github.io/documentation/rdb/mssql/</loc>
   </url>
   
   <url>
-    <loc>http://github.io/</loc>
+    <loc>http://DAYUCS.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>http://github.io/tags/</loc>
+    <loc>http://DAYUCS.github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>http://DAYUCS.github.io/tags/</loc>
   </url>
   
 </urlset>

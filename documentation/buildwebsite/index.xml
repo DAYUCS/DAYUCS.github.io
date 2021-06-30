@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site – Build Web Site</title>
-    <link>http://github.io/documentation/buildwebsite/</link>
+    <link>http://DAYUCS.github.io/documentation/buildwebsite/</link>
     <description>Recent content in Build Web Site on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="http://github.io/documentation/buildwebsite/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://DAYUCS.github.io/documentation/buildwebsite/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Documentation: 1. Install Pandoc and Convert Docx</title>
-      <link>http://github.io/documentation/buildwebsite/pandoc/</link>
+      <link>http://DAYUCS.github.io/documentation/buildwebsite/pandoc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://github.io/documentation/buildwebsite/pandoc/</guid>
+      <guid>http://DAYUCS.github.io/documentation/buildwebsite/pandoc/</guid>
       <description>
         
         
@@ -65,10 +65,10 @@ that the docx contains.&lt;/p&gt;
     
     <item>
       <title>Documentation: 2. Install Hugo</title>
-      <link>http://github.io/documentation/buildwebsite/hugo/</link>
+      <link>http://DAYUCS.github.io/documentation/buildwebsite/hugo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://github.io/documentation/buildwebsite/hugo/</guid>
+      <guid>http://DAYUCS.github.io/documentation/buildwebsite/hugo/</guid>
       <description>
         
         
@@ -112,10 +112,10 @@ package information.&lt;/p&gt;
     
     <item>
       <title>Documentation: 3. Install Docsy</title>
-      <link>http://github.io/documentation/buildwebsite/docsy/</link>
+      <link>http://DAYUCS.github.io/documentation/buildwebsite/docsy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://github.io/documentation/buildwebsite/docsy/</guid>
+      <guid>http://DAYUCS.github.io/documentation/buildwebsite/docsy/</guid>
       <description>
         
         
@@ -151,6 +151,58 @@ git submodule update --init --recursive
 &lt;pre&gt;&lt;code&gt;hugo server
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;By default, your site will be available at http://localhost:1313/&lt;/p&gt;
 &lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Documentation: 4. Setup Top-level Menu</title>
+      <link>http://DAYUCS.github.io/documentation/buildwebsite/menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://DAYUCS.github.io/documentation/buildwebsite/menu/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The top level menu (the one that appears in the top navigation bar for the entire site) uses our site’s main menu..&lt;/p&gt;
+&lt;h1 id=&#34;detailed-instructions&#34;&gt;Detailed Instructions:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Add menu definition into config.toml which is under the root of our project directory. Then it
+will look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;baseURL = &amp;quot;http://DAYUCS.github.io/&amp;quot;
+languageCode = &amp;quot;en-us&amp;quot;
+title = &amp;quot;My New Hugo Site&amp;quot;
+theme = &amp;quot;docsy&amp;quot;
+
+[menu]
+
+ [[menu.main]]
+   identifier = &amp;quot;documentation&amp;quot;
+   name = &amp;quot;Documentation&amp;quot;
+   pre = &amp;quot;&amp;lt;i class=&#39;fa fa-book&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+   url = &amp;quot;/documentation/&amp;quot;
+   weight = 20
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Add _index.md under content/documentation of our project directory. Put following infomation into
+this file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;quot;Documentation&amp;quot;
+weight: 1
+type: docs
+summary: A Hugo Site.
+---
+
+# Contents
+
+Here are the contents:
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 
       </description>
     </item>
