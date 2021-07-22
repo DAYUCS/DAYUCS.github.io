@@ -1,0 +1,4059 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.68.3" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Archiving and Recovery | My New Hugo Site</title>
+<meta name="description" content=""><meta property="og:title" content="Archiving and Recovery" />
+<meta property="og:description" content="Archiving and Recovery on CE.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://DAYUCS.github.io/documentation/ce/" />
+
+<meta itemprop="name" content="Archiving and Recovery">
+<meta itemprop="description" content="Archiving and Recovery on CE.
+">
+
+<meta itemprop="wordCount" content="9140">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Archiving and Recovery"/>
+<meta name="twitter:description" content="Archiving and Recovery on CE.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.28fb3aa092e3d1d97bfeaad13e27f40856b29252350248c2f434b3469e200b33.css" as="style">
+<link href="/scss/main.min.28fb3aa092e3d1d97bfeaad13e27f40856b29252350248c2f434b3469e200b33.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+
+
+<link rel="stylesheet" href="/css/prism.css"/>
+
+
+
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">My New Hugo Site</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/documentation/" ><i class='fa fa-book'></i><span>Documentation</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.0a1e01afc5cf341ac5077d844744290d.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="25"
+>
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+  
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.0a1e01afc5cf341ac5077d844744290d.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="25"
+>
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    
+    
+    
+    
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-documentation-li">
+    
+      <a href="/documentation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-documentation"><span class="">Documentation</span></a>
+    
+    
+      
+      <ul class="ul-1">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationmammoth-li">
+    
+      <a href="/documentation/mammoth/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationmammoth"><span class="">Mammoth</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationoffice2md-li">
+    
+      <a href="/documentation/office2md/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationoffice2md"><span class="">Office2Md</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-documentationbuildwebsite-li">
+    
+      <a href="/documentation/buildwebsite/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-documentationbuildwebsite"><span class="">Build Web Site</span></a>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitepandoc-li">
+    
+      <a href="/documentation/buildwebsite/pandoc/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitepandoc"><span class="">1. Install Pandoc and Convert Docx</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitehugo-li">
+    
+      <a href="/documentation/buildwebsite/hugo/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitehugo"><span class="">2. Install Hugo</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitedocsy-li">
+    
+      <a href="/documentation/buildwebsite/docsy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitedocsy"><span class="">3. Install Docsy</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitemenu-li">
+    
+      <a href="/documentation/buildwebsite/menu/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitemenu"><span class="">4. Setup Top-level Menu</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitecontent-li">
+    
+      <a href="/documentation/buildwebsite/content/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitecontent"><span class="">5. Add Content</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitesearch-li">
+    
+      <a href="/documentation/buildwebsite/search/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitesearch"><span class="">6. Setup Search</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationbuildwebsitepublish-li">
+    
+      <a href="/documentation/buildwebsite/publish/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationbuildwebsitepublish"><span class="">7. Publish on Github (Option)</span></a>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationce-li">
+    
+      <a href="/documentation/ce/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-documentationce"><span class="td-sidebar-nav-active-item">Archiving and Recovery</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-documentationrdb-li">
+    
+      <a href="/documentation/rdb/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-documentationrdb"><span class="">Example - RDB Log</span></a>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationrdboracle-li">
+    
+      <a href="/documentation/rdb/oracle/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationrdboracle"><span class="">Get Data from Oracle Log</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationrdbdb2-li">
+    
+      <a href="/documentation/rdb/db2/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationrdbdb2"><span class="">Get Data from DB2 Log</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationrdbmssql-li">
+    
+      <a href="/documentation/rdb/mssql/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationrdbmssql"><span class="">Get Data from MS SQL Server Log</span></a>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationtable-li">
+    
+      <a href="/documentation/table/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationtable"><span class="">Table Example</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationsearch-li">
+    
+      <a href="/documentation/search/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-documentationsearch"><span class="">Search Results</span></a>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+    </ul>
+  </nav>
+</div>
+
+
+
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+  
+  
+  
+  
+  
+  
+  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  
+  
+    <a id="print" href="http://DAYUCS.github.io/documentation/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
+  
+  </div>
+
+
+            
+
+
+
+
+            
+
+	
+		
+
+
+
+  
+  
+
+	
+		
+
+
+
+  
+  
+
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="http://DAYUCS.github.io/documentation/">Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="http://DAYUCS.github.io/documentation/ce/">Archiving and Recovery</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Archiving and Recovery</h1>
+	<div class="lead">Archiving and Recovery on CE.</div>
+	<header class="article-meta">
+		
+		
+			
+				
+
+
+			
+				
+
+
+			
+		
+		
+	</header>    
+	<p><img src="./images/" alt=""></p>
+<table>
+<thead>
+<tr>
+<th align="center"><!-- raw HTML omitted -->EXIMBILLS © Trade Finance System<!-- raw HTML omitted --><!-- raw HTML omitted -->Customer Enterprise Version 3.3.6<!-- raw HTML omitted --><!-- raw HTML omitted -->Archiving and Recovery<!-- raw HTML omitted --><!-- raw HTML omitted -->July 2021</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Copyright</em> <em>2021</em> <em>© China Systems Corporation</em><!-- raw HTML omitted --><!-- raw HTML omitted --><em>All Rights Reserved</em><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><em>This document is protected by United States Copyright Law and may contain Trade Secrets Information which is proprietary to China Systems Corporation.  No part of this document may be copied, photocopied, reproduced, translated, distributed, or reduced to any electronic medium or machine-readable form without prior consent in writing from China Systems Corporation.  The information in this document may be used only under the terms and conditions of separate China Systems Corporation license agreements.<em><!-- raw HTML omitted --><!-- raw HTML omitted --></em>Information is subject to change without notice.  China Systems Corporation makes no warranties, either expressed or implied, with respect to the software herein described as to its quality, performance, including, without limitations to, its fitness for any particular purpose.<em><!-- raw HTML omitted --><!-- raw HTML omitted --></em>This document may not reflect total system capability at any subsequent date as a result of development.  It is also possible that it may contain references to facilities not available on your computer system.  Such references should not be construed to mean that these facilities will necessarily be made available on all types of computer hardware or in all user locations.<em><!-- raw HTML omitted --><!-- raw HTML omitted --></em>China Systems Corporation accepts no responsibility or liability for any damages or loss of business or revenue due to the use of this document.<em><!-- raw HTML omitted --><!-- raw HTML omitted --></em>All trademarks, registered trademarks and trade names mentioned in this document are the sole property of their respective holders.</em></td>
+</tr>
+<tr>
+<td align="center">ORDER MORE EXIMBILLS DOCUMENTATION<!-- raw HTML omitted --><!-- raw HTML omitted -->Additional copies of Documentation are available for purchase from China Systems Corporation or through your local EXIMBILLS Support Office.</td>
+</tr>
+<tr>
+<td align="center"><img src="./images/35930536-7cd8-4bbc-a37b-85d17c45ebc5.jpeg" alt="csliit"><!-- raw HTML omitted --><!-- raw HTML omitted -->CHINA SYSTEMS CORPORATION<!-- raw HTML omitted --><!-- raw HTML omitted -->Comments may be addressed to:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><a href="mailto:corporatedocs@chinasystems.com">corporatedocs@chinasystems.com</a><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->China Systems Corporation Ltd.<!-- raw HTML omitted --><!-- raw HTML omitted -->Corner House, 20 Parliament Street<!-- raw HTML omitted --><!-- raw HTML omitted -->Hamilton HM12<!-- raw HTML omitted --><!-- raw HTML omitted -->Bermuda</td>
+</tr>
+</tbody>
+</table>
+<p>Table of Contents</p>
+<p><a href="error%20reading">CE Documentation Library</a></p>
+<p><a href="error%20reading">CE Documentation Library</a></p>
+<p><a href="error%20reading">Core System Manuals</a></p>
+<p><a href="error%20reading">CE Utility Reference Manuals</a></p>
+<p><a href="error%20reading">Installation Guides</a></p>
+<p><a href="error%20reading">Introduction</a></p>
+<p><a href="error%20reading">System Overview</a></p>
+<p><a href="error%20reading">Manual Overview</a></p>
+<p><a href="error%20reading">Using the CE Utility</a></p>
+<p><a href="error%20reading">Running the CE Utility</a></p>
+<p><a href="error%20reading">Preparing the CE Utility Files</a></p>
+<p><a href="error%20reading">Accessing the CE Utility</a></p>
+<p><a href="error%20reading">Navigating the CE Utility Interface</a></p>
+<p><a href="error%20reading">Generating the XML Parameter Files</a></p>
+<p><a href="error%20reading">Building a Product</a></p>
+<p><a href="error%20reading">Archiving Prerequisites</a></p>
+<p><a href="error%20reading">Archiving / Backup Database Settings</a></p>
+<p><a href="error%20reading">Data Source Settings</a></p>
+<p><a href="error%20reading">WebSphere Data Source Settings</a></p>
+<p><a href="error%20reading">CE Utility Data Source Settings</a></p>
+<p><a href="error%20reading">Log Settings</a></p>
+<p><a href="error%20reading">Manual Archive Mode</a></p>
+<p><a href="error%20reading">Overview</a></p>
+<p><a href="error%20reading">Common Parameter Settings</a></p>
+<p><a href="error%20reading">Archive Control Component</a></p>
+<p><a href="error%20reading">Archive Product Items</a></p>
+<p><a href="error%20reading">Error Codes</a></p>
+<p><a href="error%20reading">JSP and JS Settings</a></p>
+<p><a href="error%20reading">Archive Data Function</a></p>
+<p><a href="error%20reading">Parameter Settings</a></p>
+<p><a href="error%20reading">Transaction Process</a></p>
+<p><a href="error%20reading">Restore Archived Data Function</a></p>
+<p><a href="error%20reading">Parameter Settings</a></p>
+<p><a href="error%20reading">Transaction Process</a></p>
+<p><a href="error%20reading">Inquire Archived Data Function</a></p>
+<p><a href="error%20reading">Parameter Settings</a></p>
+<p><a href="error%20reading">Transaction Process</a></p>
+<p><a href="error%20reading">Auto Archive Mode</a></p>
+<p><a href="error%20reading">Overview</a></p>
+<p><a href="error%20reading">Parameter Settings</a></p>
+<p><a href="error%20reading">Transaction Process</a></p>
+<p><a href="error%20reading">Archiving through STP</a></p>
+<p><a href="error%20reading">Overview</a></p>
+<p><a href="error%20reading">Parameter Settings</a></p>
+<p><a href="error%20reading">Transaction Process</a></p>
+<p><a href="error%20reading">Sample Archiving JSP and JS Files</a></p>
+<p><a href="error%20reading">IMLC_ArchiveCriteria.jsp</a></p>
+<p><a href="error%20reading">IMLC_ViewArchive.jsp</a></p>
+<p><a href="error%20reading">IMLC_ViewArchive_Function.JS</a></p>
+<p><a href="error%20reading">IMLC_ViewArchive_Event.JS</a></p>
+<p><a href="error%20reading">Glossary</a></p>
+<p><a href="error%20reading">Glossary</a></p>
+<p>CE Documentation Library</p>
+<p>CE Documentation Library</p>
+<p>The CE Documentation Library lists all available manuals that serve as references on the use of the Customer Enterprise system. The documents are categorized into three groups: Core System Manuals, CE Utility Reference Manuals, and Installation Guides.</p>
+<p>Core System Manuals</p>
+<p>The CE core system manuals provide details on the setup and configuration of various CE parameters, as well as the implementation of supplementary functionalities supported by the system.</p>
+<p>Archiving and Recovery</p>
+<p>This manual is a reference to the Archive and Recovery functionality of the CE system. Discussions include the required parameter settings for configuring the relevant functions, as well as examples of how this functionality is used in transaction processes.</p>
+<p>Building a Product</p>
+<p>This manual is a reference to the process of building a product in CE.  It provides step-by-step procedures on how to create a basic CE module, transaction function, and product setting; configure parameters; and attach components to generate a working business product.</p>
+<p>Data Objects</p>
+<p>This manual serves as a reference for creating and utilizing data objects in the CE system.  The discussions provide details on how to build data object templates and data object entities, and how to attach these to the transaction function screen.</p>
+<p>Frequently Asked Questions</p>
+<p>This document addresses commonly-asked questions on the Customer Enterprise system.  Issues on the browser-side (transaction processing), CE Utility, Security Module, and database, among others, are addressed in the discussions.</p>
+<p>Interfacing CE with CS Eximbills</p>
+<p>This document discusses the process of interfacing CE with the CS Eximbills (CSX) back office system. Employing the MQ, FTP, and TCP/IP communication protocols, the interface process using the XML format is detailed in this document.</p>
+<p>Interfacing CE with Eximbills Enterprise</p>
+<p>This document discusses the process of interfacing CE with the Eximbills Enterprise (EE) back office system.  Employing the MQ protocol, the interface process for the transfer of data between CE and EE using the XML format is detailed in this document.</p>
+<p>Log Settings</p>
+<p>This manual provides details on CE logs as well as general instructions on log configuration in CE.  This is especially written for the users who are in charge of maintaining the CE system.</p>
+<p>Look and Feel</p>
+<p>This manual is a reference guide on designing the CE user interface (i.e., the look and feel of the system).  Divided into two parts, the manual provides instructions on creating a) the basic L&amp;F style of CE; and b) the CE L&amp;F style that incorporates widgets.</p>
+<p>Multi-Entity</p>
+<p>This manual is a reference on implementing the Multi-Entity functionality of the CE system.  Discussions cover the implementation and application of CE multi-entity.</p>
+<p>Multi-Language</p>
+<p>This manual discusses the procedures required in setting up the Multi-Language functionality of CE as it is run by Administrator- and Operator-type users. Furthermore, the configuration of certain system and browser elements as well as the setup of related system parameters is explained in step-by-step procedures.</p>
+<p>Reports</p>
+<p>This manual is a comprehensive reference guide on the requirements and processes involved in building business products and functions that generate online reports and documents.</p>
+<p>Security and System Maintenance Functions</p>
+<p>This manual is a comprehensive guide on the security and system maintenance of the CE system.  As such, it includes detailed instructions for company and company function management, and user and user function management.  Maintenance of key functionalities such as authorization rules, reference numbers, and other services is covered as well. In addition, this document discusses the security concepts in CE to assist users assigned with access rights to the CE Security Module.</p>
+<p>Standing Data Functions</p>
+<p>This document discusses the functions for the CE standing data that are maintained by operators (e.g., parties, clauses).  It includes sections for each function, starting with a brief description of the function, followed by the function input when necessary, and the procedure steps.</p>
+<p>Supplementary Functions</p>
+<p>This manual is a reference for the CE Utility operator user in configuring parameter, JSP, and transaction function settings to define special or supplementary CE functionalities such as uploading images; sending images and forms to the back-office system; and sending notifications via e-mail, SMS, and widgets.</p>
+<p>System Administration Functions</p>
+<p>This manual is a reference for the default Super Administrator user of the CE Utility in the configuration and maintenance of the CE environment.  It discusses in detail user management and parameter management.</p>
+<p>System Reference</p>
+<p>This document serves as a quick reference to the following elements that are used when configuring specific parameters in the CE Utility: global system parameters, system parameters, components, XML Generator items, server side system methods, system JS methods, and APIs.</p>
+<p>CE Utility Reference Manuals</p>
+<p>The CE Utility Reference set of manuals is a guide on the use of the Customer Enterprise Utility Workbench, or simply CE Utility.  This reference provides details on every function or feature in the CE Utility and includes instructions and step-by-step procedures on how to operate or use the function in relation to operating and maintaining the CE system and processing a business transaction.</p>
+<p>A manual is provided for each function group of the CE Utility:</p>
+<p><em>CE Utility</em> <em>Reference:</em> <em>User Manager Functions</em>, for the functions that belong to the User Manage function group of the CE Utility when accessed by an Administrator or Operator user</p>
+<p><em>CE Utility</em> <em>Reference:</em> <em>Parameter Manager Functions</em>, for the functions that belong to the Parameter Manage function group of the CE Utility when accessed by an Administrator or Operator user</p>
+<p><em>CE Utility</em> <em>Reference:</em> <em>System Functions</em>, for the functions that belong to the System Function group of the CE Utility.</p>
+<p><em>CE Utility</em> <em>Reference:</em> <em>Transaction Functions</em>, for the functions that belong to the Transaction Function group of the CE Utility.</p>
+<p><em>CE Utility</em> <em>Reference:</em> <em>Product Functions</em>, for the functions that belong to the Product Function group of the CE Utility.</p>
+<p><em>CE Utility</em> <em>Reference:</em> <em>Maintenance Functions</em>, for the functions that belong to the Maintenance function group of the CE Utility.</p>
+<p>Installation Guides</p>
+<p>The CE installation guides are references on the installation and setup processes of the CE system on different application servers and databases.</p>
+<p><strong>Installation Guide WAS</strong> <strong>9</strong> <strong>- Oracle</strong> <strong>19c</strong></p>
+<p>This is a reference for installing the CE system on WebSphere Application Server Version 9.0.5.6, with an Oracle 19c database.  This includes detailed instructions on configuring the components that are required to successfully run CE.</p>
+<p>Introduction</p>
+<p>System Overview</p>
+<p>Manual Overview</p>
+<p>System Overview</p>
+<p>Transactions that are old, completed, or canceled consume much disk space that is better used to store future records.  Moreover, this slows down transaction processes.  While these types of records can simply be deleted, there is no way to retrieve them for inquiry or any subsequent process.</p>
+<p>The Archiving and Recovery functionality of CE addresses these setbacks. Archiving is the process of transferring transaction records from the Transaction Database to the Backup Database. Recovery, on the other hand, is the process of retrieving archived records from the Backup Database. Recovered records may be used for other operations or inquiry, depending on the bank&rsquo;s requirements.</p>
+<p>Archived data include master file transaction data and the associated data such as documents, images, GAPI, e-mails, and forms.</p>
+<p>Run by bank operators, the Archiving functions in CE can only be created for transaction modules.  These functions are Archive Data, Inquire Archived Data, and Restore Archived Data.</p>
+<p>There are two modes of archiving:</p>
+<p>Manual Archiving, in which records are manually archived per module according to a set of defined criteria.  In addition, records received via STP can also be archived through this mode.</p>
+<p>Auto Archiving, in which records are automatically archived by batch according to a set of defined criteria. This is also called Batch Archiving.</p>
+<p>Creating Archiving functions requires specific installation, database, and parameter settings.</p>
+<p>Manual Overview</p>
+<p><!-- raw HTML omitted --><strong>Purpose</strong><!-- raw HTML omitted --></p>
+<p>This manual is a reference to the Archive and Recovery functionality of the CE system. Discussions include the required parameter settings for configuring the relevant functions, as well as examples on how this functionality is used in transaction processes.</p>
+<p>The archiving functions discussed in this document are manual Archiving functions (Archive Data, Restore Archived Data, and Inquire Archived Data), Batch Archive function, and STP Archive function.</p>
+<p><!-- raw HTML omitted --><strong>Audience</strong><!-- raw HTML omitted --></p>
+<p>This document is written specifically for, but not limited to, the following users:</p>
+<p>Consultants tasked to implement the Archive and Recovery functions in a business module.  These users must have sufficient knowledge of running CE Utility functions, building a product, and installing the CE system.</p>
+<p>Bank or browser-side users in charge of processing, managing, and maintaining transaction records.</p>
+<p><!-- raw HTML omitted --><strong>Prerequisites</strong><!-- raw HTML omitted --></p>
+<p>Sufficient knowledge of building business products is required. Recommended titles before reading this manual are as follows:</p>
+<p><em>CE</em> <em>Building a</em> <em>Product</em></p>
+<p><em>C**E Installation Guide</em></p>
+<p><em>C**E System Administration Functions</em></p>
+<p><em>CE Utility References</em></p>
+<p><img src="./images/680d2efe-5635-48b7-b50f-de19368b58b4.jpeg" alt="Tzone55"><!-- raw HTML omitted -->**NOTE:**<!-- raw HTML omitted --> <!-- raw HTML omitted -->Some features discussed in this manual have been tested and documented based on an older system version.  Unless otherwise specified, the overall functionality is the same when recreated in the current version.<!-- raw HTML omitted --></p>
+<p>Using the CE Utility</p>
+<p>Running the CE Utility</p>
+<p>Generating the XML Parameters</p>
+<p>BUILDING A PRODUCT</p>
+<p>Running the CE Utility</p>
+<p>The Customer Enterprise Utility Workbench, or CE Utility, is the main tool for building parameters in CE.</p>
+<p>Preparing the CE Utility Files</p>
+<p>Along with the installation files, the CE Utility folder is provided with every CE system release. Prior to using the CE Utility, do the following:</p>
+<p>Copy the CE Utility folder to the local drive.</p>
+<p>Define the required environment variables.</p>
+<p>Map the CE directories (e.g., CEWeb.war and CE_PARA) to the network drive.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img src="./images/5b77645f-1fe2-4b1d-9dc3-8b3cf7a35bce.jpg" alt=""></th>
+</tr>
+</thead>
+</table>
+<p><em><strong>Figure 2.</strong></em> <em><strong>1</strong></em> <em><strong>CE Utility Folder</strong></em></p>
+<p><img src="./images/949d063e-2dfe-403e-88d3-7d580ac6aa65.jpeg" alt="Tzone55"><!-- raw HTML omitted -->**NOTE:**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->The default drives defined in the GEN_XML_ROOTPATH and GEN_WEB_ROOTPATH system parameters are<!-- raw HTML omitted --> <!-- raw HTML omitted -->O:&lt;/span&gt; <!-- raw HTML omitted -->and<!-- raw HTML omitted --> <!-- raw HTML omitted -->P:&lt;/span&gt; <!-- raw HTML omitted -->respectively. These drives, if currently not existing, may be created through a batch file. While<!-- raw HTML omitted --> <!-- raw HTML omitted -->O:&lt;/span&gt; <!-- raw HTML omitted -->and<!-- raw HTML omitted --> <!-- raw HTML omitted -->P:&lt;/span&gt;<!-- raw HTML omitted -->are the default drives for CE, these may be set to any other preferred drive available in the network.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->To enable users to use the CE Utility on their own local machines as clients connecting to the CE server: 1) Install the Java Development Kit (JDK) program; 2) Copy the CE Utility folder; 3) Create the<!-- raw HTML omitted --> <!-- raw HTML omitted -->JAVA_HOME<!-- raw HTML omitted --> <!-- raw HTML omitted -->environment variable, which<!-- raw HTML omitted --> <!-- raw HTML omitted -->must<!-- raw HTML omitted --> <!-- raw HTML omitted -->point to this directory:<!-- raw HTML omitted --> <!-- raw HTML omitted -->[Java Home]\[Installed JDK]<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->For more information on setting up the CE environment, refer to the CE installation guides<!-- raw HTML omitted --><!-- raw HTML omitted -->*.*<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->For information on the CE Utility functions, refer to the<!-- raw HTML omitted --> <!-- raw HTML omitted --><em>CE Utility Reference</em><!-- raw HTML omitted --> <!-- raw HTML omitted -->manuals.<!-- raw HTML omitted --></p>
+<table>
+<thead>
+<tr>
+<th><strong>Batch File for Creating the CE Drives</strong><!-- raw HTML omitted --><!-- raw HTML omitted -->The batch file for creating drives contains the following commands:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->subst O: /d<!-- raw HTML omitted --><!-- raw HTML omitted -->subst P: /d<!-- raw HTML omitted --><!-- raw HTML omitted -->subst O: C:&quot;\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\installedApps\DOCS-CEV336Node01Cell\CE.ear\CE_PARA&quot;<!-- raw HTML omitted --><!-- raw HTML omitted -->subst P: C:&quot;\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\installedApps\DOCS-CEV336Node01Cell\CE.ear\CEWeb.war&rdquo; <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><img src="./images/57ae46a7-5984-4918-998d-c60785b5e940.jpg" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>Accessing the CE Utility</p>
+<p>The main program for running the CE Utility is the CEUtility.bat file, which is found in the CE Utility folder.</p>
+<table>
+<thead>
+<tr>
+<th><!-- raw HTML omitted -->**Do the following . .<strong><!-- raw HTML omitted --> <!-- raw HTML omitted --></strong>.**<!-- raw HTML omitted --></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Run the CEUtility batch program to access the CE Utility.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>NOTE</strong><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->A shortcut for the CEUtility batch file can be created on the desktop for easy access.<!-- raw HTML omitted --></th>
+<th></th>
+<th align="center"><img src="./images/f0de4057-32cb-4475-912f-0b2089a6765c.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>The logon window of the CE Utility is displayed.<!-- raw HTML omitted --><!-- raw HTML omitted -->To define the database information, click on the Profile button.</td>
+<td></td>
+<td align="center"><img src="./images/91c27a4f-c005-49dc-989f-3ebe873ffc7b.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>In the Database Information dialog box that is displayed, specify the required database details and click on the Save button.</td>
+<td></td>
+<td align="center"><img src="./images/ef5843c0-1c3e-4aff-a993-022b20c8f1f1.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>A confirmation message is displayed. Click on the OK button.</td>
+<td></td>
+<td align="center"><img src="./images/24ed2f38-f84e-457a-ba6c-383e5c738ce8.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>NOTE</strong><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->This new data source setting is saved in the<!-- raw HTML omitted --> <!-- raw HTML omitted -->UserInfo.xml<!-- raw HTML omitted --> <!-- raw HTML omitted -->file in the CE Utility directory.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/8a0daf95-8f9f-4ea2-940c-7647920ead56.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>The relevant username and password may then be specified for logging on the CE Utility.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>NOTE</strong><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->For information on defining CE Utility user profiles, refer to the<!-- raw HTML omitted --> <!-- raw HTML omitted --><em>CE System Administration Functions</em><!-- raw HTML omitted --> <!-- raw HTML omitted -->manual.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/01df76d7-4990-4721-87e8-b647bf436a6a.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>The CE Utility window is displayed.</td>
+<td></td>
+<td align="center"><img src="./images/65b18a7a-8d5b-4e2d-bd99-e57475158377.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>A function is accessed by opening or double-clicking on the relevant function group and clicking on the function name.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>NOTE</strong><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->A user may only access and utilize the functions assigned to him.<!-- raw HTML omitted -->  <!-- raw HTML omitted -->For more details, refer to the<!-- raw HTML omitted --> <!-- raw HTML omitted --><em>CE Utility Reference</em><!-- raw HTML omitted --><!-- raw HTML omitted -->*:*<!-- raw HTML omitted --> <!-- raw HTML omitted -->*User Manager Functions*<!-- raw HTML omitted --> <!-- raw HTML omitted -->documentation<!-- raw HTML omitted --><!-- raw HTML omitted -->*.*<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/64308560-e899-4d85-9a2c-3d916b02136a.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p><img src="./images/87b424bc-d215-4afd-a392-e4e63828663b.jpeg" alt="Tzone55"><!-- raw HTML omitted -->**NOTE:**<!-- raw HTML omitted --> <!-- raw HTML omitted -->It is sometimes necessary to assign a new user name and password when the new database is restored from a backup file.  Restoring the backup file restores the original user profiles.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->The new user profiles for the CE Utility (as well as the CE Security Module) can be defined during the installation process.  SQL scripts are run to create these profiles.  Refer to the CE installation guides for more information.<!-- raw HTML omitted --></p>
+<p>Navigating the CE Utility Interface</p>
+<p>After logging on, the CE Utility window is displayed and parameters may then be configured. The functions used for setting up parameters may be accessed by clicking on the function name on the Function menu or by using the shortcut buttons.</p>
+<p>The CE Utility interface also provides ways by which parameters can be created, edited, deleted or linked to other operations: menu bar, toolbar buttons, and popup menu.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img src="./images/b0e776e3-1ac6-4b8a-8762-81751458b35f.jpg" alt=""></th>
+</tr>
+</thead>
+</table>
+<p><em><strong>Figure 2.</strong></em> <em><strong>2</strong></em> <em><strong>The CE Utility Interface</strong></em></p>
+<p><img src="./images/048d1627-3390-4495-8bd7-9e3be9955800.jpeg" alt="Tzone55"><!-- raw HTML omitted -->**NOTE:**<!-- raw HTML omitted --> <!-- raw HTML omitted -->A function is only displayed, and its corresponding button or menu option enabled, if the user has been given the right to access this function.<!-- raw HTML omitted -->  <!-- raw HTML omitted -->Some options and functions are only available to Super Administrator users, while others are only accessible to Administrator and Operator users.<!-- raw HTML omitted --></p>
+<p>CE Utility Functions</p>
+<p>The functions that may be accessed for setting up parameters are organized together into several function groups. The current available function groups and their corresponding functions in the CE Utility are as follows:</p>
+<p><strong>User Manager Function Group</strong></p>
+<p>This function group is comprised of functions used for creating, configuring, and exporting Bank-Country group settings; creating new users; and configuring data sources. These functions are:</p>
+<p>Business Unit Config</p>
+<p>DataSource Manage</p>
+<p>Import/Export Business Unit</p>
+<p>User Manage</p>
+<p><strong>Parameter Manage Function Group</strong></p>
+<p>This function group consists of functions used for maintaining system-wide parameters and components. These functions are:</p>
+<p>AP Server</p>
+<p>Component Manage</p>
+<p>Language Configuration</p>
+<p>System Parameter</p>
+<p>System Parameters</p>
+<p><strong>System Function Group</strong></p>
+<p>This function group consists of functions used for maintaining and facilitating system-wide tasks, operations, and settings. These functions are:</p>
+<p>Image Type Maintain</p>
+<p>Output Device</p>
+<p>Queue Manager</p>
+<p>STP Setting</p>
+<p>Time Zone</p>
+<p><strong>Transaction Function Group</strong></p>
+<p>This function group is comprised of functions used for defining the actual business parameters of transaction functions.  These facilitate the maintenance and processes of the business transaction modules. These functions are:</p>
+<p>Amount/Rate Format</p>
+<p>Batch Manage</p>
+<p>Clause</p>
+<p>DO Get Data</p>
+<p>Export Setting</p>
+<p>Form</p>
+<p>GAPIs Setting</p>
+<p>Get Data</p>
+<p>Image Control</p>
+<p>Message Broker Setting</p>
+<p>Module &amp; Event</p>
+<p>Report Template</p>
+<p>STPs Mapping</p>
+<p>Sub Tasks</p>
+<p>SWIFT Config</p>
+<p>System Maintain</p>
+<p>Transaction Function</p>
+<p>Transfer To</p>
+<p>TSU Mapping</p>
+<p>Upload Message Setting</p>
+<p>Web Service Setting</p>
+<p>Widget Maintain</p>
+<p><strong>Product Function Group</strong></p>
+<p>This function group consists of functions that are used for creating and configuring the products to be accessed and used by the customers or end-users. These functions are:</p>
+<p>Fields Select</p>
+<p>Inbox</p>
+<p>Product Authorize</p>
+<p>Product Authorize Setting</p>
+<p>Product Catalog</p>
+<p>Product Function Setting</p>
+<p>Product Item</p>
+<p><strong>Maintenance Function Group</strong></p>
+<p>This function group is comprised of functions used for facilitating the maintenance of data from CE tables, including fields and error settings. These functions are:</p>
+<p>DB Dictionary</p>
+<p>Error Handling</p>
+<p>Error Message Config (CE)</p>
+<p>Field Conversion</p>
+<p>Multi Language</p>
+<p>Page Dictionary</p>
+<p>XML Generator</p>
+<p>Menu Bar</p>
+<p>The options on the menu bar are shortcuts to both the common and specific functions and tasks of the system.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img src="./images/a011066d-2e0d-42b5-ab20-065b4ef8ddc3.jpg" alt=""></th>
+</tr>
+</thead>
+</table>
+<p><em><strong>Figure 2.</strong></em> <em><strong>3</strong></em> <em><strong>Menu Bar</strong></em></p>
+<table>
+<thead>
+<tr>
+<th align="center"><!-- raw HTML omitted --><strong>Menu</strong><!-- raw HTML omitted --></th>
+<th align="center"></th>
+<th align="center"><!-- raw HTML omitted --><strong>Description</strong><!-- raw HTML omitted --></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th align="right"><strong>File</strong></th>
+<th></th>
+<th>The available options in the File menu are:<!-- raw HTML omitted --><!-- raw HTML omitted -->New: This is used for creating a new parameter or rule.<!-- raw HTML omitted --><!-- raw HTML omitted -->Save: This is used for saving the created or modified settings.<!-- raw HTML omitted --><!-- raw HTML omitted -->Close Function: This is used for closing the current function window.<!-- raw HTML omitted --><!-- raw HTML omitted -->Connect To: This is used for connecting to another Meta data source.<!-- raw HTML omitted --><!-- raw HTML omitted -->Log Off: This is used for logging off a user that is logged on to the system without exiting the system.<!-- raw HTML omitted --><!-- raw HTML omitted -->Exit: This is used for closing the system window and exiting the system.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><strong>Edit</strong></td>
+<td></td>
+<td>The available options in the Edit menu are:<!-- raw HTML omitted --><!-- raw HTML omitted -->Add: This is used for adding a setting for the selected function or parameter.<!-- raw HTML omitted --><!-- raw HTML omitted -->Delete: This is used for deleting or removing an existing setting.<!-- raw HTML omitted --><!-- raw HTML omitted -->Edit: This is used for editing or modifying existing settings.<!-- raw HTML omitted --><!-- raw HTML omitted -->Copy: This is used for copying or duplicating a selected setting.<!-- raw HTML omitted --><!-- raw HTML omitted -->Find: This is used for finding a specific setting.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><strong>Function</strong></td>
+<td></td>
+<td>The available options in the Function menu are:<!-- raw HTML omitted --><!-- raw HTML omitted -->User Manage, which displays options for running User Manager functions<!-- raw HTML omitted --><!-- raw HTML omitted -->Parameter Manage, which displays options for running Parameter Manager functions<!-- raw HTML omitted --><!-- raw HTML omitted -->System Function, which displays options for running System functions<!-- raw HTML omitted --><!-- raw HTML omitted -->Transaction Function, which displays options for running Transaction functions<!-- raw HTML omitted --><!-- raw HTML omitted -->Product Function, which displays options for running Product functions<!-- raw HTML omitted --><!-- raw HTML omitted -->Maintenance, which displays options for running Maintenance functions</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><strong>Tools</strong></td>
+<td></td>
+<td>The available options in the Tools menu are:<!-- raw HTML omitted --><!-- raw HTML omitted -->Toolbar: When this option is marked, the toolbar is displayed on the CE Utility Workbench window.<!-- raw HTML omitted --><!-- raw HTML omitted -->Function Toolbar: When this option is marked, the function toolbar is displayed on the CE Utility Workbench window. <!-- raw HTML omitted --><!-- raw HTML omitted -->Set User Profile DB Info: This option is used by the Super Administrator user to change the user information that is to be used by the CE Utility for connecting to a database. <!-- raw HTML omitted --><!-- raw HTML omitted -->Window Style: Selecting this option displays a list of CE Utility interface styles: Microsoft Style, Unix Style, Java Style, Classic Style, and Metal Style. The preferred style may be marked accordingly.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><strong>Help</strong></td>
+<td></td>
+<td>The available options in the Help menu are:<!-- raw HTML omitted --><!-- raw HTML omitted -->Help Topics: This is <em>currently not used</em>.<!-- raw HTML omitted --><!-- raw HTML omitted -->Content Help: This is *currently not used.*<!-- raw HTML omitted --><!-- raw HTML omitted -->About Customer Enterprise: Selecting this option displays the About Customer Enterprise window, which indicates the version information of CE.</td>
+</tr>
+</tbody>
+</table>
+<p>Toolbar Buttons</p>
+<p>There are two kinds of toolbars in the CE Utility: the basic toolbar and the function toolbar.</p>
+<p><strong>Basic Toolbar</strong></p>
+<p>The following standard buttons are available on the Basic Toolbar of the CE Utility window. These are used for performing the basic and common tasks of the system.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img src="./images/4fb68285-f67f-4b9f-ab69-4c03b92c1f10.jpg" alt=""></th>
+</tr>
+</thead>
+</table>
+<p><em><strong>Figure 2.</strong></em> <em><strong>4</strong></em> <em><strong>Basic Toolbar Buttons</strong></em></p>
+<table>
+<thead>
+<tr>
+<th align="center"><!-- raw HTML omitted --><strong>Button</strong><!-- raw HTML omitted --></th>
+<th align="center"></th>
+<th align="center"><!-- raw HTML omitted --><strong>Description</strong><!-- raw HTML omitted --></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th align="right"><img src="./images/d23b82a7-5847-4bae-a4f9-f2f2589904be.jpg" alt=""> <strong>New</strong></th>
+<th></th>
+<th>This button is used for creating a new parameter or rule.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/3fb0473b-943e-48c5-a7ec-39fc0c43e614.jpg" alt=""> <strong>Add</strong></td>
+<td></td>
+<td>This button is used for adding a setting for the selected function or parameter.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/e3320b71-e93e-41ff-8abd-532cd165e9a1.jpg" alt=""> <strong>Save</strong></td>
+<td></td>
+<td>This button is used for storing created or modified settings.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/061fc903-4c38-4f8f-af1c-a73ef35d3261.jpg" alt=""> <strong>Edit</strong></td>
+<td></td>
+<td>This button is used for editing or modifying existing settings.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/c4f1d95f-b674-41b5-87f6-0df07c8e030f.jpg" alt=""> <strong>Copy</strong></td>
+<td></td>
+<td>This button is used for copying or duplicating a selected setting.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/460e029b-fb60-4ff8-aae1-b7c12b70d39e.jpg" alt=""> <strong>Delete</strong></td>
+<td></td>
+<td>This button is used for deleting or removing an existing setting.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/1304e0b6-85e3-4242-852c-1cbffce6c4c0.jpg" alt=""> <strong>Find</strong></td>
+<td></td>
+<td>This button is used for finding an existing setting.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/41ec4bf3-983b-4f33-a799-31c0f2b6c3db.jpg" alt=""> <strong>Close Function</strong></td>
+<td></td>
+<td>This button is used for closing a function window.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/7d438dad-7d46-4e4c-a0a2-761b45c3be14.jpg" alt=""> <strong>Help Topic</strong></td>
+<td></td>
+<td>This button is <em>currently not used.</em></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/70fa10ec-3a0e-49e1-9b3c-24499fa9a754.jpg" alt=""> <strong>About Customer Enterprise</strong></td>
+<td></td>
+<td>This button is used for displaying the version information of Customer Enterprise.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Function Toolbar</strong></p>
+<p>The buttons on this toolbar are shortcuts to some of the functions that are in the Function Group lists of the CE Utility window. The buttons may also be accessed from the Function menu on the menu bar.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img src="./images/acc8d42b-7ebc-4ebd-8675-4737e04cece3.jpeg" alt="tmp6387"></th>
+</tr>
+</thead>
+</table>
+<p><em><strong>Figure 2.</strong></em> <em><strong>5</strong></em> <em><strong>Function Toolbar Buttons</strong></em></p>
+<table>
+<thead>
+<tr>
+<th align="center"><!-- raw HTML omitted --><strong>Button</strong><!-- raw HTML omitted --></th>
+<th align="center"></th>
+<th align="center"><!-- raw HTML omitted --><strong>Description</strong><!-- raw HTML omitted --></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th align="right"><img src="./images/144e16ad-73d5-4841-aa1b-ba7371ef95b4.jpg" alt=""> <strong>Set System Parameter</strong></th>
+<th></th>
+<th>This button is used for accessing the System Parameter function. The function may also be accessed from the Parameter Manage group in the Function menu.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/6f297b33-69de-4a15-8881-af98c1bccc0d.jpg" alt=""> <strong>Manage Component</strong></td>
+<td></td>
+<td>This button is used for accessing the Component Manage function. The function may also be accessed from the Parameter Manage group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/3b53f14a-46ea-4c21-a02e-7428080e2d47.jpg" alt=""> <strong>Calculation</strong></td>
+<td></td>
+<td>This button is <em>currently not used.</em></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/0f5f9638-9223-4bf0-b010-f5560e787a57.jpg" alt=""> <strong>Module/Event Configuration</strong></td>
+<td></td>
+<td>This button is used for accessing the Module &amp; Event function. The function may also be accessed from the Transaction Function group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/153d0e19-cecc-4355-aee8-406a2764255d.jpg" alt=""> <strong>Transaction Function Configuration</strong></td>
+<td></td>
+<td>This button is used for accessing the Transaction Function. The function may also be accessed from the Transaction Function group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/9be8e019-a5bc-4b67-8956-260932e41f3b.jpg" alt=""> <strong>Form Set</strong></td>
+<td></td>
+<td>This button is used for accessing the Form function. The function may also be accessed from the Transaction Function group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/48ea382a-e69d-4f72-bfd1-8d5f29964ebe.jpg" alt=""> <strong>Accounting Rule Setting</strong></td>
+<td></td>
+<td>This button is <em>currently not used.</em></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/7293a234-8730-4add-9c14-a22f65e79feb.jpg" alt=""> <strong>Field Conversion</strong></td>
+<td></td>
+<td>This button is used for accessing the Field Conversion function. The function may also be accessed from the Maintenance group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/099129c7-6c1d-465d-8a47-5163c6c2b3b3.jpg" alt=""><strong>Get Data</strong></td>
+<td></td>
+<td>This button is used for accessing the Get Data function. The function may also be accessed from the Transaction Function group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/8bd8bb19-c495-45c0-b7a5-4b31b716a204.jpg" alt=""> <strong>Reference Number</strong></td>
+<td></td>
+<td>This button is <em>currently not used.</em></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/575d8e7e-0e04-477b-94f6-7551e736daea.jpg" alt=""> <strong>Output Device</strong></td>
+<td></td>
+<td>This button is used for accessing the Output Device function. The function may also be accessed from the System Function group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/c27ed593-58c8-4ca7-b213-b547cab4f692.jpg" alt=""> <strong>Function Group</strong></td>
+<td></td>
+<td>This button is <em>currently not used.</em></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/691269ab-02da-4229-ab81-e158e47154e7.jpg" alt=""> <strong>Clause</strong></td>
+<td></td>
+<td>This button is used for accessing the Clause function. The function may also be accessed from the Transaction Function group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/8a5e71ab-9334-4cec-b0ff-12984314926a.jpg" alt=""> <strong>SWIFT</strong></td>
+<td></td>
+<td>This button is used for accessing the SWIFT Config function. The function may also be accessed from the Transaction Function group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="right"><img src="./images/8167d336-e584-4147-8383-4cfabc1ed2a3.jpg" alt=""> <strong>Queue Manager</strong></th>
+<th></th>
+<th>This button is used for accessing the Queue Manager function. The function may also be accessed from the System Function group in the Function menu.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/99fc150e-65eb-490d-b0b8-ee03240e3462.jpg" alt=""> <strong>GAPIs Setting</strong></td>
+<td></td>
+<td>This button is used for accessing the GAPIs Setting function. The function may also be accessed from the Transaction Function group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/37645f72-29b4-4d3d-848d-b384bc5e4226.jpg" alt=""> <strong>Time Zone</strong></td>
+<td></td>
+<td>This button is used for setting time zone. The function may also be accessed from the System Function group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/7bb7a93d-9ade-49a9-b5e2-d66b8575016f.jpg" alt=""> <strong>STP Setting</strong></td>
+<td></td>
+<td>This button is used for accessing the STP Setting function. The function may also be accessed from the System Function group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/cb537825-baea-4d64-b12e-0ba3a62c8c70.jpg" alt=""> <strong>Message Broker Setting</strong></td>
+<td></td>
+<td>This button is used for accessing the Message Broker Setting function. The function may also be accessed from the Transaction Function group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/51b4657f-ce4e-4148-b0c5-480e296eb290.jpg" alt=""> <strong>Processing Center</strong></td>
+<td></td>
+<td>This button is <em>currently not used.</em></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/ebee1856-62bc-4f5a-a501-65afc2d09a02.jpg" alt=""> <strong>Amount Format Setting</strong></td>
+<td></td>
+<td>This button is used for accessing the Amount/Rate Format function. The function may also be accessed from the Transaction Function group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/34cde1a9-250f-4431-81c2-136d8ce339b2.jpg" alt=""> <strong>Error Message</strong></td>
+<td></td>
+<td>This button is used for accessing the Error Message Config (CE) function. The function may also be accessed from the Maintenance group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/772613d3-2a2b-46e6-bbeb-f37515bf8a8a.jpg" alt=""> <strong>Say Total</strong></td>
+<td></td>
+<td>This button is <em>currently not used.</em></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/df016048-97cf-4b01-ad39-e99136139482.jpg" alt=""> <strong>Holiday</strong></td>
+<td></td>
+<td>This button is <em>currently not used.</em></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/9bd943e0-8f50-46c3-a449-f586285a8734.jpg" alt=""> <strong>Report</strong></td>
+<td></td>
+<td>This button is <em>currently not used.</em></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/b99299e0-12a9-4499-bcf4-ba087119e2d1.jpg" alt=""> <strong>Transfer To</strong></td>
+<td></td>
+<td>This button is used for accessing the Transfer To function. The function may also be accessed from the Transaction Function group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/c4df1ba8-ea47-48a3-a159-cac731284a83.jpg" alt=""> <strong>Archiving</strong></td>
+<td></td>
+<td>This button is <em>currently not used.</em></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/01ac6cee-e390-4b8c-b5e3-0997242dd5a6.jpg" alt=""> <strong>DB Dictionary</strong></td>
+<td></td>
+<td>This button is used for accessing the DB Dictionary function. The function may also be accessed from the Maintenance group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/63e1f5a7-080e-41b0-a196-9de58be4d237.jpg" alt=""> <strong>Calculation Constant</strong></td>
+<td></td>
+<td>This button is <em>currently not used.</em></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/6928b0f4-709c-4e5f-9ecc-7b8a46ccd7a7.jpg" alt=""> <strong>XML Generator</strong></td>
+<td></td>
+<td>This button is used for accessing the XML Generator function. The function may also be accessed from the Maintenance group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/b463be57-7e77-46dc-9f01-d795d245e096.jpg" alt=""> <strong>Business Unit</strong></td>
+<td></td>
+<td>This button is used for accessing the Business Unit Config function. The function may also be accessed from the User Manage group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/8cf5e1f3-9bf2-4db9-8eaa-675ffcfb4406.jpg" alt=""> <strong>User Manager</strong></td>
+<td></td>
+<td>This button is used for accessing the User Manage function. The function may also be accessed from the User Manage group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/37e5d691-a5d1-4e37-8019-bcaee450ffdb.jpg" alt=""> <strong>Import/Export Business Unit</strong></td>
+<td></td>
+<td>This button is used for accessing the Import/Export Business Unit function. The function may also be accessed from the User Manage group in the Function menu.</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right"><img src="./images/23e05679-3f8d-494a-af1a-71afec352f6b.jpg" alt=""> <strong>DataSource Manager</strong></td>
+<td></td>
+<td>This function is used for accessing the Data Source Manage function. The function may also be accessed from the User Manage group in the Function menu.</td>
+</tr>
+</tbody>
+</table>
+<p>Popup Menu</p>
+<p>Inside a function or configuration window, options may be provided in the form of a popup menu. This menu is displayed by right-clicking on the relevant window section or on the relevant information.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img src="./images/0c4b44da-d696-44ff-bdcc-5e41746ee3a9.jpg" alt=""></th>
+</tr>
+</thead>
+</table>
+<p><em><strong>Figure 2.</strong></em> <em><strong>6</strong></em> <em><strong>Popup Menu</strong></em></p>
+<p>In a popup window, the following options may be made available:</p>
+<p>New</p>
+<p>Add</p>
+<p>Save</p>
+<p>Edit</p>
+<p>Copy</p>
+<p>Delete</p>
+<p>Find</p>
+<p>Sharable</p>
+<p>Help</p>
+<p>Generating the XML Parameter Files</p>
+<p>The created parameters and business logic are stored in the database as Meta data. For this Meta data to be accessible to the application server (AP) and the web server, it has to be converted to XML - the format used for the communication between the client and the server.</p>
+<p>The XML files are generated through the XML Generator function of the Maintenance function group in the CE Utility. In most cases, the XML Generator function must be run when a parameter is created or modified using the functions discussed in this document.</p>
+<table>
+<thead>
+<tr>
+<th><!-- raw HTML omitted -->**Do the following . .<strong><!-- raw HTML omitted --> <!-- raw HTML omitted --></strong>.**<!-- raw HTML omitted --></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Log on CE Utility as an Administrator or Operator user with rights to the XML Generator function.</th>
+<th></th>
+<th align="center"><img src="./images/75440bcf-5168-4cef-8d59-c57bb2517a53.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>The CE Utility window is displayed.<!-- raw HTML omitted --><!-- raw HTML omitted -->Run the XML Generator function from the Maintenance function group.<!-- raw HTML omitted --><!-- raw HTML omitted -->Alternatively, click on the XML Generator button in the function toolbar.</td>
+<td></td>
+<td align="center"><img src="./images/cf48c7ce-a2e6-4491-9515-5021a603ef14.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>The XML Generator function window is displayed.<!-- raw HTML omitted --><!-- raw HTML omitted -->When there are newly defined or modified parameters, the Meta Data to XML window is also displayed.  It lists these parameters for easy selection.  In this case, the parameter can be selected from this window and the Apply button clicked. Afterwards, proceed to Step 5.<!-- raw HTML omitted --><!-- raw HTML omitted -->Alternatively, the Meta data or parameter can be manually selected from the main XML Generator window.  In this case, click on the Close button of the Meta Data to XML window and proceed to Step 4.</td>
+<td></td>
+<td align="center"><img src="./images/47110a98-c775-459e-a29e-e23f41cfd1a1.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Double-click on the relevant parameter type from the XML Generator window.</td>
+<td></td>
+<td align="center"><img src="./images/913097b5-61c6-4bec-b6f6-68988b1c95f6.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Depending on the selected parameter type, an XML configuration window may be displayed. In other cases, the process directly proceeds to Step 6.<!-- raw HTML omitted --><!-- raw HTML omitted -->If the configuration window is displayed, indicate the exact or any additional setting required to generate the relevant XML files. When the specifications are defined click on the Save button</td>
+<td></td>
+<td align="center"><img src="./images/846f96a8-242d-41f6-9f71-749e887386e4.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>A message is displayed confirming if the XML files are to be generated on the system path.</td>
+<td></td>
+<td align="center"><img src="./images/508b7416-f9b3-4ff3-9664-5199d4a2178c.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>NOTE</strong><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->The path of the XML files is defined through the GEN_XML_ROOTPATH Utility Workbench system parameter. This system parameter is configured through the System Parameter function from the Parameter Manage function group.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/e61ff9f5-e075-4ea8-8dfb-97d3ada29d6a.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>To save the XML file on the relevant system path, click on the Yes button.<!-- raw HTML omitted --><!-- raw HTML omitted -->To specify another path, click on the No button. On the Save dialog box that is displayed, browse for the path and click on the Save button.</td>
+<td></td>
+<td align="center"><img src="./images/6205941d-407c-462d-8274-cd8b757e9312.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>When the relevant XML files are generated, the system displays a confirmation message.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>NOTE</strong><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->To hide the information on the paths of the generated XML files, click on the Hide button.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/0949cae8-f687-4402-8a89-5bd5590a3b36.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>NOTE</strong><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Check the indicated path(s) to see the generated XML files.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/98850beb-3e71-4194-8370-b613d4e6219c.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Building a Product</p>
+<p>When building a product in the CE Utility, a few prerequisites are required to be met to make sure that modules or products are built in accordance with the bank&rsquo;s requirements.  One step is the GAP analysis which involves an evaluation of transaction requirements, based on the process flow (e.g., fields, clauses, forms, and interfaces).  These are necessary for identifying the fields required for anticipating the required output.  When the analysis has been completed, the project team can now begin the process of building a product for the bank&rsquo;s customers.</p>
+<p>The following are steps in building a product:</p>
+<p><strong>Access the CE Utility</strong>.  To access the CE Utility for building parameters, an Operator user must be created by an Administrator user.  This is set up through the User Manager function in the User Manage function group.</p>
+<p><strong>Set up the module and events</strong>.  This involves naming the module and the projected events that manage the transaction flow within the module.  This is set up in the Module and Event function in CE Utility.</p>
+<p><strong>Set up the transaction tables.</strong> This involves creating the tables in the DB Dictionary function in CE Utility.  There can be different types of tables but only three are mandatory for a CE module: master, ledger, and event.</p>
+<p><img src="./images/ec3dfc40-081a-4fac-a0c1-92a49ac7ef10.jpeg" alt="Tzone55"><!-- raw HTML omitted -->NOTE:<!-- raw HTML omitted --> <!-- raw HTML omitted -->**It is possible to create tables directly into the database by running SQL scripts in the database.  In this case, tables can be created before modules and events.  It is recommended, however, to use the DB Dictionary for creating tables.**<!-- raw HTML omitted --></p>
+<p><strong>Add fields to the transaction table</strong>.  Fields must be added to a transaction table and field properties defined for the processing and storage of data.  These can be done through the DB Dictionary function in CE Utility.</p>
+<p><strong>Set up the transaction functions</strong>.  This involves creating the functions that correspond to actual business transaction processes.  This is done through Transaction Function in the Transaction Function group.</p>
+<p><strong>Set up the transaction parameters</strong>.  This involves designing the transaction screen, defining attribute and catalog settings, and attaching these parameters to the transaction function.  These can be done through Transaction Function in CE Utility.</p>
+<p><strong>Create the product.</strong> The product is the actual functionality accessed and run by the end-user.  This process of creating a product involves setting up the product group, product, and product function, and defining product catalog settings.</p>
+<p><strong>Define authorization rules</strong>.  Authorization rules are set to further define or set limits for authorizing transactions.</p>
+<p><strong>Calculation.</strong> This involves configuring the transaction JS files and defining calculation functions using available system methods.  There are three JS files that have to be configured: the Module Base JS file, Event JS file, and Function JS file.</p>
+<p><strong>Define the settings for the transaction input.</strong> Certain functions may be added to aid in the input of data into the transaction.  The CE Utility provides options for setting up field conversion rules, lookup buttons, customer reference numbers, clauses, dropdown lists, and data objects for this purpose.</p>
+<p><strong>Define the settings for the transaction output.</strong> Some business transactions involve output generation (i.e., Forms).  To make this option available, certain settings must be configured using the functions from the Transaction Function group in CE Utility.</p>
+<p><strong>Define the security settings in the CE browser.</strong> The products and functions created are assigned to an end-user through the browser-side Security and System Maintenance functions.</p>
+<p><img src="./images/986153cd-e1b2-48a0-acef-c85155fa96dd.jpeg" alt="Tzone55"><!-- raw HTML omitted -->NOTE:<!-- raw HTML omitted --> <!-- raw HTML omitted -->**The browser-side security and system maintenance functions of CE are often collectively called the Security Module.**<!-- raw HTML omitted --></p>
+<p><strong>Add the Inbox functionality.</strong> Another way of accessing a product or a transaction for further processing is through the Customer Inbox.  This can be set up through the Inbox function in CE Utility.</p>
+<p><img src="./images/d9bf9932-77d4-49a6-a98d-3dee92068594.jpeg" alt="Tzone55"><!-- raw HTML omitted -->NOTE:<!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>For more information on configuring different parameters in CE, refer to the</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><em><strong>CE Utility Reference</strong></em><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>manuals</strong><!-- raw HTML omitted --><!-- raw HTML omitted -->***.***<!-- raw HTML omitted --></p>
+<p>Archiving Prerequisites</p>
+<p>Archiving / BACKUP Database Settings</p>
+<p>Data Source Settings</p>
+<p>Log Settings</p>
+<p>Archiving / Backup Database Settings</p>
+<p>Transaction records are archived into a separate Backup Database, i.e., the archiving database.</p>
+<p>This Backup Database must have the same table structure as the physical Transaction Database.  When the table structures of the Transaction Database is changed, modify the corresponding table structures in the Backup Database by manually running the relevant SQL statements in this archiving database.</p>
+<p><img src="./images/2d475b1f-5281-430d-a42e-d13a057a340c.jpeg" alt="Tzone55"><!-- raw HTML omitted -->**NOTE:**<!-- raw HTML omitted --> <!-- raw HTML omitted -->The Backup<!-- raw HTML omitted --> <!-- raw HTML omitted -->Database<!-- raw HTML omitted --> <!-- raw HTML omitted -->setting<!-- raw HTML omitted --><!-- raw HTML omitted -->s<!-- raw HTML omitted --> <!-- raw HTML omitted -->must be configured in the same application server (WAS).<!-- raw HTML omitted --></p>
+<p>Data Source Settings</p>
+<p>For the Archiving and Recovery functionality of the CE system, two data sources are required: CEB and CEX.</p>
+<p>The CEB data source refers to the Backup data source and, thus, points to the physical archiving database. Used for storing archived data, this Backup Database has the same table structure as the Transaction Database.</p>
+<p>The CEX data source points to the physical Transaction Database, and is essentially the same as the CET data source.</p>
+<p>The settings for the CEB and CEX data sources are configured in both WebSphere and CE Utility.</p>
+<p>WebSphere Data Source Settings</p>
+<p>The required WebSphere settings are as follows.</p>
+<table>
+<thead>
+<tr>
+<th><!-- raw HTML omitted -->**Do the following . . .**<!-- raw HTML omitted --></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Define the JDBC provider:<!-- raw HTML omitted --><!-- raw HTML omitted -->Name: Oracle JDBC Driver (XA)<!-- raw HTML omitted --><!-- raw HTML omitted -->Implementation class name: oracle.jdbc.xa.client.OracleXADataSource<!-- raw HTML omitted --><!-- raw HTML omitted -->Class path: ${ORACLE_JDBC_DRIVER_PATH}/ojdbc6.jar<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**NOTE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->The<!-- raw HTML omitted --> <!-- raw HTML omitted -->ojdbc6.jar<!-- raw HTML omitted --> <!-- raw HTML omitted -->file is the JDBC driver for Oracle<!-- raw HTML omitted --> <!-- raw HTML omitted -->12c<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --></th>
+<th align="center"></th>
+<th align="center"><img src="./images/b78e455b-637c-4b61-b11d-7c5ea1b780ad.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Define the CEB data source:<!-- raw HTML omitted --><!-- raw HTML omitted -->Name: CEB<!-- raw HTML omitted --><!-- raw HTML omitted -->JNDI Name: CEB</td>
+<td align="center"></td>
+<td align="center"><img src="./images/bcdc4361-9499-48ff-ac20-84ec480af530.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>This must point to the Backup Database (e.g., CEBK).<!-- raw HTML omitted --><!-- raw HTML omitted -->Assign CETRX for:<!-- raw HTML omitted --><!-- raw HTML omitted -->Authentication alias for XA recovery<!-- raw HTML omitted --><!-- raw HTML omitted -->Component-managed authentication alias<!-- raw HTML omitted --><!-- raw HTML omitted -->Container-managed authentication alias<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**NOTE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->The<!-- raw HTML omitted --> <!-- raw HTML omitted -->CETRX user<!-- raw HTML omitted --> <!-- raw HTML omitted -->created<!-- raw HTML omitted --> <!-- raw HTML omitted -->in the Oracle Database is<!-- raw HTML omitted --> <!-- raw HTML omitted -->the user that is to access the Backup D<!-- raw HTML omitted --><!-- raw HTML omitted -->atabase. If this is not the same as the transaction database user, the<!-- raw HTML omitted --> <!-- raw HTML omitted -->CETRX<!-- raw HTML omitted --> <!-- raw HTML omitted -->alias<!-- raw HTML omitted --> <!-- raw HTML omitted -->must<!-- raw HTML omitted --> <!-- raw HTML omitted -->be set in the Global Security tab, JAAS - J2C Authentication Data page of the WebSphere Application Server Administrative Console.<!-- raw HTML omitted --></td>
+<td align="center"></td>
+<td align="center"><img src="./images/36904b91-2328-4e84-9593-89c8347808c2.jpg" alt=""><!-- raw HTML omitted --><!-- raw HTML omitted --><img src="./images/17f307fc-439c-400a-b80b-6f2de3e1f0a4.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Define the CEX data source:<!-- raw HTML omitted --><!-- raw HTML omitted -->Name: CEX<!-- raw HTML omitted --><!-- raw HTML omitted -->JNDI Name: CEX</td>
+<td align="center"></td>
+<td align="center"><img src="./images/b9065b83-d8f1-4537-b705-615f0ee5650b.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>This must point to the Transaction Database (e.g., CEDB).<!-- raw HTML omitted --><!-- raw HTML omitted -->Assign CETRX for:<!-- raw HTML omitted --><!-- raw HTML omitted -->Authentication alias for XA recovery<!-- raw HTML omitted --><!-- raw HTML omitted -->Component-managed authentication alias<!-- raw HTML omitted --><!-- raw HTML omitted -->Container-managed authentication alias<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**NOTE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->The CETRX user is the same as the<!-- raw HTML omitted --> <!-- raw HTML omitted -->CETRX user that is used to access the transaction database<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->The CEX data source points to the physical Transaction Database, and is essentially the same as the CET data source.<!-- raw HTML omitted --></td>
+<td align="center"></td>
+<td align="center"><img src="./images/2edd12bb-c48f-4ff9-9997-1474736a2b7d.jpg" alt=""><!-- raw HTML omitted --><!-- raw HTML omitted --><img src="./images/d24b7c46-8e1a-4e7b-9fcf-7b33e5265d5f.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>CE Utility Data Source Settings</p>
+<p>Log on the CE Utility as a Super Administrator user and configure the following data source settings.</p>
+<table>
+<thead>
+<tr>
+<th><!-- raw HTML omitted -->**Do the following . . .**<!-- raw HTML omitted --></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Run the DataSource Manage function from the User Manage group.</th>
+<th></th>
+<th><img src="./images/cc10bd1c-d5d4-4924-98f0-027e62d150e6.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Check the settings in the Transaction Data Source Manager tab of the DataSource Manage function window.</td>
+<td></td>
+<td><img src="./images/a0d02fbe-1f0e-45ac-971e-b2a3f67c6796.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Modify or create the CEX data source.<!-- raw HTML omitted --><!-- raw HTML omitted -->This data source must point to the Transaction Database, and reference the CEX JNDI setting and CETRX user profile.<!-- raw HTML omitted --><!-- raw HTML omitted -->Make sure to select Archiving as the database type.</td>
+<td></td>
+<td><img src="./images/e68b4d21-8868-41b2-a7c2-a2681a28b773.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Modify or create the CEB data source.<!-- raw HTML omitted --><!-- raw HTML omitted -->This data source must point to the Backup Database, and reference the CEB JNDI setting and CETRX user profile. <!-- raw HTML omitted --><!-- raw HTML omitted -->Make sure to select Backup as the database type.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**NOTE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->CETRX is the CE Transaction Database user that is to access the Backup Database.<!-- raw HTML omitted --></td>
+<td></td>
+<td><img src="./images/ee8fd905-c4e4-47cc-9d56-a9e398ec21b8.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted --><!-- raw HTML omitted -->**XML GENERATION:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Log on as an Administrator or Operator user and run the XML Generator function.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Generate the XML file for the Data Source Manage<!-- raw HTML omitted --><!-- raw HTML omitted -->r<!-- raw HTML omitted --> <!-- raw HTML omitted -->parameter.<!-- raw HTML omitted --></td>
+<td></td>
+<td><img src="./images/63766067-e007-49a0-9e64-8e8ecc5b1143.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted -->The updated XML files are generated<!-- raw HTML omitted --> <!-- raw HTML omitted -->on<!-- raw HTML omitted --> <!-- raw HTML omitted -->this path:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->[Parameter Drive]&lt;/span&gt;<!-- raw HTML omitted -->C<!-- raw HTML omitted --><!-- raw HTML omitted -->E_SYS\SYST<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->The updated<!-- raw HTML omitted --> <!-- raw HTML omitted -->ee_dsmgr.xml<!-- raw HTML omitted --> <!-- raw HTML omitted -->file contains<!-- raw HTML omitted --> <!-- raw HTML omitted -->details<!-- raw HTML omitted --> <!-- raw HTML omitted -->on the bank groups which data sources have been set.<!-- raw HTML omitted --></td>
+<td></td>
+<td><img src="./images/a4d27001-9ea5-48a5-a38f-f51687cf5a1b.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Log Settings</p>
+<p>Configure the settings for the Archive logs through this file:</p>
+<p>[CE Parameter Folder]\CE_SYS\CE_Log_Config.xml</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:**<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->Archive Log<!-- raw HTML omitted --> <!-- raw HTML omitted -->configuration<!-- raw HTML omitted --> <!-- raw HTML omitted -->settings:<!-- raw HTML omitted --></p>
+<p><img src="./images/d3e323e2-4fda-4f44-bb77-235f01b65b80.jpeg" alt="tmp114.jpg"></p>
+<p>For detailed information on log configuration, refer to the <em>CE Log Settings</em> documentation.</p>
+<p>Manual Archive Mode</p>
+<p>Overview</p>
+<p>COMMON pARAMETER Settings</p>
+<p>ARCHIVE DATA FUNCTION</p>
+<p>Restore Archived Data Function</p>
+<p>Inquire Archived Data function</p>
+<p>Overview</p>
+<p>With the Manual Archive mode, the archiving process is performed by module. The archiving functions are grouped and accessed under a particular transaction module. Moreover, only the records that satisfy the defined set of criteria can be accessed and processed under an Archive function.</p>
+<p>The Manual Archive functions that may be created under a business transaction module are as follows:</p>
+<p>Archiving Data</p>
+<p>Inquire Archived Data</p>
+<p>Restore Archived Data</p>
+<p>Common Parameter Settings</p>
+<p>Configuring manual Archiving functions involves common prerequisite parameters.</p>
+<p>Archive Control Component</p>
+<p>Trx Manager Archive, a Control component, is used for 2 manual Archiving functions: Archive Data and Restore Archived Data.</p>
+<p>Log on the CE Utility as an Operator user and define the following settings.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Run the Component Manage function from the Parameter Manage function group.</th>
+<th></th>
+<th align="center"><img src="./images/f4433d21-7e07-4c5e-a9fd-a84765001b96.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Access the Control component type.</td>
+<td></td>
+<td align="center"><img src="./images/cb508f37-9ad4-4155-b9b3-b843f9b9f8aa.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Check or add the Trx Manager Archive Control component:<!-- raw HTML omitted --><!-- raw HTML omitted -->Component Name: Trx Manager Archive<!-- raw HTML omitted --><!-- raw HTML omitted -->Component Description: Trx Manager Archive<!-- raw HTML omitted --><!-- raw HTML omitted -->Class Name: TrxManagerArchive<!-- raw HTML omitted --><!-- raw HTML omitted -->Business Type: Delete Master Mgr</td>
+<td></td>
+<td align="center"><img src="./images/537217d7-9a65-4f64-9f56-07d863977914.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Archive Product Items</p>
+<p>Specific Archive product items are required to associate a manual Archiving function to the relevant Archiving product.</p>
+<p>Add the following product items -</p>
+<p>Archive</p>
+<p>RestoreArchive</p>
+<p>InquireArchive</p>
+<p>- to this file:</p>
+<p>[CE Utility Directory]\ce_params\Script_XML\product_item_prar.xml.</p>
+<table>
+<thead>
+<tr>
+<th><img src="./images/0308dd1a-c1bc-40d3-944c-d41631262a67.jpg" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>Figure 4.  Product Items for Archiving</p>
+<p>Once these product Ids are defined in the XML file, add these in the Product Item function.  Log on the CE Utility as an Operator user:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Run the Product Item function from the Product Function group.</th>
+<th></th>
+<th align="center"><img src="./images/7973a0d5-4410-4850-bff8-0f432dddd9b5.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Add the Archive item Id:<!-- raw HTML omitted --><!-- raw HTML omitted -->Item ID: Archive<!-- raw HTML omitted --><!-- raw HTML omitted -->Item Name: Archive<!-- raw HTML omitted --><!-- raw HTML omitted -->Item Desc: Archive<!-- raw HTML omitted --><!-- raw HTML omitted -->Is Group: No<!-- raw HTML omitted --><!-- raw HTML omitted -->Position: Transaction<!-- raw HTML omitted --><!-- raw HTML omitted -->Item Button: Archive<!-- raw HTML omitted --><!-- raw HTML omitted -->Type: Delete</td>
+<td></td>
+<td align="center"><img src="./images/e72acbc5-19b8-4760-8a5d-a88ae23622db.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Add the RestoreArchive item Id:<!-- raw HTML omitted --><!-- raw HTML omitted -->   Item ID: RestoreArchive<!-- raw HTML omitted --><!-- raw HTML omitted -->   Item Name: RestoreArchive<!-- raw HTML omitted --><!-- raw HTML omitted -->   Item Desc: RestoreArchive<!-- raw HTML omitted --><!-- raw HTML omitted -->   Is Group: No<!-- raw HTML omitted --><!-- raw HTML omitted -->   Position: Transaction<!-- raw HTML omitted --><!-- raw HTML omitted -->   Item Button: RestoreArchive<!-- raw HTML omitted --><!-- raw HTML omitted -->   Type: Delete</td>
+<td></td>
+<td align="center"><img src="./images/994d75de-4551-4397-b947-de362b159d9e.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Add the InquireArchive item Id:<!-- raw HTML omitted --><!-- raw HTML omitted -->Item ID: InquireArchive<!-- raw HTML omitted --><!-- raw HTML omitted -->Item Name: InquireArchive<!-- raw HTML omitted --><!-- raw HTML omitted -->Item Desc: InquireArchive<!-- raw HTML omitted --><!-- raw HTML omitted -->Is Group: No<!-- raw HTML omitted --><!-- raw HTML omitted -->Position: Transaction<!-- raw HTML omitted --><!-- raw HTML omitted -->Item Button: InquireArchive<!-- raw HTML omitted --><!-- raw HTML omitted -->Type: Inquire</td>
+<td></td>
+<td align="center"><img src="./images/e241fd3c-4461-4607-82e7-d933cfb6b878.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Error Codes</p>
+<p>Log on the CE Utility as an Operator user and define the following error codes for Archiving processes.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Run the Error Handling function from the Maintenance function group.</th>
+<th></th>
+<th align="center"><img src="./images/03d687a1-3a62-4106-8c82-a68d90f824bb.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>In the Catalog tab of the Error Handling function window, access the System node.</td>
+<td></td>
+<td align="center"><img src="./images/5ecbcfbd-899d-4ad5-8a7d-cb758c7cdab7.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Check or add Error Code 000464:<!-- raw HTML omitted --><!-- raw HTML omitted -->Error Code: 000464<!-- raw HTML omitted --><!-- raw HTML omitted -->Error Key: System<!-- raw HTML omitted --><!-- raw HTML omitted -->Error Level: Error<!-- raw HTML omitted --><!-- raw HTML omitted -->Error Messge: &ldquo;Archive failure&rdquo;</td>
+<td></td>
+<td align="center"><img src="./images/a743b962-034e-4a34-bf32-32e74a943136.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Check or add Error Code 000465:<!-- raw HTML omitted --><!-- raw HTML omitted -->Error Code: 000465<!-- raw HTML omitted --><!-- raw HTML omitted -->Error Key: System<!-- raw HTML omitted --><!-- raw HTML omitted -->Error Level: Error<!-- raw HTML omitted --><!-- raw HTML omitted -->Error Messge: &ldquo;Exception occur when restoring Archive&rdquo;</td>
+<td></td>
+<td align="center"><img src="./images/76eb23c4-7b04-4bd2-93b6-ba59a46b41c4.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>JSP and JS Settings</p>
+<p>Modify the JSP and JS settings of the relevant transaction module to support the Archiving and Recovery functionality.</p>
+<p>Examples of such settings are provided in <a href="error%20reading">Appendix:</a> .</p>
+<p>Archive Data Function</p>
+<p>This function is used for archiving records.</p>
+<p><img src="./images/a60c46df-3561-452f-85f3-231a8e2edd58.jpeg" alt="Tzone55"><!-- raw HTML omitted -->NOTE:<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**Archived records are stored in the Backup Database.  An archived transaction can be restored through the Restore Archived Data function.**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><strong>Multiple records can be archived at a time</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>by adding</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>the</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>following</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>code</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>in the</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>multiCheck</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>function</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>found</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>in the</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>SYS_MultiCatalog.js</strong><!-- raw HTML omitted --> <!-- raw HTML omitted -->**file:<strong><!-- raw HTML omitted -->   <!-- raw HTML omitted --></strong>:: ITEM_ID == &ldquo;Archive&rdquo; :: ITEM_ID == &ldquo;RestoreArchive&rdquo;)**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><strong>Example</strong><!-- raw HTML omitted --><!-- raw HTML omitted -->**:**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**function multiCheck(){**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**try {**<!-- raw HTML omitted --></p>
+<pre><code>&lt;span style=&quot;color:#008080&quot;&gt;**if \(ITEM\_ID == &quot;Authorize&quot; :: ITEM\_ID == &quot;Authorise&quot;**&lt;/span&gt; &lt;span style=&quot;color:#008080&quot;&gt;::&lt;/span&gt; &lt;span style=&quot;color:#008080&quot;&gt;**ITEM\_ID == &quot;Archive&quot; :: ITEM\_ID == &quot;RestoreArchive&quot;\)**&lt;/span&gt; &lt;span style=&quot;color:#008080&quot;&gt;**\{**&lt;/span&gt;
+
+&lt;span style=&quot;color:#008080&quot;&gt;**return true;**&lt;/span&gt;
+</code></pre>
+<p><!-- raw HTML omitted -->**}**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**}**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**catch (e) {**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**showExcpt(&ldquo;SYS_MultiCatalog&rdquo;, e);**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**}**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**}**<!-- raw HTML omitted --></p>
+<p>Parameter Settings</p>
+<p>Log on CE Utility as an Operator user and configure the following transaction function and product settings.</p>
+<p>Transaction Function Settings</p>
+<table>
+<thead>
+<tr>
+<th align="left">Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Run Transaction Function from the Transaction Function group.</th>
+<th></th>
+<th align="center"><img src="./images/59c0e358-f640-45b3-9c15-151eadcaedac.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Access the module and function group for which the Archive Data function is to be created.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Module: Import Letters of Credit<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Function Group: System Maintenance.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/55649846-0870-4b0f-9ea4-0f89bb7cf826.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Create the Archive Data function and set its main program to Trx Manager Archive.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:<strong><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Function: IMLC Archive Data<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></strong>NOTE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Unmark the following flags:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Check for Lock in Master<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Hold Master<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Need Lock<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Release<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/62f2a475-9b81-4f7b-adf9-8cc45984a35e.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Define the relevant Attribute settings for this function.</td>
+<td></td>
+<td align="center"><img src="./images/94fbba8d-c324-47eb-b9e6-272d64f66b86.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Define the relevant Catalog settings for this function.</td>
+<td></td>
+<td align="center"><img src="./images/06f2ffd6-f3b8-4176-980e-a487ab1e3e68.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>NOTE</strong><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->If this manual Archive function is to be used to archive a record that has been received via STP, the STP settings must also be configured through the STP function component.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->For<!-- raw HTML omitted --> <!-- raw HTML omitted -->details<!-- raw HTML omitted --> <!-- raw HTML omitted -->on STP Archive functions, refer to:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Chapter Six: Archiving through STP</td>
+<td></td>
+<td align="center"><img src="./images/12f86dc1-af71-4c79-b305-e9d377d86dde.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Product Settings</p>
+<table>
+<thead>
+<tr>
+<th align="left">Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Access the Product Function Setting function from the Product Function group.</th>
+<th></th>
+<th align="center"><img src="./images/44e8eb56-35f7-49f8-a390-ad50128a32c1.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Access the relevant product group and product from the Product Function tab.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Product Group: Import<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Product: Import Letters of Credit<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/3d236268-8e61-4e1d-9eea-aa540458b379.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Select the Archive Data function (e.g., IMLC Archive Data) and assign these settings:<!-- raw HTML omitted --><!-- raw HTML omitted -->Item: Archive<!-- raw HTML omitted --><!-- raw HTML omitted -->Item Type: Delete</td>
+<td></td>
+<td align="center"><img src="./images/d7a4e3ab-ed9a-49b1-aa67-6581f449c18a.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Transaction Process</p>
+<table>
+<thead>
+<tr>
+<th align="left">EXAMPLE</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>IMLC Archive Data Function<!-- raw HTML omitted --><!-- raw HTML omitted -->Run the IMLC Archive Data function.</th>
+<th></th>
+<th align="center"><img src="./images/d894e7d6-c235-4d6f-8134-515573a5e6ef.jpeg" alt="tmp118.jpg"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Select one record and click on the Archive button.<!-- raw HTML omitted --><!-- raw HTML omitted -->Check the Archive Log: All transaction event records - and related data including images, documents, mails, GAPI, etc. - are archived into the Backup Database and deleted from the original Transaction Database.</td>
+<td></td>
+<td align="center"><img src="./images/d8e42850-c9c3-4518-a2e1-3d125f7bbe0c.jpeg" alt="tmp119.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>IMLC Inquire Archive Function<!-- raw HTML omitted --><!-- raw HTML omitted -->Run the IMLC Inquire Archive function. <!-- raw HTML omitted --><!-- raw HTML omitted -->The catalog shows the archived record.  Select this record and click on the InquireArchive button.</td>
+<td></td>
+<td align="center"><img src="./images/4d175236-5855-4920-9a0f-1a39cbc2e60b.jpeg" alt="tmp120.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>The documents and uploaded images for this record are listed for viewing (through the corresponding View buttons).</td>
+<td></td>
+<td align="center"><img src="./images/c805ee95-5076-4e53-ae01-56043761bb17.jpeg" alt="tmp121.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Click on the View Historical button.</td>
+<td></td>
+<td align="center"><img src="./images/32b2b48a-bb6d-45b1-9dad-06e526b529de.jpeg" alt="tmp122.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>The events of the transaction record are listed.</td>
+<td></td>
+<td align="center"><img src="./images/5709e09b-d6f7-4055-98b1-322d14b16985.jpeg" alt="tmp123.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Select an event to view the event details.</td>
+<td></td>
+<td align="center"><img src="./images/5781fe6e-ccd5-4ca0-bad9-091a9ae7c07e.jpeg" alt="tmp124.jpg"></td>
+</tr>
+</tbody>
+</table>
+<p>Restore Archived Data Function</p>
+<p>This function is used to retrieve transactions from the Backup Database, and add these back to the master file.</p>
+<p>When the record to be restored already exists in the Transaction Database, the Restore process may not be performed on this record.</p>
+<p>When a record is restored, all related events are also restored in the corresponding tables.</p>
+<p><img src="./images/2a8d7a8e-e86a-400c-853e-686049c7333f.jpeg" alt="Tzone55"><!-- raw HTML omitted -->NOTE:<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><strong>M</strong><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>ultiple records</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>may be restored by adding the following code in the</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>multiCheck</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>function</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>found</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>in the</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>SYS_MultiCatalog.js</strong><!-- raw HTML omitted --> <!-- raw HTML omitted -->**file:<strong><!-- raw HTML omitted -->  <!-- raw HTML omitted --></strong>:: ITEM_ID == &ldquo;Archive&rdquo; :: ITEM_ID == &ldquo;RestoreArchive&rdquo;)**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->EXAMPLE:<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**function multiCheck(){**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**try {**<!-- raw HTML omitted --></p>
+<pre><code>&lt;span style=&quot;color:#008080&quot;&gt;**if \(ITEM\_ID == &quot;Authorize&quot; :: ITEM\_ID == &quot;Authorise&quot;**&lt;/span&gt; &lt;span style=&quot;color:#008080&quot;&gt;::&lt;/span&gt; &lt;span style=&quot;color:#008080&quot;&gt;**ITEM\_ID == &quot;Archive&quot; :: ITEM\_ID == &quot;RestoreArchive&quot;\)**&lt;/span&gt; &lt;span style=&quot;color:#008080&quot;&gt;**\{**&lt;/span&gt;
+
+&lt;span style=&quot;color:#008080&quot;&gt;**return true;**&lt;/span&gt;
+</code></pre>
+<p><!-- raw HTML omitted -->**}**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**}**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**catch (e) {**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**showExcpt(&ldquo;SYS_MultiCatalog&rdquo;, e);**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**}**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->**}**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><strong>The system restores multiple r</strong><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>ecords one at a time.<strong><!-- raw HTML omitted --> <!-- raw HTML omitted --></strong>After restoring the first selected record</strong><!-- raw HTML omitted --><!-- raw HTML omitted -->**, the system provides a Continue button to**<!-- raw HTML omitted --> <!-- raw HTML omitted -->**enable the user to**<!-- raw HTML omitted --> <!-- raw HTML omitted -->**restore the next selected records.**<!-- raw HTML omitted --></p>
+<p>Parameter Settings</p>
+<p>Log on CE Utility as an Operator user and configure the following transaction function and product settings.</p>
+<p>Transaction Function Settings</p>
+<table>
+<thead>
+<tr>
+<th align="left">Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Run Transaction Function from the Transaction Function group.</th>
+<th></th>
+<th align="center"><img src="./images/53b8d0a4-5b65-4761-9736-8f72b3359d61.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Access the module and function group for which the Restore Archived Data function is to be created.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Module: Import Letters of Credit<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Function Group: System Maintenance.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/2018d3b1-8f78-4d76-97bc-93cd68b6edd3.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Create the Restore Archived Data function and set its main program to Trx Manager Archive.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:<strong><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Function: IMLC Restore Archive<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></strong>NOTE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Unmark the following flags:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Check for Lock in Master<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Hold Master<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Need Lock<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Release<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/04c95b59-efca-4cd6-9837-975aa4067442.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Define the relevant Catalog settings for this function.</td>
+<td></td>
+<td align="center"><img src="./images/cedf0d9b-56b7-4c82-a637-4babd7a0d8d9.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Product Settings</p>
+<table>
+<thead>
+<tr>
+<th align="left">Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Access the Product Function Setting function from the Product Function group.</th>
+<th></th>
+<th align="center"><img src="./images/820cc69a-2da7-4b35-87ee-1e06d514a756.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Access the relevant product group and product from the Product Function tab.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Product Group: Import<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Product: Import Letters of Credit<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/7d341cac-c124-4606-9860-5b4a458e08b9.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Select the Restore Archived Data function (e.g., IMLC Restore Archive) and assign these settings:<!-- raw HTML omitted --><!-- raw HTML omitted -->Item: RestoreArchive<!-- raw HTML omitted --><!-- raw HTML omitted -->Item Type: Delete</td>
+<td></td>
+<td align="center"><img src="./images/bb10e75f-3ae7-4247-9f1a-d98a04aea70c.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Transaction Process</p>
+<hr>
+<p><!-- raw HTML omitted --><strong>Table has a different set of cells in one/more rows. It can&rsquo;t be shown in Markdown</strong><!-- raw HTML omitted --></p>
+<hr>
+<p>Inquire Archived Data Function</p>
+<p>The Inquire Archived Data function is used to inquire into records that are stored in the Archive file.</p>
+<p><img src="./images/99b3dd0a-b31e-4bd2-b677-64efeed7af54.jpeg" alt="Tzone55"><!-- raw HTML omitted -->NOTE:<!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>Unlike other</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>inquiry</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>functions, the Inquire Archived Data function retrieves</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>details</strong><!-- raw HTML omitted --> <!-- raw HTML omitted -->**from the Backup Database (i.e., CEB data source) and not from the Transaction Database.**<!-- raw HTML omitted --></p>
+<p>Parameter Settings</p>
+<p>Log on CE Utility as an Operator user and configure the following transaction function and product settings.</p>
+<p>Transaction Function Settings</p>
+<table>
+<thead>
+<tr>
+<th align="left">Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Run Transaction Function from the Transaction Function group.</th>
+<th></th>
+<th align="center"><img src="./images/68a659c4-6fab-48ca-878c-4ef42a5ed315.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Access the module and function group for which the Archive Data is to be created.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Module: Import Letters of Credit<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Function Group: System Maintenance.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/bd412661-0985-49ce-b820-1bd34db70bd6.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Create the Inquire Archived Data function and set its main program to Trx Manager Inq.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Function: IMLC Inquire Archive<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/052855dd-7533-4e54-b4f6-ddbaa0ec635a.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Attach the transaction JSP and template JSP files to this function.</td>
+<td></td>
+<td align="center"><img src="./images/6b8bf30f-1abc-43f1-b347-e32f298b4d91.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Define the relevant Attribute settings for this function.</td>
+<td></td>
+<td align="center"><img src="./images/43540f45-68cf-4b4c-948b-602166f3f16d.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Define the relevant Catalog settings for this function.</td>
+<td></td>
+<td align="center"><img src="./images/b0ab1104-0a51-4df0-b2ea-e66b630710c4.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Product Settings</p>
+<table>
+<thead>
+<tr>
+<th align="left">Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Access the Product Function Setting function from the Product Function group.</th>
+<th></th>
+<th align="center"><img src="./images/62930ba6-c7a9-4937-8c5b-cb3374483342.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Access the relevant product group and product from the Product Function tab.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Product Group: Import<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Product: Import Letters of Credit<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/21d1a31d-477b-412c-acf7-265832878191.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Select the Inquire Archived Data function (e.g., IMLC Inquire Archive) and assign these settings:<!-- raw HTML omitted --><!-- raw HTML omitted -->Item: InquireArchive<!-- raw HTML omitted --><!-- raw HTML omitted -->Item Type: Inquire</td>
+<td></td>
+<td align="center"><img src="./images/46b6b827-298d-49cf-a6ca-29cbf61e4b84.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Transaction Process</p>
+<table>
+<thead>
+<tr>
+<th align="left">EXAMPLE</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Through the IMLC Archive Data function, archive one record.</th>
+<th></th>
+<th align="center"><img src="./images/81419ae1-c251-4209-a3bd-f988a1a349a1.jpeg" alt="tmp119.jpg"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Run the IMLC Inquire Archive function. <!-- raw HTML omitted --><!-- raw HTML omitted -->The catalog shows the archived record.  Select this record and click on the InquireArchive button.</td>
+<td></td>
+<td align="center"><img src="./images/45172aa0-4416-4eb7-bba9-927c76adeb38.jpeg" alt="tmp120.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>The documents and uploaded images for this record are listed for viewing (through the corresponding View buttons).</td>
+<td></td>
+<td align="center"><img src="./images/efef0bdd-d4c1-4ac8-81ed-842a86d8604a.jpeg" alt="tmp121.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Click on the View Historical button.</td>
+<td></td>
+<td align="center"><img src="./images/2993baab-8b49-4aa0-a7a6-2ba93c0dcdfd.jpeg" alt="tmp122.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>The events of the transaction record are listed.</td>
+<td></td>
+<td align="center"><img src="./images/3f53ab28-1090-4a2d-84da-543f000eb154.jpeg" alt="tmp123.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Select an event to view the event details.</td>
+<td></td>
+<td align="center"><img src="./images/e76b6064-d996-45c3-b29d-26b4dd48090c.jpeg" alt="tmp124.jpg"></td>
+</tr>
+</tbody>
+</table>
+<p>Auto Archive Mode</p>
+<p>Overview</p>
+<p>parameter SEttings</p>
+<p>Transaction Process</p>
+<p>Overview</p>
+<p>With the Auto Archive mode (or batch mode), records from the relevant module that satisfy a defined set of criteria for the module are automatically archived.</p>
+<p>The AutoArchiveData batch function is an example of an Auto Archive function.</p>
+<p><img src="./images/743aab06-ea87-4722-84de-72cec4930960.jpeg" alt="Tzone55"><!-- raw HTML omitted -->NOTE:<!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>Each module has its own Archive conditions, which are set through the</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>Sub Task function</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>of the CE Utility.<strong><!-- raw HTML omitted -->  <!-- raw HTML omitted --></strong>Refer to the</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>succeeding</strong><!-- raw HTML omitted --> <strong><a href="error%20reading">Par</a></strong> <!-- raw HTML omitted --><strong>section for more</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>details</strong><!-- raw HTML omitted --> <!-- raw HTML omitted -->**on setting the archive conditions for each module.**<!-- raw HTML omitted --></p>
+<p>Parameter Settings</p>
+<p>One of the tasks under the AutoProcessTaskMgr batch manager, the AutoArchiveData batch function is used to automatically archive transaction records from a particular module that satisfy a defined set of criteria.</p>
+<p>The parameter settings for this batch function involve settings in the Sub Tasks, AP Server, Import/Export Business Unit, and Batch Manage functions.  Log on the CE Utility as an Operator user and configure the following settings.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sub Tasks<!-- raw HTML omitted --><!-- raw HTML omitted -->Run the Sub Tasks function from the Transaction Function group.</th>
+<th></th>
+<th align="center"><img src="./images/de1922ed-0fb8-4541-9f48-6d8b780dd896.jpeg" alt="CEv3_189.jpg"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Access the Auto Process Manage subtask type.</td>
+<td></td>
+<td align="center"><img src="./images/e025b57f-9198-42a9-bbac-c79918c5a962.jpeg" alt="CEv3_190.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Configure the AutoArchiveData settings as required, and make sure to define the following:<!-- raw HTML omitted --><!-- raw HTML omitted -->Task Name, Task Description, Task Component: AutoArchiveData<!-- raw HTML omitted --><!-- raw HTML omitted -->Start Schedule Type and related settings<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**NOTE:*<em><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->The<!-- raw HTML omitted --> <!-- raw HTML omitted -->Month, Week Day, Day,<!-- raw HTML omitted --> <!-- raw HTML omitted -->and<!-- raw HTML omitted --> <!-- raw HTML omitted -->Hour<!-- raw HTML omitted --> <!-- raw HTML omitted -->fields are enabled based the Start Schedule Type field setting. Define the values of these fields as well as the Minute component of the archive task schedule accordingly. Refer to the<!-- raw HTML omitted --> <!-- raw HTML omitted --><em>CE Utility Referenc</em><!-- raw HTML omitted --><!-- raw HTML omitted --><em>e</em><!-- raw HTML omitted --><!-- raw HTML omitted --></em>:<em><!-- raw HTML omitted --> <!-- raw HTML omitted --></em>Transaction Functions*<!-- raw HTML omitted --> <!-- raw HTML omitted -->documentation<!-- raw HTML omitted --> <!-- raw HTML omitted -->for more<!-- raw HTML omitted --> <!-- raw HTML omitted -->details<!-- raw HTML omitted --> <!-- raw HTML omitted -->on these settings.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Marking the Start Server flag allows a user to manually start the AutoArchiveData task.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->The Time<!-- raw HTML omitted --><!-- raw HTML omitted -->r<!-- raw HTML omitted --> <!-- raw HTML omitted -->(Hours) field pertains to the duration within which the system archives the records that meet the criteria.  If the records are not archived completely within this period, the system terminates the archive process.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/c775df63-a239-4d69-9dee-f733b4bfc239.jpeg" alt="CEv3_191.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>AP Server<!-- raw HTML omitted --><!-- raw HTML omitted -->Run the AP Server function from the Parameter Manage function group.</td>
+<td></td>
+<td align="center"><img src="./images/23815255-3138-4e14-977c-235987deb184.jpeg" alt="CEV30_Archive-02"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Define or modify the AP Server settings: Name, Host Name, and IIOP Port.</td>
+<td></td>
+<td align="center"><img src="./images/db409a40-3708-4f87-88b2-0c0acf40b98b.jpeg" alt="CEV30_Archive-03"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Import/Export Business Unit<!-- raw HTML omitted --><!-- raw HTML omitted -->Run the Import/Export Business Unit function from the User Manager function group.</td>
+<td></td>
+<td align="center"><img src="./images/07589a9b-6a22-410d-9dbf-ec9f87cc5414.jpeg" alt="CEV30_Archive-04"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>In the Import/Export Business Unit window, select the Application Server setting and click on the Import button.</td>
+<td></td>
+<td align="center"><img src="./images/ef0b20c7-6456-4fb2-9609-a349b5a046d0.jpeg" alt="CEV30_Archive-06"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Batch Manage<!-- raw HTML omitted --><!-- raw HTML omitted -->Run the Batch Manage function from the Transaction Function group.</td>
+<td></td>
+<td align="center"><img src="./images/fcb45cdf-3c65-49ed-850a-1a086ff98c2d.jpeg" alt="CEv3_192.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Create or modify the AutoProcessTaskMgr batch manager. Select the correct AP Server Name setting.</td>
+<td></td>
+<td align="center"><img src="./images/3f065ed7-d495-4d6c-84ea-68901058a4c4.jpeg" alt="CEV30_Archive-08"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Add AutoArchiveData as a subtask of the AutoProcessTaskMgr batch manager.</td>
+<td></td>
+<td align="center"><img src="./images/dfac953e-b99c-4d5d-9d91-02b0199b5583.jpeg" alt="CEv3_193.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Sub Tasks<!-- raw HTML omitted --><!-- raw HTML omitted -->Run the Sub Tasks function from the Transaction Function group.<!-- raw HTML omitted --><!-- raw HTML omitted -->Access the Archiving subtask type.</td>
+<td></td>
+<td align="center"><img src="./images/53ba29ff-7038-4b1f-955f-d24dfbc60027.jpeg" alt="CEv3_194.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Access the relevant module and define the following settings.</td>
+<td></td>
+<td align="center"><img src="./images/a7913558-38bd-4796-a48e-e102f9246934.jpeg" alt="CEv3_196.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Fields: Select PARENT_MAIN_REF <!-- raw HTML omitted --><!-- raw HTML omitted -->This reference number is used to identify the transaction and all its associated data (e.g., images, documents).</th>
+<th></th>
+<th align="center"><img src="./images/a8f604d7-64e0-42f7-99ee-52c117374333.jpeg" alt="CEv3_197.jpg"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>In the text area, define the condition by which records from the module are archived.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**NOTE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->The SQL keywords - such as<!-- raw HTML omitted --> <!-- raw HTML omitted -->SELECT<!-- raw HTML omitted --> <!-- raw HTML omitted -->and<!-- raw HTML omitted --> <!-- raw HTML omitted -->FROM<!-- raw HTML omitted --> <!-- raw HTML omitted -->- must be in uppercase.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/fb028687-b18b-4014-af37-0b932f2d338b.jpeg" alt="CEv3_198.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted --><!-- raw HTML omitted -->**XML GENERATION:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Generate the XML file for the<!-- raw HTML omitted --> <!-- raw HTML omitted -->Archive<!-- raw HTML omitted --> <!-- raw HTML omitted -->parameter.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/29f25af3-1414-4b21-8595-e75695c90d74.jpeg" alt="CEv3_199.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted -->Select<!-- raw HTML omitted --> <!-- raw HTML omitted -->all<!-- raw HTML omitted --> <!-- raw HTML omitted -->module<!-- raw HTML omitted --><!-- raw HTML omitted -->s<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**NOTE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Selecting a<!-- raw HTML omitted --><!-- raw HTML omitted -->ll modules<!-- raw HTML omitted --> <!-- raw HTML omitted -->is recommended as the system<!-- raw HTML omitted --> <!-- raw HTML omitted -->generates XML only for the selected modules and<!-- raw HTML omitted --> <!-- raw HTML omitted -->deletes all previously generated XML for<!-- raw HTML omitted --> <!-- raw HTML omitted -->the unselected<!-- raw HTML omitted --> <!-- raw HTML omitted -->modules from the Archive folder<!-- raw HTML omitted --> <!-- raw HTML omitted -->under the<!-- raw HTML omitted --> <!-- raw HTML omitted -->CE_SYS<!-- raw HTML omitted --> <!-- raw HTML omitted -->directory<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/4a837534-44b7-461f-a6ca-de1c88eb8dfd.jpeg" alt="CEV30_Archive-10"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted -->The following files are generated in<!-- raw HTML omitted --> <!-- raw HTML omitted -->[Parameter Drive]\CE_SYS\ARCHIVE:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->autoporcess.xml<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->module_[module short name].xml<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->multiPending.xml<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/48bc9dda-6d87-4cec-b353-0f48d2f8db23.jpeg" alt="CEV30_Archive-11"></td>
+</tr>
+</tbody>
+</table>
+<p>Transaction Process</p>
+<table>
+<thead>
+<tr>
+<th align="left">EXAMPLE:</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Run the Batch Manager function and display the AutoProcessTaskMgr task manager.<!-- raw HTML omitted --><!-- raw HTML omitted -->Start the AutoArchiveData subtask.</th>
+<th></th>
+<th align="center"><img src="./images/6edfa000-19f7-4b2b-89a4-b9b27d9c242e.jpeg" alt="tmp126.jpg"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Execute this SQL to check which records meet the archiving filter condition.</td>
+<td></td>
+<td align="center"><img src="./images/2c42cb16-b7ea-4459-8e85-6becfa5b5f58.jpeg" alt="tmp127.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Three records are archived according to the archiving period and archiving condition specified in the parameters.  (These pertain to the Auto Process Manage and Archiving settings defined in the Sub Tasks function.)<!-- raw HTML omitted --><!-- raw HTML omitted -->Check the Archive Log: All transaction event records - and related data including images, documents, mails, GAPI, etc. - are archived into the Backup Database and deleted from the original Transaction Database.</td>
+<td></td>
+<td align="center"><img src="./images/cdcd4115-b70c-4c45-b31b-d443a7c8878c.jpeg" alt="tmp128.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Run the IMLC Inquire Archive function.<!-- raw HTML omitted --><!-- raw HTML omitted -->The three records, along with their associated data, can be accessed through this function.</td>
+<td></td>
+<td align="center"><img src="./images/5038295d-5ec6-4168-8a14-50a7524ed0f2.jpeg" alt="tmp129.jpg"></td>
+</tr>
+</tbody>
+</table>
+<p>Archiving through STP</p>
+<p>Overview</p>
+<p>Parameter Settings</p>
+<p>Transaction Process</p>
+<p>Overview</p>
+<p>When a record in the back-office system is archived, the corresponding record in CE must also be archived.</p>
+<p>The back-office system sends the transaction&rsquo;s main reference number and other details to CE.  CE, in turn, receives the data through Auto Process function and archives the relevant record through the STP Archive Data function.</p>
+<p><img src="./images/e9629e5b-6110-40a4-a379-be1611aff0d7.jpeg" alt="Tzone55"><!-- raw HTML omitted -->NOTE:<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><strong>The STP Archive Data and the</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>manual</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>Archive Data utilize the same</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>f</strong><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>unction, which main program is Trx Manager Archive. For this function to</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>perform</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>the STP Archive Data process</strong><!-- raw HTML omitted --><!-- raw HTML omitted -->**,**<!-- raw HTML omitted --> <!-- raw HTML omitted -->**the**<!-- raw HTML omitted --> <!-- raw HTML omitted -->**STP and Attribute transaction component settings are defined**<!-- raw HTML omitted --><!-- raw HTML omitted -->**.**<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><strong>CE receives the</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>STP message</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>when the</strong><!-- raw HTML omitted --> <!-- raw HTML omitted --><strong>InGapiForm message broker</strong><!-- raw HTML omitted --> <!-- raw HTML omitted -->**is started.**<!-- raw HTML omitted --></p>
+<p>Parameter Settings</p>
+<p>Defining the STP configurations to archive transactions received via STP involves the following parameter settings:</p>
+<p>Extension field</p>
+<p>STP template and mapping rule</p>
+<p>STP Archive Data function</p>
+<p>Log on the CE Utility as an Operator user and configure the following settings.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Extension Field<!-- raw HTML omitted --><!-- raw HTML omitted -->Run the DB Dictionary function from the Maintenance function group.</th>
+<th></th>
+<th align="center"><img src="./images/23d3b4bc-b055-4dcb-885b-ea9097e64bdd.jpeg" alt="CEv3_208.jpg"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Access the Reformat tab on the DB Dictionary function window.</td>
+<td></td>
+<td align="center"><img src="./images/844e0ae1-e8db-406b-8345-88f21f36206a.jpeg" alt="CEv3_209.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Add an extension field or tag which is to be used for storing module details sent from the back-office system:<!-- raw HTML omitted --><!-- raw HTML omitted -->Name: Module<!-- raw HTML omitted --><!-- raw HTML omitted -->DB Type: VARCHAR<!-- raw HTML omitted --><!-- raw HTML omitted -->Length: 4</td>
+<td></td>
+<td align="center"><img src="./images/18e77cc6-9404-47be-b7cd-7e1fe6ed4e3c.jpeg" alt="CEv3_210.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>STP Mapping<!-- raw HTML omitted --><!-- raw HTML omitted -->Run the STP Mapping function from the Transaction Function group.</td>
+<td></td>
+<td align="center"><img src="./images/dff8cd4b-fc15-4599-a89f-1df195d067d0.jpeg" alt="CEv3_212.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Create the Archiving template.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Template ID and Template Description:<!-- raw HTML omitted --> <!-- raw HTML omitted -->ARCHIVE<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/ddfb69ef-fa04-42e9-8a42-48165a0b4025.jpeg" alt="CEv3_213.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Add the following Receive tags, which pertain to field details of the transaction from the back-office system:<!-- raw HTML omitted --><!-- raw HTML omitted -->Module, which pertains to the transaction module <!-- raw HTML omitted --><!-- raw HTML omitted -->CEMainRef, which pertains to the main reference number of the transaction<!-- raw HTML omitted --><!-- raw HTML omitted -->CustId, which refers to the Customer or Company Id</td>
+<td></td>
+<td align="center"><img src="./images/e0d3ccc7-79bd-4684-8db6-a20c4f0de964.jpeg" alt="CEv3_214.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Create an STP mapping rule and map the template tags to the relevant fields:<!-- raw HTML omitted --><!-- raw HTML omitted -->CEMainRef: C_MAIN_REF<!-- raw HTML omitted --><!-- raw HTML omitted -->CustId: C_UNIT_CODE <!-- raw HTML omitted --><!-- raw HTML omitted -->Module tag: C_MODULE</td>
+<td></td>
+<td align="center"><img src="./images/992bf96c-817b-4f1d-afd9-6067f0be27e1.jpeg" alt="CEv3_215.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>STP Setting<!-- raw HTML omitted --><!-- raw HTML omitted -->Run the STP Setting function from the System Function group.</td>
+<td></td>
+<td align="center"><img src="./images/b59f9982-51a6-4c2a-a571-ac7d84f1c990.jpeg" alt="CEv3_216.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Access the Assign Function tab for the Incoming Message STP type.</td>
+<td></td>
+<td align="center"><img src="./images/f6c01f8e-e287-4c01-bc9d-4793be89190a.jpeg" alt="CEv3_218.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Select the relevant message type (i.e., the defined STP template).<!-- raw HTML omitted --><!-- raw HTML omitted -->Assign the function that is to process the STP message through the stp.setFunc method.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Transaction function: IMLC Archive Data<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Product: Import Letters of Credit<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Code:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->stp.setFunc(&ldquo;IMLC Archive Data&rdquo;, &ldquo;Import Letters of Credit&rdquo;)<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/1334524a-ad3c-46c9-a138-ed6fce2562f3.jpeg" alt="CEv3_219.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Transaction Function<!-- raw HTML omitted --><!-- raw HTML omitted -->Run Transaction Function from the Transaction Function group.</td>
+<td></td>
+<td align="center"><img src="./images/a152d209-0a08-457d-a7a6-34945823ea78.jpeg" alt="CEv3_168.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Access the module and function group for which the Archive Data function is to be created.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Module: Import Letters of Credit<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Function Group: System Maintenance.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/1692af50-12fe-4b7b-ad56-9229b43654a5.jpeg" alt="CEv3_169.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Access or create the Archive Data function, which is used for archiving the received STP message.<!-- raw HTML omitted --><!-- raw HTML omitted -->For the required parameter settings, refer to Chapter Four &gt; Archive Data Function &gt; Parameter Settings. <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->**EXAMPLE:<strong><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Function: IMLC Archive Data<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></strong>NOTE:**<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Only one function is used for both STP archiving and<!-- raw HTML omitted --> <!-- raw HTML omitted -->manual archiving<!-- raw HTML omitted --> <!-- raw HTML omitted -->processes: the<!-- raw HTML omitted --> <!-- raw HTML omitted -->IMLC Archive Data<!-- raw HTML omitted --> <!-- raw HTML omitted -->function, which<!-- raw HTML omitted --> <!-- raw HTML omitted -->utilizes the Trx Manager Archive main program.<!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/c6d19196-e1e6-4e2a-a9be-8a65298b0028.jpeg" alt="CEv3_170.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Define the STP settings for this function through the STP function component.</td>
+<td></td>
+<td align="center"><img src="./images/9f19b57d-81ef-4b4d-be42-753c0c682330.jpeg" alt="CEv3_173.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>EXAMPLE</strong><!-- raw HTML omitted --><!-- raw HTML omitted --></td>
+<td></td>
+<td align="center"><img src="./images/3e183186-39dc-45b5-879e-22e86676e328.jpeg" alt="CEv3_174.jpg"></td>
+</tr>
+</tbody>
+</table>
+<p>Transaction Process</p>
+<table>
+<thead>
+<tr>
+<th align="left">EXAMPLE:</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Send an STP message to CE.</th>
+<th></th>
+<th align="center"><img src="./images/98339d5d-8b57-4b67-8b0a-b9cb5c2e4d1a.jpeg" alt="tmp130.jpg"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Run the Batch Manager function and display the Message Broker task manager.  Make sure that the InGapiForm subtask has been started.<!-- raw HTML omitted --><!-- raw HTML omitted -->Check the STP Log: The STP message is received successfully. <!-- raw HTML omitted --><!-- raw HTML omitted -->Check the Archive Log: All transaction event records - and related data including images, documents, mails, GAPI, etc. - are archived into the Backup Database and deleted from the original Transaction Database.</td>
+<td></td>
+<td align="center"><img src="./images/4955201e-6315-41b1-9bb9-ffd032056e4d.jpeg" alt="tmp131.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Run the IMLC Inquire Archive function.<!-- raw HTML omitted --><!-- raw HTML omitted -->The record, along with its associated data, can be accessed through this function.</td>
+<td></td>
+<td align="center"><img src="./images/df21e9b3-7d7c-490d-8d2a-2b56314d46fc.jpeg" alt="tmp132.jpg"></td>
+</tr>
+</tbody>
+</table>
+<p>Sample Archiving JSP and JS Files</p>
+<p>IMLC_ArchiveCriteria.jsp</p>
+<p>IMLC_ViewArchive.jsp</p>
+<p>IMLC_ViewArchive_Function.JS</p>
+<p>IMLC_ViewArchive_Event.JS</p>
+<p>IMLC_ArchiveCriteria.jsp</p>
+<p><strong>(Start of Code)</strong></p>
+<p>&lt;%--</p>
+<p>/**</p>
+<p>* $Id: IMLC_ArchiveCriteria.jsp,v 1.5 2013/12/31 02:41:03 HelenLiu Exp $</p>
+<p>*</p>
+<p>* @module: Import Letters of Credit (IMLC)</p>
+<p>* @function: Archive</p>
+<p>*/</p>
+<p>--%&gt;</p>
+<p>&lt;%@ taglib uri = &ldquo;/EXIMTAGS&rdquo; prefix = &ldquo;EXIMTAGS&rdquo;%&gt;</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><strong>(End of Code)</strong></p>
+<p>IMLC_ViewArchive.jsp</p>
+<p><strong>(Start of Code)</strong></p>
+<p>&lt;%--</p>
+<p>/**</p>
+<p>* $Id: IMLC_ViewArchive.jsp,v 1.6 2013/12/31 02:45:47 Helen Exp $</p>
+<p>*</p>
+<p>* @module: Import Letters of Credit (IMLC)</p>
+<p>* @function: View Archive</p>
+<p>*/</p>
+<p>--%&gt;</p>
+<p>&lt;%@ taglib uri = &ldquo;/EXIMTAGS&rdquo; prefix = &ldquo;EXIMTAGS&rdquo;%&gt;</p>
+<p>&lt;%@ taglib uri = &ldquo;/CETAGS&rdquo; prefix = &ldquo;CETAGS&rdquo;%&gt;</p>
+<p>&lt;EXIMTAGS:IncludeFile filePath=&rdquo;../JS/IMLC_ViewImpLc_Function.js&rdquo;/&gt;</p>
+<p>&lt;EXIMTAGS:IncludeFile filePath=&rdquo;../JS/IMLC_ViewImpLc_Event.js&rdquo;/&gt;</p>
+<p>&lt;EXIMTAGS:IncludeFile filePath=&rdquo;../JS/IMLC_BaseFunc.js&rdquo;/&gt;</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;input name=&quot;PARENT_MAIN_REF&rdquo; type=&quot;hidden&rdquo; class=&quot;CHAR_O&quot;id=&quot;PARENT_MAIN_REF&rdquo; title=&quot;Parent Main Reference&rdquo; value=&quot;&ldquo;&gt;</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->Hide Image(s)<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p>&lt;%@ include file=&rdquo;../../../../include/SysViewImage.jsp&rdquo; %&gt;</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;FORM_OF_LC&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:DropDownElement elementType=&quot;CCY&rdquo;/&gt;</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;TOL_SPEC&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;AVAL_BY&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;TENOR_TYPE&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;!--<!-- raw HTML omitted -->--&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;PARTIAL_SHIP&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;TNSHIP&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>    &lt;EXIMTAGS:FldConv fldName=&quot;INCOTERMS&quot; smType=&quot;false&quot; emptyValue=&quot;&quot; blankOption=&quot;TRUE&quot;/&gt;
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;PRES_PRD_EVENT&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;CONF_INSTR&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:DropDownElement elementType=&quot;CCY&rdquo;/&gt;</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:DropDownElement elementType=&quot;CCY&rdquo;/&gt;</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;CHG_FLAG&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;FWD_COVER&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;SDA_FLAG1&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;TENOR_TYPE1&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;SDA_FLAG2&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;TENOR_TYPE2&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;SDA_FLAG3&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;TENOR_TYPE3&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;SDA_FLAG4&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;TENOR_TYPE4&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;SDA_FLAG5&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;TENOR_TYPE5&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;SDA_FLAG6&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>&lt;EXIMTAGS:FldConv fldName=&quot;TENOR_TYPE6&rdquo; smType=&quot;false&rdquo; emptyValue=&rdquo;&rdquo; blankOption=&quot;TRUE&rdquo;/&gt;</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><strong>(End of Code)</strong></p>
+<p>IMLC_ViewArchive_Function.JS</p>
+<p><strong>(Start of Code)</strong></p>
+<p>// $Id: IMLC_ViewArchive_Function.js,v 1.6 2013/12/31 03:01:08 helenliu Exp $</p>
+<p>function Get_CURRNT_STATUS(){</p>
+<p>try {</p>
+<p>//        setFldValue(&ldquo;CURRNT_STATUS&rdquo;,&ldquo;Issued LC&rdquo;);</p>
+<p>}</p>
+<p>catch (e) {</p>
+<p>showExcpt(&ldquo;IMLC_ViewArchive_Function&rdquo;, e);</p>
+<p>}</p>
+<p>}</p>
+<p>function Get_NXT_STATUS(){</p>
+<p>try {</p>
+<p>//        setFldValue(&ldquo;NXT_STATUS&rdquo;, &ldquo;&quot;);</p>
+<p>}</p>
+<p>catch (e) {</p>
+<p>showExcpt(&ldquo;IMLC_ViewArchive_Function&rdquo;, e);</p>
+<p>}</p>
+<p>}</p>
+<p><strong>(End of Code)</strong></p>
+<p>IMLC_ViewArchive_Event.JS</p>
+<p><strong>(Start of Code)</strong></p>
+<p>// $Id: IMLC_ViewArchive_Event.js,v 1.6 2013/12/31 03:01:08 HelenLiu Exp $</p>
+<p>function OnInit(){</p>
+<p>try {</p>
+<p>if (SYS_FUNCTION_TYPE == &ldquo;EC&rdquo; :: SYS_FUNCTION_TYPE == &ldquo;RE&rdquo; :: SYS_FUNCTION_TYPE == &ldquo;IQ&rdquo; :: SYS_FUNCTION_TYPE == &ldquo;DM&rdquo;) {</p>
+<p>SYS_CONFIRM_FLAG = true;</p>
+<p>GetImageList();</p>
+<p>}</p>
+<p>else {</p>
+<p>if (SYS_ERROR.length == 0) {</p>
+<p>SYS_CONFIRM_FLAG = false;</p>
+<p>InitValue();</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p>catch (e) {</p>
+<p>showExcpt(&ldquo;IMLC_ViewArchive_Event&rdquo;, e);</p>
+<p>}</p>
+<p>}</p>
+<p>function InitValue(){</p>
+<p>try {</p>
+<p>}</p>
+<p>catch (e) {</p>
+<p>showExcpt(&ldquo;IMLC_ViewArchive_Event&rdquo;, e);</p>
+<p>}</p>
+<p>}</p>
+<p>function ChkTrxData(){</p>
+<p>try {</p>
+<p>return true;</p>
+<p>}</p>
+<p>catch (e) {</p>
+<p>showExcpt(&ldquo;IMLC_ViewArchive_Event&rdquo;, e);</p>
+<p>}</p>
+<p>}</p>
+<p>function ConfirmTrx(){</p>
+<p>try {</p>
+<p>//Get_CURRNT_STATUS();</p>
+<p>//Get_NXT_STATUS();</p>
+<p>}</p>
+<p>catch (e) {</p>
+<p>showExcpt(&ldquo;IMLC_ViewArchive_Event&rdquo;, e);</p>
+<p>}</p>
+<p>}</p>
+<p>function InitFldEvt(){</p>
+<p>try {</p>
+<p>}</p>
+<p>catch (e) {</p>
+<p>showExcpt(&ldquo;IMLC_ViewArchive_Event&rdquo;, e);</p>
+<p>}</p>
+<p>}</p>
+<p><strong>(End of Code)</strong></p>
+<p>Glossary</p>
+<p>Glossary</p>
+<p>a</p>
+<table>
+<thead>
+<tr>
+<th><em><strong>Application Server</strong></em></th>
+<th>Server where the CE system is actually deployed and where CE processes the business logic and parameter operations.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>Archiving</strong></em></td>
+<td>The process of transferring transaction records from the Transaction Database to the Backup Database.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>Auto Archiving</strong></em></td>
+<td>Mode of archiving in which records are automatically archived by batch according to a set of defined criteria.  This is also called Batch Archiving.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>Archive Data Function</strong></em></td>
+<td>Function used for archiving records.</td>
+</tr>
+</tbody>
+</table>
+<p>B</p>
+<table>
+<thead>
+<tr>
+<th><em><strong>Batch Archiving</strong></em></th>
+<th>See Auto Archiving.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>Business Unit</strong></em></td>
+<td>A processing center or a branch unit of a bank-country group.</td>
+</tr>
+</tbody>
+</table>
+<p>C</p>
+<table>
+<thead>
+<tr>
+<th><em><strong>CE Utility</strong></em></th>
+<th>Short for Customer Enterprise Utility Workbench.  This is the main tool for building parameters in CE.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>Customer Enterprise (CE)</strong></em></td>
+<td>The Eximbills business-to-business (B2B) solution that provides bank customers with a convenient and secure single window for processing and inquiring on all their trade finance, open account, and payments transactions.</td>
+</tr>
+</tbody>
+</table>
+<p>D</p>
+<table>
+<thead>
+<tr>
+<th><em><strong>Database</strong></em></th>
+<th>An application used for the management, storage, and retrieval of data.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>Document</strong></em></td>
+<td>Also referred to as form.  It is one of the types of output that can be generated in HTML, PDF, WORD, or EXCEL format by a transaction function.</td>
+</tr>
+</tbody>
+</table>
+<p>E</p>
+<table>
+<thead>
+<tr>
+<th><em><strong>End-user</strong></em></th>
+<th>The actual user running the CE business functions.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>Eximbills</strong></em></td>
+<td>The flagship product of China Systems, which provides support for advanced e-commerce, open account, and trade-related services.</td>
+</tr>
+</tbody>
+</table>
+<p>F</p>
+<table>
+<thead>
+<tr>
+<th><em><strong>Field</strong></em></th>
+<th>The smallest unit that can hold data.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>Function</strong></em></td>
+<td>A unified set of elements, operations, and configurations that produce a target setting, process, and/or output. This typically refers to a CE Utility function or a transaction function.</td>
+</tr>
+</tbody>
+</table>
+<p>I</p>
+<table>
+<thead>
+<tr>
+<th><em><strong>Inquire Archived Data Function</strong></em></th>
+<th>Function used for inquiring into records that are stored in the Archive file.</th>
+</tr>
+</thead>
+</table>
+<p>M</p>
+<table>
+<thead>
+<tr>
+<th><em><strong>Manual Archiving</strong></em></th>
+<th>Mode of archiving in which records are manually archived per module according to a set of defined criteria.  In addition, records received via STP can also be archived through this mode.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>Meta Data</strong></em></td>
+<td>The parameter data, or simply parameters, that are defined in the CE Utility.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>Module</strong></em></td>
+<td>A group of functions that perform interrelated processes and operate under a general principle or objective (e.g., a system module, which is essential to system processes; a business or transaction module, which pertains to a bank service or product).</td>
+</tr>
+</tbody>
+</table>
+<p>P</p>
+<table>
+<thead>
+<tr>
+<th><em><strong>Parameter</strong></em></th>
+<th>Any user-controlled configuration that defines a factor or logic within a set of interrelated operations; performs a specific action in a group of processes; or produces a categorical result or setting.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>Parameter Files</strong></em></td>
+<td>See XML*.*</td>
+</tr>
+</tbody>
+</table>
+<p>R</p>
+<table>
+<thead>
+<tr>
+<th><em><strong>Recovery</strong></em></th>
+<th>The process of retrieving archived records from the Backup Database.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>Restore Archived Data Function</strong></em></td>
+<td>Function used for retrieving transactions from the Backup Database, and adding these back to the master file.</td>
+</tr>
+</tbody>
+</table>
+<p>S</p>
+<table>
+<thead>
+<tr>
+<th><em><strong>SQL</strong></em></th>
+<th>Stands for Structured Query Language.  This is a standard interactive and programming language for retrieving and updating data in the database.</th>
+</tr>
+</thead>
+</table>
+<p>X</p>
+<table>
+<thead>
+<tr>
+<th><em><strong>XML</strong></em></th>
+<th>Stands for Extensible Markup Language.  This is the format used by CE for the communication between the client (browser) and the server.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>XML Generator Function</strong></em></td>
+<td>The CE Utility function that is used to generate the corresponding XML files for a specific parameter setting.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">
+
+</div>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        
+        
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.62d5d89dda5fd5eaef8356b27f7171a800bd19917c4b1ab85ec6dca281c201f8.js" integrity="sha256-YtXYndpf1ervg1ayf3FxqAC9GZF8Sxq4XsbcooHCAfg=" crossorigin="anonymous"></script>
+
+
+
+<script src='/js/prism.js'></script>
+
+
+
+  </body>
+</html>
