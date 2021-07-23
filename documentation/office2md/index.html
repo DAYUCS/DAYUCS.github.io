@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.68.3" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.86.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -22,16 +22,15 @@
 <meta property="og:description" content="Use Office2Md to convert Word document from docx to Markdown.
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://DAYUCS.github.io/documentation/office2md/" />
+<meta property="og:url" content="http://DAYUCS.github.io/documentation/office2md/" /><meta property="article:section" content="documentation" />
+
+
 
 <meta itemprop="name" content="Office2Md">
 <meta itemprop="description" content="Use Office2Md to convert Word document from docx to Markdown.
 ">
 
-<meta itemprop="wordCount" content="141">
-
-
-
+<meta itemprop="wordCount" content="460">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Office2Md"/>
 <meta name="twitter:description" content="Use Office2Md to convert Word document from docx to Markdown.
@@ -40,8 +39,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.28fb3aa092e3d1d97bfeaad13e27f40856b29252350248c2f434b3469e200b33.css" as="style">
-<link href="/scss/main.min.28fb3aa092e3d1d97bfeaad13e27f40856b29252350248c2f434b3469e200b33.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.27f080b85a32168f0af41d6f6e856adf3f9a77e7fefe4fb77d40d23bd77afca8.css" as="style">
+<link href="/scss/main.min.27f080b85a32168f0af41d6f6e856adf3f9a77e7fefe4fb77d40d23bd77afca8.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -98,7 +97,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0a1e01afc5cf341ac5077d844744290d.json"
+  data-offline-search-index-json-src="/offline-search-index.cccc37c0667c00f1c678563c6f652d36.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -133,7 +132,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0a1e01afc5cf341ac5077d844744290d.json"
+  data-offline-search-index-json-src="/offline-search-index.cccc37c0667c00f1c678563c6f652d36.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -220,7 +219,7 @@
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationoffice2md-li">
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-documentationoffice2md-li">
     
       <a href="/documentation/office2md/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-documentationoffice2md"><span class="td-sidebar-nav-active-item">Office2Md</span></a>
     
@@ -760,16 +759,143 @@
 <li>Step 2</li>
 </ul>
 <blockquote>
+<p>There is file named Office2Md.json in folder opendoc. This file cotains the configuration of the tool. Replace its conten with this:</p>
+<pre><code>{
+ &quot;Toc&quot;: {
+   &quot;TocHeading&quot;: [
+     &quot;TOC Heading&quot;
+   ],
+   &quot;Toc1&quot;: [
+     &quot;TOC 1&quot;
+   ],
+   &quot;Toc2&quot;: [
+     &quot;TOC 2&quot;
+   ],
+   &quot;Toc3&quot;: [
+     &quot;TOC 3&quot;
+   ],
+   &quot;Toc4&quot;: [
+     &quot;TOC 4&quot;
+   ]
+ },
+ &quot;Head&quot;: {
+   &quot;Heading1&quot;: [
+     &quot;Heading1&quot;,
+     &quot;FASEHeading1&quot;
+   ],
+   &quot;Heading2&quot;: [
+     &quot;Heading2&quot;,
+     &quot;FASEHeading2&quot;
+   ],
+   &quot;Heading3&quot;: [
+     &quot;Heading3&quot;,
+     &quot;FASEHeading3&quot;
+   ],
+   &quot;Heading4&quot;: [
+     &quot;Heading4&quot;,
+     &quot;FASEHeading4&quot;
+   ],
+   &quot;Heading5&quot;: [
+     &quot;Heading5&quot;,
+     &quot;FASEHeading5&quot;
+   ],
+   &quot;Heading6&quot;: [
+     &quot;Heading6&quot;,
+     &quot;FASEHeading6&quot;
+   ]
+ },
+ &quot;List&quot;: [
+   &quot;ListParagraph&quot;,
+   &quot;FSBulletlistblacklight&quot;,
+   &quot;Bullet1&quot;,
+   &quot;Bullet2&quot;,
+   &quot;Bullet3&quot;
+ ],
+ &quot;Common&quot;: [
+   &quot;Normal&quot;,
+   &quot;Emphasis&quot;,
+   &quot;Table Grid&quot;,
+   &quot;Normal (Web)&quot;,
+   &quot;Caption&quot;,
+   &quot;Hyperlink&quot;,
+   null
+ ],
+ &quot;Image&quot;: {
+   &quot;Prefix&quot;: &quot;/content&quot;,
+   &quot;UsePrefix&quot;: false,
+   &quot;Embed&quot; : false,
+   &quot;Convert&quot; : {
+     &quot;UseConversion&quot; : false,
+     &quot;Replace&quot; : [
+       {&quot;From&quot; : &quot;.emf&quot;, &quot;To&quot; : &quot;.jpg&quot;},
+       {&quot;From&quot; : &quot;.wmf&quot;, &quot;To&quot; : &quot;.jpg&quot;},
+       {&quot;From&quot; : &quot;.tif&quot;, &quot;To&quot; : &quot;.jpg&quot;},
+       {&quot;From&quot; : &quot;.tiff&quot;, &quot;To&quot; : &quot;.jpg&quot;},
+       {&quot;From&quot; : &quot;.png&quot;, &quot;To&quot; : &quot;.jpg&quot;},
+       {&quot;From&quot; : &quot;.bmp&quot;, &quot;To&quot; : &quot;.jpg&quot;},
+       {&quot;From&quot; : &quot;.exif&quot;, &quot;To&quot; : &quot;.jpg&quot;},
+       {&quot;From&quot; : &quot;.gif&quot;, &quot;To&quot; : &quot;.jpg&quot;},
+       {&quot;From&quot; : &quot;.ico&quot;, &quot;To&quot; : &quot;.jpg&quot;}
+     ],
+     &quot;Resize&quot; : {
+       &quot;UseResize&quot; : false,
+       &quot;MaxWidth&quot; : 800,
+       &quot;MaxHeight&quot; : 0,
+       &quot;DoNotResizeLessThanMax&quot; : true,
+       &quot;InterpolationMode&quot; : &quot;HighQualityBicubic&quot;
+     }
+   }    
+ },
+ &quot;ReplaceThis&quot;: [
+   {&quot;From&quot; : &quot;\u2013&quot;, &quot;To&quot; : &quot;-&quot;},
+   {&quot;From&quot; : &quot;\u201c&quot;, &quot;To&quot; : &quot;\&quot;&quot;},
+   {&quot;From&quot; : &quot;\u201d&quot;, &quot;To&quot; : &quot;\&quot;&quot;},
+   {&quot;From&quot; : &quot;\u2022&quot;, &quot;To&quot; : &quot;&quot;},
+   {&quot;From&quot; : &quot;\u2026&quot;, &quot;To&quot; : &quot;...&quot;},
+   {&quot;From&quot; : &quot;\u2014&quot;, &quot;To&quot; : &quot;-&quot;},
+   {&quot;From&quot; : &quot;®&quot;, &quot;To&quot; : &quot;&amp;copy;&quot;},
+   {&quot;From&quot; : &quot;\u2122&quot;, &quot;To&quot; : &quot;&amp;trade;&quot;},
+   {&quot;From&quot; : &quot;°&quot;, &quot;To&quot; : &quot;&amp;deg;&quot;},
+   {&quot;From&quot; : &quot;\uffff&quot;, &quot;To&quot; : &quot;&quot;},
+   {&quot;From&quot; : &quot;\u2019&quot;, &quot;To&quot; : &quot;'&quot;}
+ ],
+ &quot;Table&quot; : {
+   &quot;Standardize&quot; : true
+ },
+ &quot;Colors&quot; : {
+   &quot;UseColors&quot; : true,
+   &quot;Replace&quot; : [
+     {&quot;From&quot; : &quot;#FFFFFF&quot;, &quot;To&quot; : &quot;#000000&quot;},
+     {&quot;From&quot; : &quot;white&quot;, &quot;To&quot; : &quot;black&quot;}
+   ]
+ },
+ &quot;Workbook&quot; : {
+   &quot;SheetHeading&quot; : {
+     &quot;UseTabName&quot; : true,
+     &quot;Template&quot; : &quot;### {TabName}&quot;
+   }
+ },
+ &quot;Pdf&quot; : {
+   &quot;UsePageNumbers&quot; : true,
+   &quot;Position&quot; : &quot;footer&quot;,
+   &quot;Template&quot; : &quot;#### {PageNumber}&quot;    
+ }
+}
+</code></pre></blockquote>
+<ul>
+<li>Step 3</li>
+</ul>
+<blockquote>
 <p>Suppose you have a recent .Net SDK installed on your machine. Under the window opened by Step 1:</p>
 <pre><code>cd opendoc
 .\Office2Md.ps1 -DocPath &quot;D:\Temp\CEV336 Archiving and Recovery.docx&quot; -MdDir D:\Temp\CE -GithubFlawor -IntoSingleOne
 </code></pre><p>This will covert the docx and put the converted files into D:\Temp\CE</p>
 </blockquote>
 <ul>
-<li>Step 3</li>
+<li>Step 4</li>
 </ul>
 <blockquote>
-<p>Rename the md file as index.md. Open one of your favorite edit tool, e.g. VS Code, replace all &ldquo;(/content/images/&rdquo; with &ldquo;(./images/&quot;.</p>
+<p>Rename the md file as index.md and add Docsy header into it.</p>
 </blockquote>
 
 	
@@ -829,7 +955,7 @@
 
 
 
-<script src="/js/main.min.62d5d89dda5fd5eaef8356b27f7171a800bd19917c4b1ab85ec6dca281c201f8.js" integrity="sha256-YtXYndpf1ervg1ayf3FxqAC9GZF8Sxq4XsbcooHCAfg=" crossorigin="anonymous"></script>
+<script src="/js/main.min.3b172c13b62c2bea8b1c9d2599cddc8cf89718a92d792c680871c81ba43d8c85.js" integrity="sha256-OxcsE7YsK&#43;qLHJ0lmc3cjPiXGKkteSxoCHHIG6Q9jIU=" crossorigin="anonymous"></script>
 
 
 

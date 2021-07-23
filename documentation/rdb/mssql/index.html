@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.68.3" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.86.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -22,16 +22,15 @@
 <meta property="og:description" content="A example to show how to get historical data from MS SQL Server Log.
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://DAYUCS.github.io/documentation/rdb/mssql/" />
+<meta property="og:url" content="http://DAYUCS.github.io/documentation/rdb/mssql/" /><meta property="article:section" content="documentation" />
+
+
 
 <meta itemprop="name" content="Get Data from MS SQL Server Log">
 <meta itemprop="description" content="A example to show how to get historical data from MS SQL Server Log.
 ">
 
 <meta itemprop="wordCount" content="351">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Get Data from MS SQL Server Log"/>
 <meta name="twitter:description" content="A example to show how to get historical data from MS SQL Server Log.
@@ -40,8 +39,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.28fb3aa092e3d1d97bfeaad13e27f40856b29252350248c2f434b3469e200b33.css" as="style">
-<link href="/scss/main.min.28fb3aa092e3d1d97bfeaad13e27f40856b29252350248c2f434b3469e200b33.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.27f080b85a32168f0af41d6f6e856adf3f9a77e7fefe4fb77d40d23bd77afca8.css" as="style">
+<link href="/scss/main.min.27f080b85a32168f0af41d6f6e856adf3f9a77e7fefe4fb77d40d23bd77afca8.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -98,7 +97,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0a1e01afc5cf341ac5077d844744290d.json"
+  data-offline-search-index-json-src="/offline-search-index.cccc37c0667c00f1c678563c6f652d36.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -133,7 +132,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0a1e01afc5cf341ac5077d844744290d.json"
+  data-offline-search-index-json-src="/offline-search-index.cccc37c0667c00f1c678563c6f652d36.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -575,7 +574,7 @@
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-documentationrdbmssql-li">
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-documentationrdbmssql-li">
     
       <a href="/documentation/rdb/mssql/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-documentationrdbmssql"><span class="td-sidebar-nav-active-item">Get Data from MS SQL Server Log</span></a>
     
@@ -762,7 +761,7 @@
 		
 		
 	</header>    
-	<p><img src="./media/image1.png" alt="">{width=&quot;2.89375in&rdquo; height=&quot;1.0604166666666666in&rdquo;}</p>
+	<p><img src="./media/image1.png" alt="">{width=&ldquo;2.89375in&rdquo; height=&ldquo;1.0604166666666666in&rdquo;}</p>
 <p>简要介绍MS SQL Server 2008上出现的Change Data
 Capture功能，探讨在Eximbills产品中使用该技术实现Audit
 Log相关功能的可能途径。</p>
@@ -804,12 +803,12 @@ Query功能。利用这些技术，应用程序与报表工具可以直接使用
 Log功能的实现提供了便利。</p>
 <p>至于MS SQL Server，自2008版本起，推出了一个名为Change Data
 Capture的功能，同样也是在后台通过读取数据库日志的方法、自动生成数据库中记录的变化历史资料。<a href="http://msdn.microsoft.com/en-us/library/cc645937.aspx">[这儿]{.underline}</a>有相关介绍，当中有一幅图（如下）描述了其基本实现原理。</p>
-<p><img src="./media/image2.gif" alt="Change data capture dataflow">{width=&quot;2.4784722222222224in&rdquo;
-height=&quot;4.157638888888889in&rdquo;}</p>
+<p><img src="./media/image2.gif" alt="Change data capture dataflow">{width=&ldquo;2.4784722222222224in&rdquo;
+height=&ldquo;4.157638888888889in&rdquo;}</p>
 <h1 id="设置步骤">设置步骤</h1>
 <p>假设在数据库exim下有一个名为dbo.IMLC的表，现有如下几个简单字段&mdash;&mdash;</p>
-<p><img src="./media/image3.png" alt="imlc\_table.PNG">{width=&quot;4.042230971128609in&rdquo;
-height=&quot;1.458536745406824in&rdquo;}</p>
+<p><img src="./media/image3.png" alt="imlc\_table.PNG">{width=&ldquo;4.042230971128609in&rdquo;
+height=&ldquo;1.458536745406824in&rdquo;}</p>
 <p>下面，我们将以此表为基础、分两个步骤设置Change Data Capture&mdash;&mdash;</p>
 <h2 id="enable-change-data-capture-for-the-database-exim">Enable Change Data Capture for the Database exim</h2>
 <p>执行以下Transact-SQL：</p>
@@ -834,10 +833,10 @@ height=&quot;1.458536745406824in&rdquo;}</p>
 <p>至此，有关IMLC的Data Change
 Capture设置就全部完成了，系统还为此自动生成了两个Table-valued函数及一个Change
 table:</p>
-<p><img src="./media/image4.png" alt="imlc\_cdc\_functions.PNG">{width=&quot;5.386169072615923in&rdquo;
-height=&quot;5.980002187226597in&rdquo;}</p>
-<p><img src="./media/image5.png" alt="imlc\_cdc\_table.PNG">{width=&quot;6.0in&rdquo;
-height=&quot;3.2625in&rdquo;}</p>
+<p><img src="./media/image4.png" alt="imlc\_cdc\_functions.PNG">{width=&ldquo;5.386169072615923in&rdquo;
+height=&ldquo;5.980002187226597in&rdquo;}</p>
+<p><img src="./media/image5.png" alt="imlc\_cdc\_table.PNG">{width=&ldquo;6.0in&rdquo;
+height=&ldquo;3.2625in&rdquo;}</p>
 <h1 id="验证效果">验证效果</h1>
 <p>现在（2012年9月29日），我们对IMLC依次进行如下数据操作：</p>
 <ul>
@@ -872,8 +871,8 @@ equal', @end_time);</p>
 <p>SELECT * FROM cdc.fn_cdc_get_all_changes_dbo_IMLC(@from_lsn,
 @to_lsn, 'all');</p>
 <p>得到的结果如下图：</p>
-<p><img src="./media/image6.png" alt="imlc\_cdc\_query.PNG">{width=&quot;6.0in&rdquo;
-height=&quot;0.9104166666666667in&rdquo;}</p>
+<p><img src="./media/image6.png" alt="imlc\_cdc\_query.PNG">{width=&ldquo;6.0in&rdquo;
+height=&ldquo;0.9104166666666667in&rdquo;}</p>
 <p>其中，__$operation的值的含义为：</p>
 <blockquote>
 <p>2 &ndash; Insert</p>
@@ -882,8 +881,8 @@ height=&quot;0.9104166666666667in&rdquo;}</p>
 <p>1 &ndash; Delete</p>
 </blockquote>
 <p>此外，通过JDBC/SQL直接访问Change Table也可得到与上面类似的结果：</p>
-<p><img src="./media/image7.png" alt="imlc\_cdc\_jdbc\_sql.PNG">{width=&quot;6.0in&rdquo;
-height=&quot;2.088888888888889in&rdquo;}</p>
+<p><img src="./media/image7.png" alt="imlc\_cdc\_jdbc\_sql.PNG">{width=&ldquo;6.0in&rdquo;
+height=&ldquo;2.088888888888889in&rdquo;}</p>
 <h1 id="小结">小结</h1>
 <p>MS SQL Server上的Change Data Capture功能，与Oracle上的Flashback
 Technology、DB2上的Time Travel
@@ -955,7 +954,7 @@ Sign off Required by:</p>
 
 
 
-<script src="/js/main.min.62d5d89dda5fd5eaef8356b27f7171a800bd19917c4b1ab85ec6dca281c201f8.js" integrity="sha256-YtXYndpf1ervg1ayf3FxqAC9GZF8Sxq4XsbcooHCAfg=" crossorigin="anonymous"></script>
+<script src="/js/main.min.3b172c13b62c2bea8b1c9d2599cddc8cf89718a92d792c680871c81ba43d8c85.js" integrity="sha256-OxcsE7YsK&#43;qLHJ0lmc3cjPiXGKkteSxoCHHIG6Q9jIU=" crossorigin="anonymous"></script>
 
 
 

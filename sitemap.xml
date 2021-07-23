@@ -1,89 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>http://DAYUCS.github.io/documentation/buildwebsite/pandoc/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/buildwebsite/hugo/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/buildwebsite/docsy/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/buildwebsite/menu/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/buildwebsite/content/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/buildwebsite/search/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/buildwebsite/publish/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/mammoth/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/office2md/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/buildwebsite/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/rdb/oracle/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/ce/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/rdb/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/rdb/db2/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/table/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/rdb/mssql/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/documentation/search/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://DAYUCS.github.io/tags/</loc>
   </url>
-  
 </urlset>
